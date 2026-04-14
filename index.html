@@ -7,7 +7,7 @@
   <meta name="description" content="小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、独自ドメイン接続、Google設定補助にも対応。">
   <meta name="robots" content="index,follow">
   <meta name="format-detection" content="telephone=no">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#1d4ed8">
   <link rel="canonical" href="https://syasu-pixel.github.io/website-service/">
 
   <meta property="og:type" content="website">
@@ -26,17 +26,21 @@
 
   <style>
     :root {
-      --bg: #f8fafc;
+      --bg: #f7faff;
       --surface: #ffffff;
-      --surface-soft: #eef4ff;
+      --surface-soft: #eef5ff;
+      --surface-warm: #fff6ea;
       --text: #0f172a;
       --muted: #475569;
-      --line: #dbe4f0;
+      --line: #d8e4f5;
       --primary: #2563eb;
       --primary-dark: #1d4ed8;
+      --primary-soft: #dbeafe;
       --accent: #f59e0b;
       --accent-dark: #d97706;
+      --accent-soft: #ffedd5;
       --success: #16a34a;
+      --success-soft: #dcfce7;
       --shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
       --radius-xl: 24px;
       --radius-lg: 18px;
@@ -57,9 +61,9 @@
       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(37, 99, 235, 0.10), transparent 28%),
-        radial-gradient(circle at top left, rgba(245, 158, 11, 0.08), transparent 24%),
-        var(--bg);
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.12), transparent 26%),
+        radial-gradient(circle at top left, rgba(245, 158, 11, 0.10), transparent 24%),
+        linear-gradient(180deg, #f8fbff 0%, #f6f9fe 100%);
       line-height: 1.8;
     }
 
@@ -84,8 +88,8 @@
       top: 0;
       z-index: 1000;
       backdrop-filter: blur(10px);
-      background: rgba(248, 250, 252, 0.82);
-      border-bottom: 1px solid rgba(219, 228, 240, 0.85);
+      background: rgba(248, 251, 255, 0.84);
+      border-bottom: 1px solid rgba(216, 228, 245, 0.9);
     }
 
     .header-inner {
@@ -130,7 +134,7 @@
       justify-content: center;
       padding: 10px 14px;
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.94);
       border-radius: 999px;
       color: var(--text);
       font-size: 13px;
@@ -157,16 +161,19 @@
 
     .hero-main,
     .hero-side {
-      background: rgba(255, 255, 255, 0.86);
-      border: 1px solid rgba(219, 228, 240, 0.95);
       border-radius: var(--radius-xl);
       box-shadow: var(--shadow);
     }
 
     .hero-main {
-      padding: 34px;
+      padding: 36px;
       position: relative;
       overflow: hidden;
+      background:
+        radial-gradient(circle at top right, rgba(255,255,255,0.16), transparent 34%),
+        linear-gradient(135deg, #2563eb 0%, #1d4ed8 55%, #1e3a8a 100%);
+      color: #fff;
+      border: 1px solid rgba(147, 197, 253, 0.34);
     }
 
     .hero-main::before {
@@ -175,8 +182,18 @@
       inset: auto -50px -50px auto;
       width: 220px;
       height: 220px;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.16), transparent 70%);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 70%);
       pointer-events: none;
+    }
+
+    .hero-side {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(216, 228, 245, 0.95);
     }
 
     .eyebrow {
@@ -186,8 +203,9 @@
       margin-bottom: 16px;
       padding: 8px 12px;
       border-radius: 999px;
-      background: #e8f0ff;
-      color: var(--primary-dark);
+      background: rgba(255,255,255,0.16);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.20);
       font-size: 13px;
       font-weight: 800;
     }
@@ -201,7 +219,7 @@
 
     .hero-lead {
       margin: 0;
-      color: var(--muted);
+      color: rgba(255,255,255,0.92);
       font-size: 16px;
     }
 
@@ -214,12 +232,13 @@
 
     .hero-point {
       padding: 14px 14px 13px;
-      background: #fff;
-      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
       border-radius: var(--radius-md);
       font-size: 13px;
       font-weight: 700;
       line-height: 1.6;
+      color: #fff;
     }
 
     .cta-group {
@@ -245,14 +264,14 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
       color: #fff;
-      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+      box-shadow: 0 12px 24px rgba(245, 158, 11, 0.24);
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 16px 28px rgba(37, 99, 235, 0.28);
+      box-shadow: 0 16px 28px rgba(245, 158, 11, 0.30);
     }
 
     .btn-secondary {
@@ -267,12 +286,14 @@
       transform: translateY(-1px);
     }
 
-    .hero-side {
-      padding: 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 18px;
+    .hero-main .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.22);
+      color: #fff;
+    }
+
+    .hero-main .btn-secondary:hover {
+      background: rgba(255,255,255,0.18);
     }
 
     .hero-card {
@@ -280,6 +301,11 @@
       border-radius: var(--radius-lg);
       background: linear-gradient(180deg, #ffffff, #f8fbff);
       border: 1px solid var(--line);
+    }
+
+    .hero-card.hero-card-accent {
+      background: linear-gradient(180deg, #fff9ef, #fff3df);
+      border-color: #f5d7a2;
     }
 
     .hero-card h2,
@@ -394,8 +420,7 @@
     .service-card h3,
     .faq-item h3,
     .plan-card h3,
-    .option-card h3,
-    .case-card h3 {
+    .option-card h3 {
       margin: 0 0 10px;
       font-size: 19px;
       line-height: 1.5;
@@ -405,8 +430,7 @@
     .service-card p,
     .faq-item p,
     .plan-card p,
-    .option-card p,
-    .case-card p {
+    .option-card p {
       margin: 0;
       color: var(--muted);
       font-size: 14px;
@@ -420,10 +444,15 @@
       min-height: 32px;
       padding: 6px 10px;
       border-radius: 999px;
-      background: #eff6ff;
+      background: var(--primary-soft);
       color: var(--primary-dark);
       font-size: 12px;
       font-weight: 800;
+    }
+
+    .tag.tag-accent {
+      background: var(--accent-soft);
+      color: #9a6507;
     }
 
     .service-card {
@@ -437,7 +466,7 @@
       display: grid;
       place-items: center;
       margin-bottom: 14px;
-      background: linear-gradient(135deg, #e9f1ff, #fff4db);
+      background: linear-gradient(135deg, #dbeafe, #ffedd5);
       color: var(--primary-dark);
       font-size: 22px;
       font-weight: 900;
@@ -476,41 +505,41 @@
       background: var(--accent);
     }
 
-    .policy-box {
+    .highlight-box {
       padding: 28px;
-      background: linear-gradient(180deg, #fff, #f7fbff);
+      background: linear-gradient(135deg, #eff6ff, #fff7eb);
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
       box-shadow: var(--shadow);
     }
 
-    .policy-box p {
+    .highlight-box p {
       margin: 0;
       color: var(--muted);
       font-size: 15px;
     }
 
-    .policy-points {
+    .highlight-points {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
       margin-top: 20px;
     }
 
-    .policy-point {
+    .highlight-point {
       background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
       padding: 16px;
     }
 
-    .policy-point strong {
+    .highlight-point strong {
       display: block;
       margin-bottom: 8px;
       font-size: 15px;
     }
 
-    .policy-point span {
+    .highlight-point span {
       color: var(--muted);
       font-size: 13px;
       line-height: 1.7;
@@ -613,27 +642,30 @@
       color: #6b4d17;
     }
 
-    .case-card {
+    .payment-grid {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
-      align-items: center;
     }
 
-    .case-badge {
-      min-width: 108px;
-      min-height: 108px;
-      border-radius: 22px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 16px;
-      background: linear-gradient(135deg, #eaf1ff, #fff5df);
-      color: var(--primary-dark);
-      font-size: 14px;
-      font-weight: 900;
+    .payment-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .payment-card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
       line-height: 1.5;
-      border: 1px solid #d8e5ff;
+    }
+
+    .payment-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .faq-list {
@@ -728,15 +760,12 @@
       .grid-2,
       .plans,
       .option-grid,
-      .policy-points {
+      .payment-grid,
+      .highlight-points {
         grid-template-columns: 1fr;
       }
 
       .hero-points {
-        grid-template-columns: 1fr;
-      }
-
-      .case-card {
         grid-template-columns: 1fr;
       }
 
@@ -766,7 +795,8 @@
       .hero-main,
       .hero-side,
       .card-body,
-      .policy-box,
+      .highlight-box,
+      .payment-card,
       .contact-box {
         padding-left: 20px;
         padding-right: 20px;
@@ -836,6 +866,7 @@
         <a class="nav-link" href="#service">できること</a>
         <a class="nav-link" href="#price">料金</a>
         <a class="nav-link" href="#options">オプション</a>
+        <a class="nav-link" href="#payment">お支払い</a>
         <a class="nav-link" href="#contact">お問い合わせ</a>
       </nav>
     </div>
@@ -856,7 +887,7 @@
           <div class="hero-points">
             <div class="hero-point">スマホでも見やすい設計</div>
             <div class="hero-point">問い合わせ導線をわかりやすく整理</div>
-            <div class="hero-point">独自ドメインやGoogle補助も対応</div>
+            <div class="hero-point">複雑すぎず維持しやすい構成</div>
           </div>
 
           <div class="cta-group">
@@ -866,7 +897,7 @@
         </div>
 
         <aside class="hero-side" aria-label="サービスの特徴">
-          <div class="hero-card">
+          <div class="hero-card hero-card-accent">
             <h2>こんな方に向いています</h2>
             <p>難しすぎる制作会社ではなく、まずはちょうどいい形で会社HPを持ちたい方向けです。</p>
             <ul class="check-list">
@@ -878,13 +909,12 @@
           </div>
 
           <div class="hero-card">
-            <h3>対応内容</h3>
+            <h3>この作り方の強み</h3>
             <ul class="check-list">
-              <li>会社案内ページ作成</li>
-              <li>対応業務の整理</li>
-              <li>お問い合わせフォーム設置</li>
-              <li>独自ドメイン接続の相談</li>
-              <li>Google向け初期設定補助</li>
+              <li>複雑な仕組みを使いすぎない</li>
+              <li>公開後の管理負担を抑えやすい</li>
+              <li>月々の運用費が必須ではない</li>
+              <li>必要な時だけ都度修正しやすい</li>
             </ul>
           </div>
         </aside>
@@ -912,7 +942,7 @@
 
           <article class="card recommend-card">
             <div class="card-body">
-              <span class="tag">仕事につなげたい方</span>
+              <span class="tag tag-accent">仕事につなげたい方</span>
               <h3>お問い合わせしやすい形に整えたい</h3>
               <p>電話だけでなくフォーム導線も用意し、依頼や相談につながりやすい形へ整えます。</p>
             </div>
@@ -921,7 +951,7 @@
           <article class="card recommend-card">
             <div class="card-body">
               <span class="tag">小さな会社・個人事業向け</span>
-              <h3>高すぎる制作は避けたい</h3>
+              <h3>高すぎる制作や重い運用は避けたい</h3>
               <p>必要以上に複雑な仕組みを入れず、まずは仕事で使いやすいHPを作りたい方に向いています。</p>
             </div>
           </article>
@@ -1021,34 +1051,35 @@
       </div>
     </section>
 
-    <section class="section" id="policy">
+    <section class="section" id="strength">
       <div class="container">
-        <div class="policy-box">
+        <div class="highlight-box">
           <div class="section-head">
-            <span class="section-kicker">POLICY</span>
-            <h2 class="section-title">大げさすぎず、仕事につながりやすい形を意識しています</h2>
+            <span class="section-kicker">STRONG POINT</span>
+            <h2 class="section-title">月々の運用費が必須ではない、シンプルで維持しやすい構成です</h2>
             <p class="section-lead">
-              見た目だけを派手にするのではなく、「どんな会社か」「何を頼めるのか」「どう連絡すればいいか」が伝わることを大事にしています。
+              複雑なシステムを使いすぎないため、公開後の管理負担や維持コストを重くしにくいのが強みです。
             </p>
           </div>
 
           <p>
-            小さな会社や個人事業のホームページは、情報が整理されていて見やすいだけでも十分に印象が良くなります。
-            必要以上に難しい仕組みを入れず、まずは仕事に使いやすい形で整えることを重視しています。
+            小規模事業者向けのホームページでは、まず必要な情報がきちんと伝わることが大切です。
+            この作り方では、毎月の保守が前提になりやすい複雑な構成を避けつつ、必要な時だけ都度修正しやすい形を意識しています。
+            そのため、月々の運用費を必須にしなくても始めやすいのが特徴です。
           </p>
 
-          <div class="policy-points">
-            <div class="policy-point">
-              <strong>わかりやすさ重視</strong>
-              <span>専門用語ばかりにならないように、見た人が内容を理解しやすい形に整えます。</span>
+          <div class="highlight-points">
+            <div class="highlight-point">
+              <strong>維持しやすい</strong>
+              <span>公開後の管理負担を抑えやすく、必要な時だけ修正しやすい構成です。</span>
             </div>
-            <div class="policy-point">
-              <strong>相談しやすい導線</strong>
-              <span>問い合わせまでの流れがわかりやすいと、仕事の相談につながりやすくなります。</span>
+            <div class="highlight-point">
+              <strong>始めやすい</strong>
+              <span>制作費を中心に考えやすく、最初から重い月額費用を前提にしなくて済みます。</span>
             </div>
-            <div class="policy-point">
-              <strong>ちょうどいい価格感</strong>
-              <span>小規模事業者が頼みやすい範囲で、必要な内容をしっかり整理して制作します。</span>
+            <div class="highlight-point">
+              <strong>必要な分だけ追加</strong>
+              <span>独自ドメインやGoogle補助などは、必要に応じて後から追加しやすいです。</span>
             </div>
           </div>
         </div>
@@ -1091,7 +1122,7 @@
 
           <article class="card plan-card featured">
             <div class="card-body">
-              <span class="tag">いちばん選びやすい標準</span>
+              <span class="tag tag-accent">いちばん選びやすい標準</span>
               <h3>標準プラン</h3>
               <p class="plan-price">88,000<span>円（税込）〜</span></p>
               <p class="plan-note">信頼感や問い合わせ導線までしっかり整えたい方向け</p>
@@ -1127,7 +1158,7 @@
         <div class="option-grid">
           <article class="card option-card">
             <div class="card-body">
-              <span class="tag">検索・マップ向け</span>
+              <span class="tag tag-accent">検索・マップ向け</span>
               <h3>Google設定補助</h3>
               <p>ホームページ公開後に、Google検索やGoogleマップ向けの初期整備を進めたい方向けの追加対応です。</p>
               <ul>
@@ -1158,31 +1189,45 @@
       </div>
     </section>
 
-    <section class="section" id="works">
+    <section class="section" id="payment">
       <div class="container">
         <div class="section-head">
-          <span class="section-kicker">WORKS</span>
-          <h2 class="section-title">制作例</h2>
+          <span class="section-kicker">PAYMENT</span>
+          <h2 class="section-title">お支払い方法</h2>
           <p class="section-lead">
-            自社ホームページの制作・調整も行いながら、小規模事業者向けに見やすく仕事につながりやすい形を意識して作成しています。
+            銀行振込を基本にしつつ、クレジットカード決済にも対応しやすい形で進められます。
           </p>
         </div>
 
-        <article class="card case-card">
-          <div class="card-body">
-            <span class="tag">制作実績の見せ方例</span>
-            <h3>自社ホームページを実際の制作例として案内できます</h3>
+        <div class="payment-grid">
+          <article class="payment-card">
+            <span class="tag">基本のお支払い方法</span>
+            <h3>銀行振込</h3>
             <p>
-              会社案内、対応業務、問い合わせ導線、スマホでの見やすさなど、
-              小規模事業者に必要な要素を整理した実例として見せられます。
-              今後、制作事例が増えたらここに順次追加していく形にもできます。
+              お支払いは、株式会社ケイディエスの銀行口座へのお振込みに対応しています。
+              請求書ベースで進めたい場合にもわかりやすい方法です。
             </p>
-            <div class="cta-group">
-              <a class="btn btn-primary" href="#" aria-label="制作例を見る">制作例を見る</a>
-            </div>
-          </div>
-          <div class="case-badge">見やすさ<br>スマホ対応<br>問い合わせ導線</div>
-        </article>
+            <ul class="option-card" style="padding:0; box-shadow:none; border:none; background:transparent; margin-top:14px;">
+              <li>請求書ベースで案内しやすい</li>
+              <li>手数料面でもシンプル</li>
+              <li>基本の支払い方法として運用しやすい</li>
+            </ul>
+          </article>
+
+          <article class="payment-card">
+            <span class="tag tag-accent">希望者向け</span>
+            <h3>クレジットカード決済</h3>
+            <p>
+              クレジットカード決済をご希望の場合は、別途オンライン決済でご案内する形にも対応できます。
+              銀行振込とクレジットカードで料金差をつけず、同額で受ける前提です。
+            </p>
+            <ul class="option-card" style="padding:0; box-shadow:none; border:none; background:transparent; margin-top:14px;">
+              <li>銀行振込と同額で案内</li>
+              <li>希望者だけ別途ご案内</li>
+              <li>支払い方法を選びやすい</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1197,6 +1242,11 @@
         </div>
 
         <div class="faq-list">
+          <article class="faq-item">
+            <div class="faq-q">Q. 月々の運用費は必ずかかりますか？</div>
+            <div class="faq-a">必須ではありません。まずは制作費を中心に考え、必要な時だけ都度修正や追加対応を行う形でも進めやすいです。</div>
+          </article>
+
           <article class="faq-item">
             <div class="faq-q">Q. メールアドレスは今使っているもので大丈夫ですか？</div>
             <div class="faq-a">はい、大丈夫です。最初は今使っているメールアドレスをそのまま問い合わせ先として使う形でも問題ありません。</div>
@@ -1213,13 +1263,13 @@
           </article>
 
           <article class="faq-item">
-            <div class="faq-q">Q. 写真がなくても作れますか？</div>
-            <div class="faq-a">はい、大丈夫です。まずは文字中心でわかりやすくまとめる形でも作成できます。あとから写真を追加していく形にも対応できます。</div>
+            <div class="faq-q">Q. 支払い方法は何がありますか？</div>
+            <div class="faq-a">銀行振込に対応しています。クレジットカード決済をご希望の場合は、別途ご案内する形にも対応できます。</div>
           </article>
 
           <article class="faq-item">
-            <div class="faq-q">Q. 内容がまだうまくまとまっていません。</div>
-            <div class="faq-a">大丈夫です。相談しながら整理していく形で進められます。まずは会社情報や載せたい内容をわかる範囲で教えていただければ十分です。</div>
+            <div class="faq-q">Q. 写真がなくても作れますか？</div>
+            <div class="faq-a">はい、大丈夫です。まずは文字中心でわかりやすくまとめる形でも作成できます。あとから写真を追加していく形にも対応できます。</div>
           </article>
         </div>
       </div>
