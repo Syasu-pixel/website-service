@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>小規模事業者向けホームページ制作｜見やすく、仕事につながる会社HPを作ります</title>
-  <meta name="description" content="小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、Google登録補助にも対応。">
+  <meta name="description" content="小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、独自ドメイン接続、Google設定補助にも対応。">
   <meta name="robots" content="index,follow">
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#0f172a">
@@ -14,14 +14,14 @@
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="小規模事業者向けホームページ制作">
   <meta property="og:title" content="小規模事業者向けホームページ制作｜見やすく、仕事につながる会社HPを作ります">
-  <meta property="og:description" content="小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、Google登録補助にも対応。">
+  <meta property="og:description" content="小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、独自ドメイン接続、Google設定補助にも対応。">
   <meta property="og:url" content="https://syasu-pixel.github.io/website-service/">
   <meta property="og:image" content="https://example.com/assets/images/common/ogp.jpg">
   <meta property="og:image:alt" content="小規模事業者向けホームページ制作の案内ページ">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="小規模事業者向けホームページ制作｜見やすく、仕事につながる会社HPを作ります">
-  <meta name="twitter:description" content="小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、Google登録補助にも対応。">
+  <meta name="twitter:description" content="小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、独自ドメイン接続、Google設定補助にも対応。">
   <meta name="twitter:image" content="https://example.com/assets/images/common/ogp.jpg">
 
   <style>
@@ -392,9 +392,9 @@
 
     .recommend-card h3,
     .service-card h3,
-    .flow-card h3,
     .faq-item h3,
     .plan-card h3,
+    .option-card h3,
     .case-card h3 {
       margin: 0 0 10px;
       font-size: 19px;
@@ -403,9 +403,9 @@
 
     .recommend-card p,
     .service-card p,
-    .flow-card p,
     .faq-item p,
     .plan-card p,
+    .option-card p,
     .case-card p {
       margin: 0;
       color: var(--muted);
@@ -444,7 +444,8 @@
     }
 
     .service-card ul,
-    .plan-card ul {
+    .plan-card ul,
+    .option-card ul {
       margin: 14px 0 0;
       padding: 0;
       list-style: none;
@@ -453,7 +454,8 @@
     }
 
     .service-card li,
-    .plan-card li {
+    .plan-card li,
+    .option-card li {
       position: relative;
       padding-left: 20px;
       color: var(--text);
@@ -462,7 +464,8 @@
     }
 
     .service-card li::before,
-    .plan-card li::before {
+    .plan-card li::before,
+    .option-card li::before {
       content: "";
       position: absolute;
       left: 0;
@@ -515,7 +518,7 @@
 
     .plans {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
       align-items: stretch;
     }
@@ -579,6 +582,8 @@
     }
 
     .plan-actions {
+      display: grid;
+      gap: 12px;
       margin-top: 14px;
     }
 
@@ -587,22 +592,25 @@
       min-height: 50px;
     }
 
-    .flow-card {
+    .option-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .option-card {
       height: 100%;
     }
 
-    .flow-number {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      margin-bottom: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: #fff;
-      font-size: 16px;
-      font-weight: 900;
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.20);
+    .option-note {
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: var(--radius-md);
+      background: #fff8eb;
+      border: 1px solid #f5d9a8;
+      font-size: 13px;
+      color: #6b4d17;
     }
 
     .case-card {
@@ -719,6 +727,7 @@
       .grid-3,
       .grid-2,
       .plans,
+      .option-grid,
       .policy-points {
         grid-template-columns: 1fr;
       }
@@ -796,7 +805,7 @@
     "@type": "ProfessionalService",
     "name": "小規模事業者向けホームページ制作",
     "url": "https://syasu-pixel.github.io/website-service/",
-    "description": "小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、Google登録補助にも対応。",
+    "description": "小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、独自ドメイン接続、Google設定補助にも対応。",
     "areaServed": "Japan",
     "serviceType": "ホームページ制作",
     "offers": [
@@ -810,12 +819,6 @@
         "@type": "Offer",
         "name": "標準プラン",
         "price": "88000",
-        "priceCurrency": "JPY"
-      },
-      {
-        "@type": "Offer",
-        "name": "Google設定補助込みプラン",
-        "price": "110000",
         "priceCurrency": "JPY"
       }
     ]
@@ -832,7 +835,7 @@
       <nav class="header-nav" aria-label="主要メニュー">
         <a class="nav-link" href="#service">できること</a>
         <a class="nav-link" href="#price">料金</a>
-        <a class="nav-link" href="#flow">制作の流れ</a>
+        <a class="nav-link" href="#options">オプション</a>
         <a class="nav-link" href="#contact">お問い合わせ</a>
       </nav>
     </div>
@@ -853,7 +856,7 @@
           <div class="hero-points">
             <div class="hero-point">スマホでも見やすい設計</div>
             <div class="hero-point">問い合わせ導線をわかりやすく整理</div>
-            <div class="hero-point">Google登録補助にも対応</div>
+            <div class="hero-point">独自ドメインやGoogle補助も対応</div>
           </div>
 
           <div class="cta-group">
@@ -992,12 +995,12 @@
           <article class="card service-card">
             <div class="card-body">
               <div class="service-icon">05</div>
-              <h3>Google向け基本設定</h3>
-              <p>検索に見つけてもらいやすくするための基本的な設定を行います。</p>
+              <h3>独自ドメイン接続相談</h3>
+              <p>本番公開用のURLを整えたい場合に、独自ドメイン接続の相談にも対応できます。</p>
               <ul>
-                <li>タイトル・説明文設定</li>
-                <li>OGP設定</li>
-                <li>基本的な構造整理</li>
+                <li>独自ドメイン接続案内</li>
+                <li>公開URLの整理</li>
+                <li>納品時の見え方調整</li>
               </ul>
             </div>
           </article>
@@ -1005,12 +1008,12 @@
           <article class="card service-card">
             <div class="card-body">
               <div class="service-icon">06</div>
-              <h3>Google登録補助</h3>
-              <p>必要に応じて、Googleビジネスプロフィールや検索向けの初期設定補助も対応します。</p>
+              <h3>あとから追加しやすい設計</h3>
+              <p>実績、FAQ、写真、Google補助なども後から足しやすい形で整えます。</p>
               <ul>
-                <li>初期入力の補助</li>
-                <li>公開時の設定案内</li>
-                <li>本人確認が必要な部分のサポート</li>
+                <li>ページ追加しやすい構成</li>
+                <li>文面差し替えしやすい設計</li>
+                <li>段階的な拡張に対応</li>
               </ul>
             </div>
           </article>
@@ -1058,10 +1061,10 @@
           <span class="section-kicker">PRICE</span>
           <h2 class="section-title">料金の目安</h2>
           <p class="section-lead">
-            内容やページ数、修正回数によって金額は変わります。まずは必要な内容を確認しながら、できるだけわかりやすくお見積りします。
+            まずはライトプランと標準プランをベースに選び、必要に応じてオプションを追加していく形がわかりやすいです。
           </p>
           <p class="section-lead" style="margin-top: 10px;">
-            各プランにはベースとなる見本サイトがあります。近い形を選んでいただき、そこから内容や見た目を調整していく進め方もできます。
+            ベース見本から近い形を選んでいただき、そこから内容や見た目を調整していく進め方もできます。
           </p>
         </div>
 
@@ -1081,7 +1084,7 @@
               </ul>
               <div class="plan-target">まずは名刺代わりになる会社HPを持ちたい方向けです。</div>
               <div class="plan-actions">
-                <a class="btn btn-secondary plan-link-btn" href="base-simple.html">このベースを見る</a>
+                <a class="btn btn-secondary plan-link-btn" href="base-simple.html">シンプル型を見る</a>
               </div>
             </div>
           </article>
@@ -1091,38 +1094,19 @@
               <span class="tag">いちばん選びやすい標準</span>
               <h3>標準プラン</h3>
               <p class="plan-price">88,000<span>円（税込）〜</span></p>
-              <p class="plan-note">仕事の依頼につながる形まで整えたい方向け</p>
+              <p class="plan-note">信頼感や問い合わせ導線までしっかり整えたい方向け</p>
               <ul>
                 <li>1〜3ページ</li>
                 <li>会社情報掲載</li>
                 <li>対応業務整理</li>
                 <li>お問い合わせフォーム設置</li>
                 <li>スマホ対応</li>
-                <li>Google向け基本設定</li>
                 <li>軽微な修正対応</li>
               </ul>
-              <div class="plan-target">仕事の依頼につながる形まで、ある程度しっかり整えたい方向けです。</div>
+              <div class="plan-target">会社としての見え方を整えつつ、仕事の依頼につながる形まで作りたい方向けです。</div>
               <div class="plan-actions">
-                <a class="btn btn-primary plan-link-btn" href="base-standard.html">このベースを見る</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card plan-card">
-            <div class="card-body">
-              <span class="tag">公開後の準備も進めたい方向け</span>
-              <h3>Google設定補助込み</h3>
-              <p class="plan-price">110,000<span>円（税込）〜</span></p>
-              <p class="plan-note">公開後の集客準備まで一緒に進めたい方向け</p>
-              <ul>
-                <li>標準プランの内容</li>
-                <li>Googleビジネスプロフィール初期設定補助</li>
-                <li>Google検索向け初期設定補助</li>
-                <li>公開時の設定サポート</li>
-              </ul>
-              <div class="plan-target">ホームページ公開後の検索・マップ準備までまとめて進めたい方向けです。</div>
-              <div class="plan-actions">
-                <a class="btn btn-secondary plan-link-btn" href="base-works.html">このベースを見る</a>
+                <a class="btn btn-primary plan-link-btn" href="base-standard.html">信頼感しっかり型を見る</a>
+                <a class="btn btn-secondary plan-link-btn" href="base-corporate.html">コーポレート型を見る</a>
               </div>
             </div>
           </article>
@@ -1130,62 +1114,44 @@
       </div>
     </section>
 
-    <section class="section" id="flow">
+    <section class="section" id="options">
       <div class="container">
         <div class="section-head">
-          <span class="section-kicker">FLOW</span>
-          <h2 class="section-title">制作の流れ</h2>
+          <span class="section-kicker">OPTION</span>
+          <h2 class="section-title">必要に応じて追加できるオプション</h2>
           <p class="section-lead">
-            内容がまだまとまっていない場合でも、相談しながら整理していけます。
+            ホームページ本体とは別に、公開後の整備やURLまわりを追加でサポートする形にもできます。
           </p>
         </div>
 
-        <div class="grid-3">
-          <article class="card flow-card">
+        <div class="option-grid">
+          <article class="card option-card">
             <div class="card-body">
-              <div class="flow-number">1</div>
-              <h3>ご相談</h3>
-              <p>どんなホームページにしたいかを確認します。業種や載せたい内容がまだ整理できていなくても大丈夫です。</p>
+              <span class="tag">検索・マップ向け</span>
+              <h3>Google設定補助</h3>
+              <p>ホームページ公開後に、Google検索やGoogleマップ向けの初期整備を進めたい方向けの追加対応です。</p>
+              <ul>
+                <li>Google検索向け初期設定補助</li>
+                <li>Googleビジネスプロフィール初期設定補助</li>
+                <li>基本情報の整理補助</li>
+                <li>公開後の動き出しサポート</li>
+              </ul>
+              <div class="option-note">デザインの型ではなく、ホームページ公開後の初期整備に近い追加対応として考えるのが自然です。</div>
             </div>
           </article>
 
-          <article class="card flow-card">
+          <article class="card option-card">
             <div class="card-body">
-              <div class="flow-number">2</div>
-              <h3>掲載内容の確認</h3>
-              <p>会社情報、仕事内容、問い合わせ先など、必要な内容を整理して、載せる内容を決めていきます。</p>
-            </div>
-          </article>
-
-          <article class="card flow-card">
-            <div class="card-body">
-              <div class="flow-number">3</div>
-              <h3>仮デザイン作成</h3>
-              <p>まずは見た目や流れがわかるように仮公開版を作成し、全体の方向性を確認していただきます。</p>
-            </div>
-          </article>
-
-          <article class="card flow-card">
-            <div class="card-body">
-              <div class="flow-number">4</div>
-              <h3>修正</h3>
-              <p>内容や見え方を確認していただき、必要な部分を調整します。わかりにくい部分もここで整えます。</p>
-            </div>
-          </article>
-
-          <article class="card flow-card">
-            <div class="card-body">
-              <div class="flow-number">5</div>
-              <h3>公開</h3>
-              <p>最終確認後に公開します。必要に応じて独自ドメイン接続や公開時の案内も対応します。</p>
-            </div>
-          </article>
-
-          <article class="card flow-card">
-            <div class="card-body">
-              <div class="flow-number">6</div>
-              <h3>公開後の初期サポート</h3>
-              <p>必要に応じてGoogle登録や軽微な調整など、公開直後の動き出しもサポートします。</p>
+              <span class="tag">公開まわり</span>
+              <h3>そのほか追加しやすい対応</h3>
+              <p>必要に応じて、本番公開や運用まわりで気になる部分を追加で整えられます。</p>
+              <ul>
+                <li>独自ドメイン接続設定</li>
+                <li>公開後の軽微修正</li>
+                <li>文章差し替え</li>
+                <li>写真や実績の追加</li>
+              </ul>
+              <div class="option-note">最初は本体を作り、必要なものだけ後から追加していく進め方にも向いています。</div>
             </div>
           </article>
         </div>
@@ -1242,6 +1208,11 @@
           </article>
 
           <article class="faq-item">
+            <div class="faq-q">Q. Googleマップへの登録も相談できますか？</div>
+            <div class="faq-a">はい。Googleビジネスプロフィールの初期設定補助も対応できます。本人確認が必要な部分は、お客様に操作をお願いする形になります。</div>
+          </article>
+
+          <article class="faq-item">
             <div class="faq-q">Q. 写真がなくても作れますか？</div>
             <div class="faq-a">はい、大丈夫です。まずは文字中心でわかりやすくまとめる形でも作成できます。あとから写真を追加していく形にも対応できます。</div>
           </article>
@@ -1249,11 +1220,6 @@
           <article class="faq-item">
             <div class="faq-q">Q. 内容がまだうまくまとまっていません。</div>
             <div class="faq-a">大丈夫です。相談しながら整理していく形で進められます。まずは会社情報や載せたい内容をわかる範囲で教えていただければ十分です。</div>
-          </article>
-
-          <article class="faq-item">
-            <div class="faq-q">Q. Googleマップへの登録も相談できますか？</div>
-            <div class="faq-a">はい。Googleビジネスプロフィールの初期設定補助も対応できます。本人確認が必要な部分は、お客様に操作をお願いする形になります。</div>
           </article>
         </div>
       </div>
@@ -1266,7 +1232,7 @@
             <span class="section-kicker">CONTACT</span>
             <h2 class="section-title">ホームページ制作のご相談はこちら</h2>
             <p class="section-lead">
-              「会社HPを作りたい」「今あるページを見やすくしたい」「Google検索やGoogleマップにも出るように整えたい」など、
+              「会社HPを作りたい」「今あるページを見やすくしたい」「独自ドメインやGoogle系の初期整備も相談したい」など、
               気になることがあればお気軽にご相談ください。
             </p>
           </div>
