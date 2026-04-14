@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>信頼感しっかり型ホームページの見本｜標準プラン向けベース構成</title>
+  <meta name="description" content="会社情報、対応業務、選ばれる理由、制作の流れ、お問い合わせ導線まで整理した、標準プラン向けのホームページ見本です。">
+  <meta name="robots" content="index,follow">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://syasu-pixel.github.io/website-service/base-standard.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="小規模事業者向けホームページ制作">
+  <meta property="og:title" content="信頼感しっかり型ホームページの見本｜標準プラン向けベース構成">
+  <meta property="og:description" content="会社情報、対応業務、選ばれる理由、制作の流れ、お問い合わせ導線まで整理した、標準プラン向けのホームページ見本です。">
+  <meta property="og:url" content="https://syasu-pixel.github.io/website-service/base-standard.html">
+  <meta property="og:image" content="https://example.com/assets/images/common/ogp.jpg">
+  <meta property="og:image:alt" content="信頼感しっかり型ホームページ見本のイメージ">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="信頼感しっかり型ホームページの見本｜標準プラン向けベース構成">
+  <meta name="twitter:description" content="会社情報、対応業務、選ばれる理由、制作の流れ、お問い合わせ導線まで整理した、標準プラン向けのホームページ見本です。">
+  <meta name="twitter:image" content="https://example.com/assets/images/common/ogp.jpg">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-soft: #f8fbff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe4f0;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #f59e0b;
+      --accent-dark: #d97706;
+      --success: #16a34a;
+      --shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.10), transparent 28%),
+        radial-gradient(circle at top left, rgba(245, 158, 11, 0.07), transparent 24%),
+        var(--bg);
+      line-height: 1.8;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(248, 250, 252, 0.82);
+      border-bottom: 1px solid rgba(219, 228, 240, 0.9);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .brand-label {
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-link {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 999px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .nav-link:hover {
+      border-color: #bfd2ff;
+      background: #fff;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 52px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-main,
+    .hero-side {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(219, 228, 240, 0.95);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main::before {
+      content: "";
+      position: absolute;
+      inset: auto -50px -50px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.14), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-side {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: space-between;
+    }
+
+    .side-card {
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+      border: 1px solid var(--line);
+    }
+
+    .side-card h2,
+    .side-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .side-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #e8f0ff;
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(30px, 4.2vw, 44px);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .hero-point {
+      padding: 14px 14px 13px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      min-height: 50px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.4;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: #bfd2ff;
+      background: #f8fbff;
+      transform: translateY(-1px);
+    }
+
+    .section {
+      padding: 28px 0;
+    }
+
+    .section-head {
+      margin-bottom: 20px;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 3.1vw, 34px);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    .section-lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      height: 100%;
+    }
+
+    .card-body {
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      line-height: 1.5;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      min-height: 32px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .point-list,
+    .check-list {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .point-list li,
+    .check-list li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .point-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--success);
+      font-weight: 900;
+    }
+
+    .reason-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reason-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    .info-box {
+      padding: 28px;
+      background: linear-gradient(180deg, #fff, #f7fbff);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .info-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .flow-step {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .flow-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      font-size: 16px;
+      font-weight: 900;
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.20);
+    }
+
+    .flow-step h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .flow-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta-band {
+      padding: 28px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #eff6ff, #fff8eb);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-band h2 {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 3vw, 32px);
+      line-height: 1.35;
+    }
+
+    .cta-band p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .contact-box {
+      padding: 30px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      border-radius: var(--radius-xl);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.22);
+    }
+
+    .contact-box .section-kicker,
+    .contact-box .section-title,
+    .contact-box .section-lead,
+    .contact-box p {
+      color: #fff;
+    }
+
+    .contact-box .section-lead {
+      opacity: 0.86;
+    }
+
+    .contact-box .btn-secondary {
+      background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(255, 255, 255, 0.22);
+      color: #fff;
+    }
+
+    .contact-box .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.32);
+    }
+
+    .back-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .site-footer {
+      padding: 22px 0 36px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-title {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .footer-text,
+    .footer-copy {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .hero-points,
+      .grid-3,
+      .grid-2,
+      .flow-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .brand {
+        align-items: flex-start;
+      }
+
+      .header-nav {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding-top: 24px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .card-body,
+      .info-box,
+      .cta-band,
+      .contact-box {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .section {
+        padding: 22px 0;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cta-group,
+      .back-links {
+        flex-direction: column;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .nav-link {
+        min-height: 40px;
+        font-size: 12px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "小規模事業者向けホームページ制作",
+    "url": "https://syasu-pixel.github.io/website-service/base-standard.html",
+    "description": "会社情報、対応業務、選ばれる理由、制作の流れ、お問い合わせ導線まで整理した、標準プラン向けのホームページ見本です。",
+    "areaServed": "Japan",
+    "serviceType": "ホームページ制作",
+    "offers": {
+      "@type": "Offer",
+      "name": "標準プラン向けベース構成",
+      "price": "88000",
+      "priceCurrency": "JPY"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="サービス案内トップへ戻る">
+        <span class="brand-label">STANDARD SAMPLE</span>
+        <span class="brand-name">標準プラン向けベース構成</span>
+      </a>
+      <nav class="header-nav" aria-label="主要メニュー">
+        <a class="nav-link" href="#overview">概要</a>
+        <a class="nav-link" href="#reasons">選ばれる理由</a>
+        <a class="nav-link" href="#flow">流れ</a>
+        <a class="nav-link" href="#contact">相談する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <span class="eyebrow">STANDARD PLAN SAMPLE</span>
+          <h1>信頼感をしっかり出しながら、<br>仕事につながるホームページを作りたい方向けの見本です。</h1>
+          <p class="hero-lead">
+            このベースは、会社情報や対応業務だけでなく、
+            選ばれる理由、仕事の流れ、よくある質問、お問い合わせ導線まで整理して、
+            初めて見る相手にも安心感を持ってもらいやすい構成です。
+          </p>
+
+          <div class="hero-points">
+            <div class="hero-point">会社の内容が伝わりやすい</div>
+            <div class="hero-point">依頼前の安心感を出しやすい</div>
+            <div class="hero-point">問い合わせにつなげやすい構成</div>
+          </div>
+
+          <div class="cta-group">
+            <a class="btn btn-primary" href="#contact">この形で相談する</a>
+            <a class="btn btn-secondary" href="index.html#price">料金ページに戻る</a>
+          </div>
+        </div>
+
+        <aside class="hero-side" aria-label="補足情報">
+          <div class="side-card">
+            <h2>こんな方に向いています</h2>
+            <ul class="check-list">
+              <li>ちゃんとした会社感を出したい</li>
+              <li>何を頼めるかを伝わりやすくしたい</li>
+              <li>初めての相手にも安心してもらいたい</li>
+              <li>問い合わせにつながる流れを作りたい</li>
+            </ul>
+          </div>
+
+          <div class="side-card">
+            <h3>このベースで入れやすい内容</h3>
+            <ul class="check-list">
+              <li>会社案内</li>
+              <li>対応業務</li>
+              <li>選ばれる理由</li>
+              <li>制作・対応の流れ</li>
+              <li>問い合わせ導線</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">OVERVIEW</span>
+          <h2 class="section-title">このベースが向いているケース</h2>
+          <p class="section-lead">
+            名刺代わりで終わらず、仕事の相談や依頼につながる流れまで考えたい場合に向いています。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">信頼感を出したい方</span>
+              <h3>初見でも安心してもらいやすい</h3>
+              <p>会社概要や対応内容だけでなく、選ばれる理由や流れを入れることで、印象がかなり変わります。</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">問い合わせにつなげたい方</span>
+              <h3>依頼前の不安を減らしやすい</h3>
+              <p>何をしている会社か、どう相談すればいいかが見えると、問い合わせのハードルが下がります。</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">小規模事業者向け</span>
+              <h3>情報を整理して見せたい</h3>
+              <p>ページ数を増やしすぎなくても、構成を整えるだけで見やすさと信頼感はかなり上げられます。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reasons">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">REASONS</span>
+          <h2 class="section-title">この形で入れると効果が出やすい項目</h2>
+          <p class="section-lead">
+            会社案内や業務内容だけより、見た人が判断しやすい情報を少し足すことで、相談しやすさがかなり上がります。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card reason-card">
+            <div class="card-body">
+              <h3>選ばれる理由</h3>
+              <p>対応の丁寧さ、業種への理解、スピード感、柔軟さなどを整理して伝えやすいです。</p>
+              <ul class="point-list">
+                <li>安心感を出しやすい</li>
+                <li>違いが伝わりやすい</li>
+                <li>他社との比較材料になる</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reason-card">
+            <div class="card-body">
+              <h3>仕事の流れ</h3>
+              <p>相談から対応までの流れが見えると、初めての相手でも問い合わせしやすくなります。</p>
+              <ul class="point-list">
+                <li>相談前の不安を減らせる</li>
+                <li>やり取りを想像しやすい</li>
+                <li>依頼のしやすさにつながる</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reason-card">
+            <div class="card-body">
+              <h3>よくある質問</h3>
+              <p>料金感や対応範囲、写真の有無、連絡方法などを入れておくと、やり取りがスムーズになります。</p>
+              <ul class="point-list">
+                <li>事前説明の負担が減る</li>
+                <li>問い合わせ精度が上がる</li>
+                <li>安心感が出しやすい</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">載せる内容の例</span>
+              <h3>このベースで整理しやすい情報</h3>
+              <ul class="point-list">
+                <li>会社概要</li>
+                <li>対応業務</li>
+                <li>強み・特徴</li>
+                <li>選ばれる理由</li>
+                <li>依頼の流れ</li>
+                <li>よくある質問</li>
+                <li>お問い合わせ導線</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">向いている業種</span>
+              <h3>相性がいい使い方</h3>
+              <ul class="point-list">
+                <li>工事業・設備業</li>
+                <li>法人向けサービス業</li>
+                <li>地域密着の事業</li>
+                <li>紹介だけでなく新規相談も増やしたい会社</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="info-box">
+          <div class="section-head">
+            <span class="section-kicker">POINT</span>
+            <h2 class="section-title">標準プランは「見せ方の整理」でかなり差が出ます</h2>
+            <p class="section-lead">
+              情報量を少し増やしても、並べ方と導線を整えれば見づらくはなりません。
+            </p>
+          </div>
+          <p>
+            このベースは、会社としての見え方をしっかり整えながら、
+            見た人が「ここなら相談してみてもいいかも」と感じやすい流れを作るための構成です。
+            小規模事業者でも、必要な情報を丁寧に見せるだけで、かなり印象が良くなります。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="flow">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">FLOW</span>
+          <h2 class="section-title">このベースで作る時の流れ</h2>
+          <p class="section-lead">
+            ヒアリングしながら内容を整理していけば、信頼感のあるページ構成にしやすいです。
+          </p>
+        </div>
+
+        <div class="flow-grid">
+          <article class="flow-step">
+            <div class="flow-number">1</div>
+            <h3>掲載内容を整理</h3>
+            <p>会社情報、仕事内容、強み、連絡方法など、見せたい内容を整理します。</p>
+          </article>
+
+          <article class="flow-step">
+            <div class="flow-number">2</div>
+            <h3>見せ方を整える</h3>
+            <p>見た人が迷わないように、順番や導線を整えていきます。</p>
+          </article>
+
+          <article class="flow-step">
+            <div class="flow-number">3</div>
+            <h3>問い合わせにつなげる</h3>
+            <p>よくある不安を減らしながら、相談しやすい形を作ります。</p>
+          </article>
+
+          <article class="flow-step">
+            <div class="flow-number">4</div>
+            <h3>公開後も調整しやすい</h3>
+            <p>必要に応じてFAQや実績などを後から追加しやすい構成です。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>「ちゃんとして見える会社HP」にしたいなら、この型が使いやすいです。</h2>
+          <p>
+            シンプルすぎず、でも重くなりすぎない範囲で、
+            会社の内容と問い合わせ導線をしっかり整えたい場合に向いています。
+          </p>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="#contact">この形で相談する</a>
+            <a class="btn btn-secondary" href="index.html#price">料金一覧へ戻る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="section-head">
+            <span class="section-kicker">CONTACT</span>
+            <h2 class="section-title">この標準型をベースに相談できます</h2>
+            <p class="section-lead">
+              会社としての見え方を整えつつ、問い合わせにつながる流れまで作りたい場合に向いています。
+            </p>
+          </div>
+
+          <p>
+            実際の業種や載せたい内容に合わせて、文言や見せ方は調整できます。
+            まずは信頼感のあるホームページを作りたい場合は、このベースをもとに相談いただけます。
+          </p>
+
+          <div class="cta-group">
+            <a class="btn btn-primary" href="mailto:yourmail@example.com?subject=標準プランの相談">この形で問い合わせる</a>
+            <a class="btn btn-secondary" href="index.html#price">料金一覧に戻る</a>
+          </div>
+
+          <div class="back-links">
+            <a class="btn btn-secondary" href="base-simple.html">ライトプランの見本を見る</a>
+            <a class="btn btn-secondary" href="base-works.html">Google設定補助込みの見本を見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">標準プラン向けベース構成</div>
+        <div class="footer-text">会社情報、対応業務、選ばれる理由、流れ、お問い合わせ導線まで整理した見本ページです。</div>
+      </div>
+      <div class="footer-copy">© 2026 Small Business Web.</div>
+    </div>
+  </footer>
+</body>
+</html>
