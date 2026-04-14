@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小規模事業者向けホームページ制作｜見やすく、仕事につながる会社HPを作ります</title>
+  <meta name="description" content="小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、Google登録補助にも対応。">
+  <meta name="robots" content="index,follow">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://example.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="小規模事業者向けホームページ制作">
+  <meta property="og:title" content="小規模事業者向けホームページ制作｜見やすく、仕事につながる会社HPを作ります">
+  <meta property="og:description" content="小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、Google登録補助にも対応。">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/assets/images/common/ogp.jpg">
+  <meta property="og:image:alt" content="小規模事業者向けホームページ制作の案内ページ">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="小規模事業者向けホームページ制作｜見やすく、仕事につながる会社HPを作ります">
+  <meta name="twitter:description" content="小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、Google登録補助にも対応。">
+  <meta name="twitter:image" content="https://example.com/assets/images/common/ogp.jpg">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-soft: #eef4ff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe4f0;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #f59e0b;
+      --accent-dark: #d97706;
+      --success: #16a34a;
+      --shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.10), transparent 28%),
+        radial-gradient(circle at top left, rgba(245, 158, 11, 0.08), transparent 24%),
+        var(--bg);
+      line-height: 1.8;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(248, 250, 252, 0.82);
+      border-bottom: 1px solid rgba(219, 228, 240, 0.85);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .brand-label {
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-link {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 999px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .nav-link:hover {
+      border-color: #bfd2ff;
+      background: #fff;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 54px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-main,
+    .hero-side {
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(219, 228, 240, 0.95);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main::before {
+      content: "";
+      position: absolute;
+      inset: auto -50px -50px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.16), transparent 70%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #e8f0ff;
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(30px, 4.5vw, 48px);
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .hero-point {
+      padding: 14px 14px 13px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      min-height: 50px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.4;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: #bfd2ff;
+      background: #f8fbff;
+      transform: translateY(-1px);
+    }
+
+    .hero-side {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .hero-card {
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+      border: 1px solid var(--line);
+    }
+
+    .hero-card h2,
+    .hero-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 26px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.7;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--success);
+      font-weight: 900;
+    }
+
+    .section {
+      padding: 28px 0;
+    }
+
+    .section-head {
+      margin-bottom: 20px;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 3.2vw, 34px);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    .section-lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .card-body {
+      padding: 24px;
+    }
+
+    .recommend-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .recommend-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    .recommend-card h3,
+    .service-card h3,
+    .flow-card h3,
+    .faq-item h3,
+    .plan-card h3,
+    .case-card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      line-height: 1.5;
+    }
+
+    .recommend-card p,
+    .service-card p,
+    .flow-card p,
+    .faq-item p,
+    .plan-card p,
+    .case-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      min-height: 32px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .service-card {
+      height: 100%;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #e9f1ff, #fff4db);
+      color: var(--primary-dark);
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .service-card ul,
+    .plan-card ul {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .service-card li,
+    .plan-card li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .service-card li::before,
+    .plan-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .policy-box {
+      padding: 28px;
+      background: linear-gradient(180deg, #fff, #f7fbff);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .policy-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .policy-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .policy-point {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .policy-point strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .policy-point span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .plan-card {
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .plan-card.featured {
+      border-color: #b9d0ff;
+      transform: translateY(-4px);
+    }
+
+    .plan-card.featured::before {
+      content: "おすすめ";
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      min-height: 28px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .plan-price {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .plan-price span {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .plan-note {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .plan-target {
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: var(--radius-md);
+      background: #f8fbff;
+      border: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .flow-card {
+      height: 100%;
+    }
+
+    .flow-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      font-size: 16px;
+      font-weight: 900;
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.20);
+    }
+
+    .case-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .case-badge {
+      min-width: 108px;
+      min-height: 108px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 16px;
+      background: linear-gradient(135deg, #eaf1ff, #fff5df);
+      color: var(--primary-dark);
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.5;
+      border: 1px solid #d8e5ff;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .faq-q {
+      padding: 20px 22px 8px;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.6;
+    }
+
+    .faq-a {
+      padding: 0 22px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-box {
+      padding: 30px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      border-radius: var(--radius-xl);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.22);
+    }
+
+    .contact-box .section-kicker,
+    .contact-box .section-title,
+    .contact-box .section-lead,
+    .contact-box p {
+      color: #fff;
+    }
+
+    .contact-box .section-lead {
+      opacity: 0.86;
+    }
+
+    .contact-box .cta-group {
+      margin-top: 22px;
+    }
+
+    .contact-box .btn-secondary {
+      background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(255, 255, 255, 0.22);
+      color: #fff;
+    }
+
+    .contact-box .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.32);
+    }
+
+    .site-footer {
+      padding: 22px 0 36px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-title {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .footer-text,
+    .footer-copy {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-3,
+      .grid-2,
+      .plans,
+      .policy-points {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      .case-card {
+        grid-template-columns: 1fr;
+      }
+
+      .plan-card.featured {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .brand {
+        align-items: flex-start;
+      }
+
+      .header-nav {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding-top: 24px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .card-body,
+      .policy-box,
+      .contact-box {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .section {
+        padding: 22px 0;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cta-group {
+        flex-direction: column;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .nav-link {
+        min-height: 40px;
+        font-size: 12px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "小規模事業者向けホームページ制作",
+    "url": "https://example.com/",
+    "description": "小さな会社・個人事業向けに、見やすくわかりやすいホームページを作成します。スマホ対応、お問い合わせフォーム設置、Google登録補助にも対応。",
+    "areaServed": "Japan",
+    "serviceType": "ホームページ制作",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "ライトプラン",
+        "price": "55000",
+        "priceCurrency": "JPY"
+      },
+      {
+        "@type": "Offer",
+        "name": "標準プラン",
+        "price": "88000",
+        "priceCurrency": "JPY"
+      },
+      {
+        "@type": "Offer",
+        "name": "Google設定補助込みプラン",
+        "price": "110000",
+        "priceCurrency": "JPY"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="トップへ戻る">
+        <span class="brand-label">SMALL BUSINESS WEB</span>
+        <span class="brand-name">小規模事業者向けホームページ制作</span>
+      </a>
+      <nav class="header-nav" aria-label="主要メニュー">
+        <a class="nav-link" href="#service">できること</a>
+        <a class="nav-link" href="#price">料金</a>
+        <a class="nav-link" href="#flow">制作の流れ</a>
+        <a class="nav-link" href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <span class="eyebrow">見やすく、わかりやすく、仕事につながる形へ</span>
+          <h1>小さな会社・個人事業向けに、<br>わかりやすいホームページを作ります。</h1>
+          <p class="hero-lead">
+            会社のことや対応できる仕事、お問い合わせ方法がきちんと伝わるホームページがあるだけでも、
+            相手に与える印象はかなり変わります。難しすぎる構成や大げさなデザインではなく、
+            見やすくて、仕事につながりやすいシンプルな会社HPを作ります。
+          </p>
+
+          <div class="hero-points">
+            <div class="hero-point">スマホでも見やすい設計</div>
+            <div class="hero-point">問い合わせ導線をわかりやすく整理</div>
+            <div class="hero-point">Google登録補助にも対応</div>
+          </div>
+
+          <div class="cta-group">
+            <a class="btn btn-primary" href="#contact">お問い合わせはこちら</a>
+            <a class="btn btn-secondary" href="#price">料金の目安を見る</a>
+          </div>
+        </div>
+
+        <aside class="hero-side" aria-label="サービスの特徴">
+          <div class="hero-card">
+            <h2>こんな方に向いています</h2>
+            <p>難しすぎる制作会社ではなく、まずはちょうどいい形で会社HPを持ちたい方向けです。</p>
+            <ul class="check-list">
+              <li>会社HPがまだない</li>
+              <li>名刺に載せるURLがほしい</li>
+              <li>何をしている会社か伝わるページがほしい</li>
+              <li>フォームから問い合わせを受けたい</li>
+            </ul>
+          </div>
+
+          <div class="hero-card">
+            <h3>対応内容</h3>
+            <ul class="check-list">
+              <li>会社案内ページ作成</li>
+              <li>対応業務の整理</li>
+              <li>お問い合わせフォーム設置</li>
+              <li>独自ドメイン接続の相談</li>
+              <li>Google向け初期設定補助</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="recommend">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">FOR YOU</span>
+          <h2 class="section-title">こんな方におすすめです</h2>
+          <p class="section-lead">
+            まずは会社の情報がきちんと伝わるページを持ちたい方、見積もりしやすく相談しやすい相手を探している方向けです。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card recommend-card">
+            <div class="card-body">
+              <span class="tag">会社HPがまだない方</span>
+              <h3>名刺代わりになるホームページがほしい</h3>
+              <p>会社名、住所、仕事内容、連絡先などを、見やすく整理して掲載したい方向けです。</p>
+            </div>
+          </article>
+
+          <article class="card recommend-card">
+            <div class="card-body">
+              <span class="tag">仕事につなげたい方</span>
+              <h3>お問い合わせしやすい形に整えたい</h3>
+              <p>電話だけでなくフォーム導線も用意し、依頼や相談につながりやすい形へ整えます。</p>
+            </div>
+          </article>
+
+          <article class="card recommend-card">
+            <div class="card-body">
+              <span class="tag">小さな会社・個人事業向け</span>
+              <h3>高すぎる制作は避けたい</h3>
+              <p>必要以上に複雑な仕組みを入れず、まずは仕事で使いやすいHPを作りたい方に向いています。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="service">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">SERVICE</span>
+          <h2 class="section-title">できること</h2>
+          <p class="section-lead">
+            見た目だけではなく、会社情報や仕事内容、お問い合わせ方法がきちんと伝わることを大事にしています。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card service-card">
+            <div class="card-body">
+              <div class="service-icon">01</div>
+              <h3>会社案内ページ作成</h3>
+              <p>会社名、所在地、連絡先、対応エリアなどを整理して掲載します。</p>
+              <ul>
+                <li>会社情報の整理</li>
+                <li>事業内容の掲載</li>
+                <li>連絡先の掲載</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="card-body">
+              <div class="service-icon">02</div>
+              <h3>対応業務の整理</h3>
+              <p>何を依頼できる会社なのかがわかりやすいように、仕事内容をまとめます。</p>
+              <ul>
+                <li>対応できる工事や業務の整理</li>
+                <li>依頼しやすい文面へ調整</li>
+                <li>強みの見せ方を整理</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="card-body">
+              <div class="service-icon">03</div>
+              <h3>お問い合わせフォーム設置</h3>
+              <p>電話だけでなく、フォームからも相談しやすい形にできます。</p>
+              <ul>
+                <li>問い合わせ項目の設定</li>
+                <li>メール受信先の接続</li>
+                <li>導線の見やすさ調整</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="card-body">
+              <div class="service-icon">04</div>
+              <h3>スマホ対応</h3>
+              <p>スマホで見た時にも、文字が読みやすくボタンが押しやすい構成に整えます。</p>
+              <ul>
+                <li>文字サイズの調整</li>
+                <li>余白や行間の調整</li>
+                <li>ボタン配置の最適化</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="card-body">
+              <div class="service-icon">05</div>
+              <h3>Google向け基本設定</h3>
+              <p>検索に見つけてもらいやすくするための基本的な設定を行います。</p>
+              <ul>
+                <li>タイトル・説明文設定</li>
+                <li>OGP設定</li>
+                <li>基本的な構造整理</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="card-body">
+              <div class="service-icon">06</div>
+              <h3>Google登録補助</h3>
+              <p>必要に応じて、Googleビジネスプロフィールや検索向けの初期設定補助も対応します。</p>
+              <ul>
+                <li>初期入力の補助</li>
+                <li>公開時の設定案内</li>
+                <li>本人確認が必要な部分のサポート</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy">
+      <div class="container">
+        <div class="policy-box">
+          <div class="section-head">
+            <span class="section-kicker">POLICY</span>
+            <h2 class="section-title">大げさすぎず、仕事につながりやすい形を意識しています</h2>
+            <p class="section-lead">
+              見た目だけを派手にするのではなく、「どんな会社か」「何を頼めるのか」「どう連絡すればいいか」が伝わることを大事にしています。
+            </p>
+          </div>
+
+          <p>
+            小さな会社や個人事業のホームページは、情報が整理されていて見やすいだけでも十分に印象が良くなります。
+            必要以上に難しい仕組みを入れず、まずは仕事に使いやすい形で整えることを重視しています。
+          </p>
+
+          <div class="policy-points">
+            <div class="policy-point">
+              <strong>わかりやすさ重視</strong>
+              <span>専門用語ばかりにならないように、見た人が内容を理解しやすい形に整えます。</span>
+            </div>
+            <div class="policy-point">
+              <strong>相談しやすい導線</strong>
+              <span>問い合わせまでの流れがわかりやすいと、仕事の相談につながりやすくなります。</span>
+            </div>
+            <div class="policy-point">
+              <strong>ちょうどいい価格感</strong>
+              <span>小規模事業者が頼みやすい範囲で、必要な内容をしっかり整理して制作します。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="price">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">PRICE</span>
+          <h2 class="section-title">料金の目安</h2>
+          <p class="section-lead">
+            内容やページ数、修正回数によって金額は変わります。まずは必要な内容を確認しながら、できるだけわかりやすくお見積りします。
+          </p>
+        </div>
+
+        <div class="plans">
+          <article class="card plan-card">
+            <div class="card-body">
+              <span class="tag">まずは形にしたい方向け</span>
+              <h3>ライトプラン</h3>
+              <p class="plan-price">55,000<span>円（税込）〜</span></p>
+              <p class="plan-note">1ページ完結のシンプルな会社HP</p>
+              <ul>
+                <li>1ページ完結</li>
+                <li>会社情報掲載</li>
+                <li>対応業務掲載</li>
+                <li>お問い合わせ導線設置</li>
+                <li>スマホ対応</li>
+              </ul>
+              <div class="plan-target">まずは名刺代わりになる会社HPを持ちたい方向けです。</div>
+            </div>
+          </article>
+
+          <article class="card plan-card featured">
+            <div class="card-body">
+              <span class="tag">いちばん選びやすい標準</span>
+              <h3>標準プラン</h3>
+              <p class="plan-price">88,000<span>円（税込）〜</span></p>
+              <p class="plan-note">仕事の依頼につながる形まで整えたい方向け</p>
+              <ul>
+                <li>1〜3ページ</li>
+                <li>会社情報掲載</li>
+                <li>対応業務整理</li>
+                <li>お問い合わせフォーム設置</li>
+                <li>スマホ対応</li>
+                <li>Google向け基本設定</li>
+                <li>軽微な修正対応</li>
+              </ul>
+              <div class="plan-target">仕事の依頼につながる形まで、ある程度しっかり整えたい方向けです。</div>
+            </div>
+          </article>
+
+          <article class="card plan-card">
+            <div class="card-body">
+              <span class="tag">公開後の準備も進めたい方向け</span>
+              <h3>Google設定補助込み</h3>
+              <p class="plan-price">110,000<span>円（税込）〜</span></p>
+              <p class="plan-note">公開後の集客準備まで一緒に進めたい方向け</p>
+              <ul>
+                <li>標準プランの内容</li>
+                <li>Googleビジネスプロフィール初期設定補助</li>
+                <li>Google検索向け初期設定補助</li>
+                <li>公開時の設定サポート</li>
+              </ul>
+              <div class="plan-target">ホームページ公開後の検索・マップ準備までまとめて進めたい方向けです。</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="flow">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">FLOW</span>
+          <h2 class="section-title">制作の流れ</h2>
+          <p class="section-lead">
+            内容がまだまとまっていない場合でも、相談しながら整理していけます。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card flow-card">
+            <div class="card-body">
+              <div class="flow-number">1</div>
+              <h3>ご相談</h3>
+              <p>どんなホームページにしたいかを確認します。業種や載せたい内容がまだ整理できていなくても大丈夫です。</p>
+            </div>
+          </article>
+
+          <article class="card flow-card">
+            <div class="card-body">
+              <div class="flow-number">2</div>
+              <h3>掲載内容の確認</h3>
+              <p>会社情報、仕事内容、問い合わせ先など、必要な内容を整理して、載せる内容を決めていきます。</p>
+            </div>
+          </article>
+
+          <article class="card flow-card">
+            <div class="card-body">
+              <div class="flow-number">3</div>
+              <h3>仮デザイン作成</h3>
+              <p>まずは見た目や流れがわかるように仮公開版を作成し、全体の方向性を確認していただきます。</p>
+            </div>
+          </article>
+
+          <article class="card flow-card">
+            <div class="card-body">
+              <div class="flow-number">4</div>
+              <h3>修正</h3>
+              <p>内容や見え方を確認していただき、必要な部分を調整します。わかりにくい部分もここで整えます。</p>
+            </div>
+          </article>
+
+          <article class="card flow-card">
+            <div class="card-body">
+              <div class="flow-number">5</div>
+              <h3>公開</h3>
+              <p>最終確認後に公開します。必要に応じて独自ドメイン接続や公開時の案内も対応します。</p>
+            </div>
+          </article>
+
+          <article class="card flow-card">
+            <div class="card-body">
+              <div class="flow-number">6</div>
+              <h3>公開後の初期サポート</h3>
+              <p>必要に応じてGoogle登録や軽微な調整など、公開直後の動き出しもサポートします。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">WORKS</span>
+          <h2 class="section-title">制作例</h2>
+          <p class="section-lead">
+            自社ホームページの制作・調整も行いながら、小規模事業者向けに見やすく仕事につながりやすい形を意識して作成しています。
+          </p>
+        </div>
+
+        <article class="card case-card">
+          <div class="card-body">
+            <span class="tag">制作実績の見せ方例</span>
+            <h3>自社ホームページを実際の制作例として案内できます</h3>
+            <p>
+              会社案内、対応業務、問い合わせ導線、スマホでの見やすさなど、
+              小規模事業者に必要な要素を整理した実例として見せられます。
+              今後、制作事例が増えたらここに順次追加していく形にもできます。
+            </p>
+            <div class="cta-group">
+              <a class="btn btn-primary" href="#" aria-label="制作例を見る">制作例を見る</a>
+            </div>
+          </div>
+          <div class="case-badge">見やすさ<br>スマホ対応<br>問い合わせ導線</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">FAQ</span>
+          <h2 class="section-title">よくある質問</h2>
+          <p class="section-lead">
+            初めてホームページを作る方でも進めやすいように、よくある内容をまとめています。
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <div class="faq-q">Q. メールアドレスは今使っているもので大丈夫ですか？</div>
+            <div class="faq-a">はい、大丈夫です。最初は今使っているメールアドレスをそのまま問い合わせ先として使う形でも問題ありません。</div>
+          </article>
+
+          <article class="faq-item">
+            <div class="faq-q">Q. 独自ドメインは必要ですか？</div>
+            <div class="faq-a">必須ではありませんが、会社HPとして見せるなら独自ドメインがあると信頼感が出やすいです。必要であれば、取得後の接続設定も対応できます。</div>
+          </article>
+
+          <article class="faq-item">
+            <div class="faq-q">Q. 写真がなくても作れますか？</div>
+            <div class="faq-a">はい、大丈夫です。まずは文字中心でわかりやすくまとめる形でも作成できます。あとから写真を追加していく形にも対応できます。</div>
+          </article>
+
+          <article class="faq-item">
+            <div class="faq-q">Q. 内容がまだうまくまとまっていません。</div>
+            <div class="faq-a">大丈夫です。相談しながら整理していく形で進められます。まずは会社情報や載せたい内容をわかる範囲で教えていただければ十分です。</div>
+          </article>
+
+          <article class="faq-item">
+            <div class="faq-q">Q. Googleマップへの登録も相談できますか？</div>
+            <div class="faq-a">はい。Googleビジネスプロフィールの初期設定補助も対応できます。本人確認が必要な部分は、お客様に操作をお願いする形になります。</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="section-head">
+            <span class="section-kicker">CONTACT</span>
+            <h2 class="section-title">ホームページ制作のご相談はこちら</h2>
+            <p class="section-lead">
+              「会社HPを作りたい」「今あるページを見やすくしたい」「Google検索やGoogleマップにも出るように整えたい」など、
+              気になることがあればお気軽にご相談ください。
+            </p>
+          </div>
+
+          <p>
+            業種や規模に合わせて、必要な内容を整理しながら進めます。
+            まだ内容がはっきり決まっていない段階でも大丈夫です。
+          </p>
+
+          <div class="cta-group">
+            <a class="btn btn-primary" href="mailto:yourmail@example.com">メールで問い合わせる</a>
+            <a class="btn btn-secondary" href="#price">料金の目安をもう一度見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">小規模事業者向けホームページ制作</div>
+        <div class="footer-text">見やすく、わかりやすく、仕事につながる会社HPづくりをお手伝いします。</div>
+      </div>
+      <div class="footer-copy">© 2026 Small Business Web.</div>
+    </div>
+  </footer>
+</body>
+</html>
