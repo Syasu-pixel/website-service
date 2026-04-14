@@ -86,9 +86,12 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      backdrop-filter: blur(8px);
-      background: rgba(244, 248, 252, 0.92);
-      border-bottom: 1px solid rgba(215, 227, 240, 0.9);
+      backdrop-filter: blur(10px);
+      background:
+        linear-gradient(90deg, rgba(234, 243, 255, 0.88), rgba(244, 248, 252, 0.86)),
+        rgba(244, 248, 252, 0.86);
+      border-bottom: 1px solid rgba(180, 201, 230, 0.82);
+      box-shadow: 0 4px 14px rgba(16, 34, 61, 0.08);
     }
 
     .header-inner {
@@ -183,9 +186,9 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(135deg, rgba(255,255,255,0.90), rgba(247,251,255,0.76)),
+        linear-gradient(135deg, rgba(255,255,255,0.78), rgba(247,251,255,0.66)),
         url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat;
-      opacity: 0.18;
+      opacity: 0.42;
       pointer-events: none;
     }
 
@@ -208,8 +211,13 @@
     h1 {
       margin: 0 0 14px;
       font-size: clamp(29px, 4.2vw, 44px);
-      line-height: 1.2;
+      line-height: 1.26;
       letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
+
+    .hero-line {
+      display: block;
     }
 
     .hero-copy {
@@ -357,6 +365,45 @@
       box-shadow: 0 10px 24px rgba(16, 34, 61, 0.06);
     }
 
+    .section-visual {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(160deg, rgba(239, 247, 255, 0.86), rgba(255, 255, 255, 0.96));
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 12px;
+    }
+
+    .section-visual img {
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .accent-panel {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .accent-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 88% 14%, rgba(30, 91, 183, 0.11), transparent 33%),
+        radial-gradient(circle at 10% 82%, rgba(43, 123, 228, 0.08), transparent 36%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .accent-panel > * {
+      position: relative;
+      z-index: 1;
+    }
+
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -376,6 +423,25 @@
       border-radius: var(--radius-md);
       border: 1px solid var(--line);
       background: var(--surface-soft);
+    }
+
+    .service-item,
+    .strength-item {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.98), rgba(247,251,255,0.9));
+    }
+
+    .card-thumb {
+      margin: 0 0 12px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #d8e6f4;
+    }
+
+    .card-thumb img {
+      height: 130px;
+      object-fit: cover;
+      border-radius: 0;
     }
 
     h3 {
@@ -612,6 +678,15 @@
         padding: 20px;
       }
 
+      .section-visual {
+        grid-template-columns: 1fr;
+      }
+
+      .section-visual img,
+      .card-thumb img {
+        height: 150px;
+      }
+
       .hero-cta {
         flex-direction: column;
       }
@@ -679,7 +754,7 @@
       <div class="container hero-grid">
         <div class="hero-main">
           <p class="eyebrow">製造業・設備保全部門向けの加工パートナー</p>
-          <h1 id="hero-title">図面支給案件から継続生産まで。<br>精密加工を、実務に強い体制で。</h1>
+          <h1 id="hero-title"><span class="hero-line">図面支給案件から継続生産まで。</span><span class="hero-line">精密加工を、実務に強い体制で。</span></h1>
           <p class="hero-copy">旭東精機株式会社は、機械加工・精密部品製作・設備部品対応を主軸に、法人のお客様向けに加工サービスを提供する架空会社ホームページ見本です。試作段階の検討、治具・交換部品の手配、量産立ち上げ支援まで、現場の工程に合わせた提案で調達負荷を抑えます。</p>
 
           <div class="hero-points">
@@ -708,7 +783,7 @@
             <h2>法人担当者様へ</h2>
             <p>図面支給案件、仕様変更が発生する試作案件、既存設備の改修向け部品製作など、技術窓口と調達窓口の双方が扱いやすい情報整理を心がけています。</p>
             <div class="hero-photo">
-              <img src="https://images.unsplash.com/photo-1565439518243-7f2b0fe3f4a0?auto=format&fit=crop&w=1200&q=80" alt="マシニングセンタで加工を行う工場内の様子（仮画像）" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80" alt="マシニングセンタで加工を行う工場内の様子（仮画像）" loading="lazy">
             </div>
           </div>
 
@@ -729,7 +804,7 @@
         <h2 class="section-title" id="company-title">会社紹介 / メッセージ</h2>
         <p class="section-lead">旭東精機株式会社は、加工現場で必要とされる「品質」「納期」「相談のしやすさ」のバランスを重視し、法人取引に適した標準化された進行管理で部品調達を支援します。初めてのお取引でも、技術仕様・検査基準・納入条件を段階的にすり合わせるため、業務負担を最小化しながら継続しやすい体制づくりを進めます。</p>
 
-        <div class="panel grid-2">
+        <div class="panel grid-2 accent-panel">
           <div>
             <h3>私たちが大切にすること</h3>
             <p>単に加工を請け負うだけでなく、後工程での組付性や保守性を踏まえた提案を行うことを基本方針としています。図面通りの製作を前提にしつつ、加工可否やコスト・納期に影響する要素は早い段階で共有し、判断材料を明確にします。品質要求が高い案件でも、検査項目の定義と記録フォーマットを統一し、安定した運用を目指します。</p>
@@ -747,7 +822,12 @@
         <h2 class="section-title" id="services-title">対応内容</h2>
         <p class="section-lead">用途・数量・納期に応じて、下記のような加工と進行管理に対応します。図面支給案件を中心に、仕様確認〜納入までを一貫してサポートします。</p>
 
-        <div class="panel grid-3">
+        <div class="section-visual" aria-label="対応内容のイメージ写真">
+          <img src="https://images.unsplash.com/photo-1565715101847-3a2f0c8f0d7f?auto=format&fit=crop&w=1300&q=80" alt="切削加工機の主軸周辺の様子（仮画像）" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80" alt="加工済み金属部品を点検する様子（仮画像）" loading="lazy">
+        </div>
+
+        <div class="panel grid-3 accent-panel">
           <article class="service-item">
             <h3>精密部品加工</h3>
             <p>マシニング、旋盤、穴加工、ねじ加工などを組み合わせ、要求公差に応じた工程設計で対応します。重要寸法は検査記録を残し、再発注時の再現性を確保します。</p>
@@ -779,6 +859,9 @@
           </article>
 
           <article class="service-item">
+            <figure class="card-thumb">
+              <img src="https://images.unsplash.com/photo-1581092919535-7146ff1a5902?auto=format&fit=crop&w=900&q=80" alt="加工設備で金属加工を行う様子（仮画像）" loading="lazy">
+            </figure>
             <h3>設備部品対応</h3>
             <p>既設設備の交換部品・補修部品・改造部品に対応し、生産停止時間の最小化を支援。現物参照が必要な案件も、仕様確認の上で柔軟に進めます。</p>
             <ul class="list-check">
@@ -816,8 +899,11 @@
         <h2 class="section-title" id="strengths-title">旭東精機の強み</h2>
         <p class="section-lead">「品質管理」「納期対応」「加工相談」「継続取引のしやすさ」を軸に、企業間取引で必要な安心感を整えています。</p>
 
-        <div class="panel grid-2">
+        <div class="panel grid-2 accent-panel">
           <article class="strength-item">
+            <figure class="card-thumb">
+              <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=900&q=80" alt="寸法測定器で部品を検査する様子（仮画像）" loading="lazy">
+            </figure>
             <h3>品質管理</h3>
             <p>受注時の仕様確認から出荷前検査まで、案件ごとにチェック項目を明文化。重要寸法は記録を残し、継続案件での品質のばらつきを抑制します。</p>
           </article>
