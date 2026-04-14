@@ -1,875 +1,1830 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>旭東精機株式会社 | 機械加工・精密部品製作・設備部品対応</title>
-  <meta name="description" content="旭東精機株式会社は、精密部品加工、試作、小ロット〜量産、設備部品、図面支給案件に対応する法人向け加工会社です。品質と納期を両立し、継続取引しやすい体制で支援します。">
-  <meta name="robots" content="index,follow">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="theme-color" content="#0f2747">
-  <link rel="canonical" href="https://syasu-pixel.github.io/website-service/base-standard.html">
+diff --git a/base-standard.html b/base-standard.html
+index 73f9f392f916b78a6d1d4f576f0e25a1123bc68a..a997f8e8fe250a958cbb9052edce71ce181cc641 100644
+--- a/base-standard.html
++++ b/base-standard.html
+@@ -1,964 +1,875 @@
+-<!DOCTYPE html>
+-<html lang="ja">
+-<head>
+-  <meta charset="utf-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1">
+-  <title>信頼感しっかり型ホームページの見本｜標準プラン向けベース構成</title>
+-  <meta name="description" content="会社情報、対応業務、選ばれる理由、制作の流れ、お問い合わせ導線まで整理した、標準プラン向けのホームページ見本です。">
+-  <meta name="robots" content="index,follow">
+-  <meta name="format-detection" content="telephone=no">
+-  <meta name="theme-color" content="#0f172a">
+-  <link rel="canonical" href="https://syasu-pixel.github.io/website-service/base-standard.html">
+-
+-  <meta property="og:type" content="website">
+-  <meta property="og:locale" content="ja_JP">
+-  <meta property="og:site_name" content="小規模事業者向けホームページ制作">
+-  <meta property="og:title" content="信頼感しっかり型ホームページの見本｜標準プラン向けベース構成">
+-  <meta property="og:description" content="会社情報、対応業務、選ばれる理由、制作の流れ、お問い合わせ導線まで整理した、標準プラン向けのホームページ見本です。">
+-  <meta property="og:url" content="https://syasu-pixel.github.io/website-service/base-standard.html">
+-  <meta property="og:image" content="https://example.com/assets/images/common/ogp.jpg">
+-  <meta property="og:image:alt" content="信頼感しっかり型ホームページ見本のイメージ">
+-
+-  <meta name="twitter:card" content="summary_large_image">
+-  <meta name="twitter:title" content="信頼感しっかり型ホームページの見本｜標準プラン向けベース構成">
+-  <meta name="twitter:description" content="会社情報、対応業務、選ばれる理由、制作の流れ、お問い合わせ導線まで整理した、標準プラン向けのホームページ見本です。">
+-  <meta name="twitter:image" content="https://example.com/assets/images/common/ogp.jpg">
+-
+-  <style>
+-    :root {
+-      --bg: #f8fafc;
+-      --surface: #ffffff;
+-      --surface-soft: #f8fbff;
+-      --text: #0f172a;
+-      --muted: #475569;
+-      --line: #dbe4f0;
+-      --primary: #2563eb;
+-      --primary-dark: #1d4ed8;
+-      --accent: #f59e0b;
+-      --accent-dark: #d97706;
+-      --success: #16a34a;
+-      --shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
+-      --radius-xl: 24px;
+-      --radius-lg: 18px;
+-      --radius-md: 14px;
+-      --max: 1120px;
+-    }
+-
+-    * {
+-      box-sizing: border-box;
+-    }
+-
+-    html {
+-      scroll-behavior: smooth;
+-    }
+-
+-    body {
+-      margin: 0;
+-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+-      color: var(--text);
+-      background:
+-        radial-gradient(circle at top right, rgba(37, 99, 235, 0.10), transparent 28%),
+-        radial-gradient(circle at top left, rgba(245, 158, 11, 0.07), transparent 24%),
+-        var(--bg);
+-      line-height: 1.8;
+-    }
+-
+-    img {
+-      max-width: 100%;
+-      display: block;
+-      height: auto;
+-    }
+-
+-    a {
+-      color: inherit;
+-      text-decoration: none;
+-    }
+-
+-    .container {
+-      width: min(calc(100% - 32px), var(--max));
+-      margin: 0 auto;
+-    }
+-
+-    .site-header {
+-      position: sticky;
+-      top: 0;
+-      z-index: 1000;
+-      backdrop-filter: blur(10px);
+-      background: rgba(248, 250, 252, 0.82);
+-      border-bottom: 1px solid rgba(219, 228, 240, 0.9);
+-    }
+-
+-    .header-inner {
+-      display: flex;
+-      align-items: center;
+-      justify-content: space-between;
+-      gap: 16px;
+-      padding: 12px 0;
+-    }
+-
+-    .brand {
+-      display: flex;
+-      flex-direction: column;
+-      gap: 2px;
+-      min-width: 0;
+-    }
+-
+-    .brand-label {
+-      font-size: 12px;
+-      color: var(--primary);
+-      font-weight: 700;
+-      letter-spacing: 0.04em;
+-    }
+-
+-    .brand-name {
+-      font-size: 18px;
+-      font-weight: 800;
+-      line-height: 1.35;
+-    }
+-
+-    .header-nav {
+-      display: flex;
+-      gap: 10px;
+-      flex-wrap: wrap;
+-      justify-content: flex-end;
+-    }
+-
+-    .nav-link {
+-      min-height: 42px;
+-      display: inline-flex;
+-      align-items: center;
+-      justify-content: center;
+-      padding: 10px 14px;
+-      border: 1px solid var(--line);
+-      background: rgba(255, 255, 255, 0.92);
+-      border-radius: 999px;
+-      color: var(--text);
+-      font-size: 13px;
+-      font-weight: 700;
+-      transition: 0.2s ease;
+-    }
+-
+-    .nav-link:hover {
+-      border-color: #bfd2ff;
++<!DOCTYPE html>
++<html lang="ja">
++<head>
++  <meta charset="utf-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1">
++  <title>旭東精機株式会社 | 機械加工・精密部品製作・設備部品対応</title>
++  <meta name="description" content="旭東精機株式会社は、精密部品加工、試作、小ロット〜量産、設備部品、図面支給案件に対応する法人向け加工会社です。品質と納期を両立し、継続取引しやすい体制で支援します。">
++  <meta name="robots" content="index,follow">
++  <meta name="format-detection" content="telephone=no">
++  <meta name="theme-color" content="#0f2747">
++  <link rel="canonical" href="https://syasu-pixel.github.io/website-service/base-standard.html">
++
++  <style>
++    :root {
++      --bg: #f4f8fc;
++      --surface: #ffffff;
++      --surface-soft: #f7fbff;
++      --text: #10223d;
++      --muted: #456181;
++      --line: #d7e3f0;
++      --primary: #1e5bb7;
++      --primary-dark: #144286;
++      --deep: #0f2747;
++      --accent: #2b7be4;
++      --shadow: 0 16px 36px rgba(16, 34, 61, 0.12);
++      --radius-xl: 24px;
++      --radius-lg: 18px;
++      --radius-md: 14px;
++      --max: 1120px;
++    }
++
++    * {
++      box-sizing: border-box;
++    }
++
++    html {
++      scroll-behavior: smooth;
++    }
++
++    body {
++      margin: 0;
++      color: var(--text);
++      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
++      background: radial-gradient(circle at top right, rgba(30, 91, 183, 0.08), transparent 32%), var(--bg);
++      line-height: 1.8;
++    }
++
++    img {
++      width: 100%;
++      height: auto;
++      display: block;
++      border-radius: var(--radius-md);
++    }
++
++    a {
++      color: inherit;
++      text-decoration: none;
++    }
++
++    .container {
++      width: min(calc(100% - 32px), var(--max));
++      margin-inline: auto;
++    }
++
++    .site-header {
++      position: sticky;
++      top: 0;
++      z-index: 1000;
++      backdrop-filter: blur(8px);
++      background: rgba(244, 248, 252, 0.9);
++      border-bottom: 1px solid rgba(215, 227, 240, 0.9);
++    }
++
++    .header-inner {
++      display: flex;
++      flex-wrap: wrap;
++      align-items: center;
++      justify-content: space-between;
++      gap: 12px;
++      padding: 12px 0;
++    }
++
++    .brand {
++      min-width: 0;
++    }
++
++    .brand small {
++      display: block;
++      color: var(--primary);
++      font-size: 12px;
++      font-weight: 700;
++      letter-spacing: 0.06em;
++    }
++
++    .brand strong {
++      font-size: 19px;
++      font-weight: 800;
++      line-height: 1.4;
++    }
++
++    .header-nav {
++      display: flex;
++      flex-wrap: wrap;
++      gap: 8px;
++    }
++
++    .nav-link {
++      display: inline-flex;
++      align-items: center;
++      justify-content: center;
++      min-height: 40px;
++      padding: 8px 14px;
++      border: 1px solid var(--line);
+       background: #fff;
++      border-radius: 999px;
++      font-size: 13px;
++      font-weight: 700;
++      transition: 0.2s ease;
++    }
++
++    .nav-link:hover {
++      border-color: #b4c9e6;
+       transform: translateY(-1px);
+     }
+ 
+     .nav-return {
+       background: var(--primary);
+-      border-color: var(--primary);
+       color: #fff;
+-      white-space: nowrap;
++      border-color: var(--primary);
+     }
+ 
+     .nav-return:hover {
+       background: var(--primary-dark);
+       border-color: var(--primary-dark);
+     }
+-
+-    .hero {
+-      padding: 52px 0 28px;
+-    }
+-
+-    .hero-grid {
+-      display: grid;
+-      grid-template-columns: 1.08fr 0.92fr;
+-      gap: 24px;
+-      align-items: stretch;
+-    }
+-
+-    .hero-main,
+-    .hero-side {
+-      background: rgba(255, 255, 255, 0.9);
+-      border: 1px solid rgba(219, 228, 240, 0.95);
+-      border-radius: var(--radius-xl);
+-      box-shadow: var(--shadow);
+-    }
+-
+-    .hero-main {
+-      padding: 34px;
+-      position: relative;
+-      overflow: hidden;
+-    }
+-
+-    .hero-main::before {
+-      content: "";
+-      position: absolute;
+-      inset: auto -50px -50px auto;
+-      width: 220px;
+-      height: 220px;
+-      background: radial-gradient(circle, rgba(37, 99, 235, 0.14), transparent 70%);
+-      pointer-events: none;
+-    }
+-
+-    .hero-side {
+-      padding: 22px;
+-      display: flex;
+-      flex-direction: column;
+-      gap: 16px;
+-      justify-content: space-between;
+-    }
+-
+-    .side-card {
+-      padding: 18px;
+-      border-radius: var(--radius-lg);
+-      background: linear-gradient(180deg, #ffffff, #f8fbff);
+-      border: 1px solid var(--line);
+-    }
+-
+-    .side-card h2,
+-    .side-card h3 {
+-      margin: 0 0 10px;
+-      font-size: 18px;
+-      line-height: 1.5;
+-    }
+-
+-    .side-card p {
+-      margin: 0;
+-      color: var(--muted);
+-      font-size: 14px;
+-    }
+-
+-    .eyebrow {
+-      display: inline-flex;
+-      align-items: center;
+-      gap: 8px;
+-      margin-bottom: 16px;
+-      padding: 8px 12px;
+-      border-radius: 999px;
+-      background: #e8f0ff;
+-      color: var(--primary-dark);
+-      font-size: 13px;
+-      font-weight: 800;
+-    }
+-
+-    h1 {
+-      margin: 0 0 16px;
+-      font-size: clamp(30px, 4.2vw, 44px);
+-      line-height: 1.2;
+-      letter-spacing: -0.02em;
+-    }
+-
+-    .hero-lead {
+-      margin: 0;
+-      color: var(--muted);
+-      font-size: 16px;
+-    }
+-
+-    .hero-points {
+-      display: grid;
+-      grid-template-columns: repeat(3, minmax(0, 1fr));
+-      gap: 12px;
+-      margin-top: 24px;
+-    }
+-
+-    .hero-point {
+-      padding: 14px 14px 13px;
+-      background: #fff;
+-      border: 1px solid var(--line);
+-      border-radius: var(--radius-md);
+-      font-size: 13px;
+-      font-weight: 700;
+-      line-height: 1.6;
+-    }
+-
+-    .cta-group {
+-      display: flex;
+-      flex-wrap: wrap;
+-      gap: 12px;
+-      margin-top: 26px;
+-    }
+-
+-    .btn {
+-      min-height: 50px;
+-      padding: 12px 18px;
+-      border-radius: 14px;
+-      font-size: 14px;
+-      font-weight: 800;
+-      line-height: 1.4;
+-      display: inline-flex;
+-      align-items: center;
+-      justify-content: center;
+-      text-align: center;
+-      transition: 0.2s ease;
+-      border: 1px solid transparent;
+-    }
+-
+-    .btn-primary {
+-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+-      color: #fff;
+-      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+-    }
+-
+-    .btn-primary:hover {
+-      transform: translateY(-1px);
+-      box-shadow: 0 16px 28px rgba(37, 99, 235, 0.28);
+-    }
+-
+-    .btn-secondary {
+-      background: #fff;
+-      border-color: var(--line);
+-      color: var(--text);
+-    }
+-
+-    .btn-secondary:hover {
+-      border-color: #bfd2ff;
+-      background: #f8fbff;
+-      transform: translateY(-1px);
+-    }
+-
+-    .section {
+-      padding: 28px 0;
+-    }
+-
+-    .section-head {
+-      margin-bottom: 20px;
+-    }
+-
+-    .section-kicker {
+-      display: inline-block;
+-      margin-bottom: 10px;
+-      color: var(--primary);
+-      font-size: 13px;
+-      font-weight: 800;
+-      letter-spacing: 0.06em;
+-    }
+-
+-    .section-title {
+-      margin: 0 0 10px;
+-      font-size: clamp(24px, 3.1vw, 34px);
+-      line-height: 1.35;
+-      letter-spacing: -0.01em;
+-    }
+-
+-    .section-lead {
+-      margin: 0;
+-      color: var(--muted);
+-      font-size: 15px;
+-    }
+-
+-    .grid-3,
+-    .grid-2 {
+-      display: grid;
+-      gap: 18px;
+-    }
+-
+-    .grid-3 {
+-      grid-template-columns: repeat(3, minmax(0, 1fr));
+-    }
+-
+-    .grid-2 {
+-      grid-template-columns: repeat(2, minmax(0, 1fr));
+-    }
+-
+-    .card {
+-      background: var(--surface);
+-      border: 1px solid var(--line);
+-      border-radius: var(--radius-lg);
+-      box-shadow: var(--shadow);
+-      height: 100%;
+-    }
+-
+-    .card-body {
+-      padding: 24px;
+-    }
+-
+-    .card h3 {
+-      margin: 0 0 10px;
+-      font-size: 19px;
+-      line-height: 1.5;
+-    }
+-
+-    .card p {
+-      margin: 0;
+-      color: var(--muted);
+-      font-size: 14px;
+-    }
+-
+-    .tag {
+-      display: inline-flex;
+-      align-items: center;
+-      justify-content: center;
+-      margin-bottom: 12px;
+-      min-height: 32px;
+-      padding: 6px 10px;
+-      border-radius: 999px;
+-      background: #eff6ff;
+-      color: var(--primary-dark);
+-      font-size: 12px;
+-      font-weight: 800;
+-    }
+-
+-    .point-list,
+-    .check-list {
+-      margin: 14px 0 0;
+-      padding: 0;
+-      list-style: none;
+-      display: grid;
+-      gap: 8px;
+-    }
+-
+-    .point-list li,
+-    .check-list li {
+-      position: relative;
+-      padding-left: 20px;
+-      color: var(--text);
+-      font-size: 14px;
+-      line-height: 1.7;
+-    }
+-
+-    .point-list li::before {
+-      content: "";
+-      position: absolute;
+-      left: 0;
+-      top: 11px;
+-      width: 8px;
+-      height: 8px;
+-      border-radius: 50%;
+-      background: var(--accent);
+-    }
+-
+-    .check-list li::before {
+-      content: "✓";
+-      position: absolute;
+-      left: 0;
+-      top: 0;
+-      color: var(--success);
+-      font-weight: 900;
+-    }
+-
+-    .reason-card {
+-      position: relative;
+-      overflow: hidden;
+-    }
+-
+-    .reason-card::before {
+-      content: "";
+-      position: absolute;
+-      inset: 0 auto auto 0;
+-      width: 100%;
+-      height: 4px;
+-      background: linear-gradient(90deg, var(--primary), var(--accent));
+-    }
+-
+-    .info-box {
+-      padding: 28px;
+-      background: linear-gradient(180deg, #fff, #f7fbff);
+-      border: 1px solid var(--line);
+-      border-radius: var(--radius-xl);
+-      box-shadow: var(--shadow);
+-    }
+-
+-    .info-box p {
+-      margin: 0;
+-      color: var(--muted);
+-      font-size: 15px;
+-    }
+-
+-    .flow-grid {
+-      display: grid;
+-      grid-template-columns: repeat(4, minmax(0, 1fr));
+-      gap: 18px;
+-    }
+-
+-    .flow-step {
+-      background: #fff;
+-      border: 1px solid var(--line);
+-      border-radius: var(--radius-lg);
+-      box-shadow: var(--shadow);
+-      padding: 22px;
+-    }
+-
+-    .flow-number {
+-      width: 42px;
+-      height: 42px;
+-      border-radius: 50%;
+-      display: grid;
+-      place-items: center;
+-      margin-bottom: 14px;
+-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+-      color: #fff;
+-      font-size: 16px;
+-      font-weight: 900;
+-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.20);
+-    }
+-
+-    .flow-step h3 {
+-      margin: 0 0 10px;
+-      font-size: 18px;
+-    }
+-
+-    .flow-step p {
+-      margin: 0;
+-      color: var(--muted);
+-      font-size: 14px;
+-    }
+-
+-    .cta-band {
+-      padding: 28px;
+-      border-radius: var(--radius-xl);
+-      background: linear-gradient(135deg, #eff6ff, #fff8eb);
+-      border: 1px solid var(--line);
+-      box-shadow: var(--shadow);
+-    }
+-
+-    .cta-band h2 {
+-      margin: 0 0 10px;
+-      font-size: clamp(24px, 3vw, 32px);
+-      line-height: 1.35;
+-    }
+-
+-    .cta-band p {
+-      margin: 0;
+-      color: var(--muted);
+-      font-size: 15px;
+-    }
+-
+-    .contact-box {
+-      padding: 30px;
+-      background: linear-gradient(135deg, #0f172a, #1e293b);
+-      color: #fff;
+-      border-radius: var(--radius-xl);
+-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.22);
+-    }
+-
+-    .contact-box .section-kicker,
+-    .contact-box .section-title,
+-    .contact-box .section-lead,
+-    .contact-box p {
+-      color: #fff;
+-    }
+-
+-    .contact-box .section-lead {
+-      opacity: 0.86;
+-    }
+-
+-    .contact-box .btn-secondary {
+-      background: rgba(255, 255, 255, 0.10);
+-      border-color: rgba(255, 255, 255, 0.22);
+-      color: #fff;
+-    }
+-
+-    .contact-box .btn-secondary:hover {
+-      background: rgba(255, 255, 255, 0.16);
+-      border-color: rgba(255, 255, 255, 0.32);
+-    }
+-
+-    .back-links {
+-      display: flex;
+-      flex-wrap: wrap;
+-      gap: 12px;
+-      margin-top: 18px;
+-    }
+-
+-    .site-footer {
+-      padding: 22px 0 36px;
+-    }
+-
+-    .footer-inner {
+-      display: flex;
+-      align-items: flex-start;
+-      justify-content: space-between;
+-      gap: 16px;
+-      padding-top: 22px;
+-      border-top: 1px solid var(--line);
+-    }
+-
+-    .footer-title {
+-      font-size: 14px;
+-      font-weight: 800;
+-      margin-bottom: 6px;
+-    }
+-
+-    .footer-text,
+-    .footer-copy {
+-      color: var(--muted);
+-      font-size: 13px;
+-      line-height: 1.7;
+-    }
+-
+-    @media (max-width: 980px) {
+-      .hero-grid,
+-      .hero-points,
+-      .grid-3,
+-      .grid-2,
+-      .flow-grid {
+-        grid-template-columns: 1fr;
+-      }
+-    }
+-
+-    @media (max-width: 768px) {
+-      .header-inner {
+-        flex-direction: column;
+-        align-items: stretch;
+-      }
+-
+-      .brand {
+-        align-items: flex-start;
+-      }
+-
+-      .header-nav {
+-        justify-content: flex-start;
+-      }
+-
+-      .hero {
+-        padding-top: 24px;
+-      }
+-
+-      .hero-main,
+-      .hero-side,
+-      .card-body,
+-      .info-box,
+-      .cta-band,
+-      .contact-box {
+-        padding-left: 20px;
+-        padding-right: 20px;
+-      }
+-
+-      h1 {
+-        font-size: 31px;
+-      }
+-
+-      .section {
+-        padding: 22px 0;
+-      }
+-
+-      .btn {
+-        width: 100%;
+-      }
+-
+-      .cta-group,
+-      .back-links {
+-        flex-direction: column;
+-      }
+-
+-      .footer-inner {
+-        flex-direction: column;
+-      }
+-
+-      .nav-link {
+-        min-height: 40px;
+-        font-size: 12px;
+-      }
+-    }
+-  </style>
+-
+-  <script type="application/ld+json">
+-  {
+-    "@context": "https://schema.org",
+-    "@type": "ProfessionalService",
+-    "name": "小規模事業者向けホームページ制作",
+-    "url": "https://syasu-pixel.github.io/website-service/base-standard.html",
+-    "description": "会社情報、対応業務、選ばれる理由、制作の流れ、お問い合わせ導線まで整理した、標準プラン向けのホームページ見本です。",
+-    "areaServed": "Japan",
+-    "serviceType": "ホームページ制作",
+-    "offers": {
+-      "@type": "Offer",
+-      "name": "標準プラン向けベース構成",
+-      "price": "88000",
+-      "priceCurrency": "JPY"
+-    }
+-  }
+-  </script>
+-</head>
+-<body>
+-  <header class="site-header">
+-    <div class="container header-inner">
+-      <a class="brand" href="index.html" aria-label="サービス案内トップへ戻る">
+-        <span class="brand-label">STANDARD SAMPLE</span>
+-        <span class="brand-name">標準プラン向けベース構成</span>
+-      </a>
+-      <nav class="header-nav" aria-label="主要メニュー">
+-        <a class="nav-link nav-return" href="index.html#price">プラン選択へ戻る</a>
+-        <a class="nav-link" href="#overview">概要</a>
+-        <a class="nav-link" href="#reasons">選ばれる理由</a>
+-        <a class="nav-link" href="#flow">流れ</a>
+-        <a class="nav-link" href="#contact">相談する</a>
++
++    .hero {
++      padding: 54px 0 34px;
++    }
++
++    .hero-grid {
++      display: grid;
++      grid-template-columns: 1.15fr 0.85fr;
++      gap: 22px;
++    }
++
++    .hero-main,
++    .hero-side {
++      background: rgba(255, 255, 255, 0.94);
++      border: 1px solid #d9e6f2;
++      border-radius: var(--radius-xl);
++      box-shadow: var(--shadow);
++    }
++
++    .hero-main {
++      padding: 34px;
++    }
++
++    .eyebrow {
++      display: inline-block;
++      margin-bottom: 14px;
++      padding: 7px 12px;
++      border-radius: 999px;
++      background: #e6f0ff;
++      color: var(--primary-dark);
++      font-size: 13px;
++      font-weight: 800;
++    }
++
++    h1 {
++      margin: 0 0 14px;
++      font-size: clamp(29px, 4.2vw, 44px);
++      line-height: 1.2;
++      letter-spacing: -0.02em;
++    }
++
++    .hero-copy {
++      margin: 0;
++      color: var(--muted);
++      font-size: 16px;
++    }
++
++    .hero-points {
++      margin-top: 22px;
++      display: grid;
++      grid-template-columns: repeat(3, minmax(0, 1fr));
++      gap: 10px;
++    }
++
++    .hero-point {
++      padding: 12px;
++      border: 1px solid var(--line);
++      border-radius: var(--radius-md);
++      background: #fff;
++    }
++
++    .hero-point strong {
++      display: block;
++      font-size: 13px;
++      line-height: 1.4;
++    }
++
++    .hero-point span {
++      color: var(--muted);
++      font-size: 12px;
++    }
++
++    .hero-cta {
++      margin-top: 24px;
++      display: flex;
++      flex-wrap: wrap;
++      gap: 12px;
++    }
++
++    .btn {
++      display: inline-flex;
++      align-items: center;
++      justify-content: center;
++      min-height: 46px;
++      border-radius: 999px;
++      font-weight: 700;
++      padding: 10px 18px;
++      border: 1px solid transparent;
++    }
++
++    .btn-primary {
++      background: var(--primary);
++      color: #fff;
++      border-color: var(--primary);
++    }
++
++    .btn-secondary {
++      background: #fff;
++      border-color: var(--line);
++      color: var(--text);
++    }
++
++    .hero-side {
++      padding: 18px;
++      display: grid;
++      gap: 14px;
++      align-content: start;
++    }
++
++    .side-card {
++      padding: 16px;
++      border-radius: var(--radius-md);
++      border: 1px solid var(--line);
++      background: linear-gradient(180deg, #ffffff, #f7fbff);
++    }
++
++    .side-card h2,
++    .side-card h3 {
++      margin: 0 0 8px;
++      font-size: 18px;
++      line-height: 1.5;
++    }
++
++    .side-card p,
++    .side-card li {
++      margin: 0;
++      font-size: 14px;
++      color: var(--muted);
++    }
++
++    .side-card ul {
++      margin: 0;
++      padding-left: 18px;
++      display: grid;
++      gap: 6px;
++    }
++
++    .hero-photo {
++      overflow: hidden;
++      border-radius: var(--radius-md);
++      border: 1px solid var(--line);
++      margin-top: 12px;
++    }
++
++    main section {
++      padding: 32px 0;
++    }
++
++    .section-title {
++      margin: 0;
++      font-size: clamp(24px, 3vw, 34px);
++      line-height: 1.3;
++      letter-spacing: -0.01em;
++    }
++
++    .section-lead {
++      margin: 12px 0 0;
++      color: var(--muted);
++    }
++
++    .panel {
++      margin-top: 20px;
++      padding: 24px;
++      border-radius: var(--radius-lg);
++      border: 1px solid var(--line);
++      background: var(--surface);
++      box-shadow: 0 10px 24px rgba(16, 34, 61, 0.06);
++    }
++
++    .grid-2 {
++      display: grid;
++      grid-template-columns: repeat(2, minmax(0, 1fr));
++      gap: 16px;
++    }
++
++    .grid-3 {
++      display: grid;
++      grid-template-columns: repeat(3, minmax(0, 1fr));
++      gap: 16px;
++    }
++
++    .service-item,
++    .strength-item,
++    .case-item {
++      padding: 18px;
++      border-radius: var(--radius-md);
++      border: 1px solid var(--line);
++      background: var(--surface-soft);
++    }
++
++    h3 {
++      margin: 0 0 8px;
++      font-size: 19px;
++      line-height: 1.45;
++    }
++
++    p {
++      margin: 0;
++    }
++
++    .list-check {
++      margin: 12px 0 0;
++      padding-left: 18px;
++      color: var(--muted);
++      display: grid;
++      gap: 6px;
++      font-size: 14px;
++    }
++
++    .stats {
++      margin-top: 18px;
++      display: grid;
++      grid-template-columns: repeat(4, minmax(0, 1fr));
++      gap: 12px;
++    }
++
++    .stat {
++      text-align: center;
++      padding: 14px;
++      border-radius: var(--radius-md);
++      border: 1px solid var(--line);
++      background: #fff;
++    }
++
++    .stat strong {
++      display: block;
++      color: var(--deep);
++      font-size: 22px;
++      line-height: 1.2;
++    }
++
++    .stat span {
++      font-size: 12px;
++      color: var(--muted);
++    }
++
++    .gallery {
++      display: grid;
++      grid-template-columns: 1.2fr 0.8fr;
++      gap: 14px;
++      margin-top: 20px;
++    }
++
++    .gallery-sub {
++      display: grid;
++      gap: 14px;
++    }
++
++    .photo-card {
++      border: 1px solid var(--line);
++      border-radius: var(--radius-md);
++      overflow: hidden;
++      background: #fff;
++    }
++
++    .photo-card figcaption {
++      padding: 10px 12px;
++      font-size: 13px;
++      color: var(--muted);
++      border-top: 1px solid var(--line);
++      background: #fff;
++    }
++
++    .company-table {
++      width: 100%;
++      border-collapse: collapse;
++      margin-top: 18px;
++      background: #fff;
++      border-radius: var(--radius-md);
++      overflow: hidden;
++      border: 1px solid var(--line);
++    }
++
++    .company-table th,
++    .company-table td {
++      text-align: left;
++      padding: 12px 14px;
++      border-bottom: 1px solid #e2ebf5;
++      vertical-align: top;
++      font-size: 14px;
++    }
++
++    .company-table th {
++      width: 180px;
++      color: #193b67;
++      background: #f3f8ff;
++      font-weight: 700;
++    }
++
++    .company-table tr:last-child th,
++    .company-table tr:last-child td {
++      border-bottom: none;
++    }
++
++    .contact-wrap {
++      margin-top: 20px;
++      display: grid;
++      grid-template-columns: repeat(2, minmax(0, 1fr));
++      gap: 16px;
++    }
++
++    .contact-card {
++      padding: 22px;
++      border-radius: var(--radius-lg);
++      background: #fff;
++      border: 1px solid var(--line);
++      box-shadow: 0 10px 20px rgba(16, 34, 61, 0.06);
++    }
++
++    .contact-actions {
++      display: flex;
++      flex-wrap: wrap;
++      gap: 10px;
++      margin-top: 14px;
++    }
++
++    .note {
++      margin-top: 12px;
++      font-size: 13px;
++      color: #b45309;
++      background: #fff7ed;
++      border: 1px solid #fed7aa;
++      border-radius: 10px;
++      padding: 10px 12px;
++    }
++
++    .map-frame {
++      width: 100%;
++      min-height: 320px;
++      border: 1px solid var(--line);
++      border-radius: var(--radius-md);
++    }
++
++    .return-area {
++      margin-top: 20px;
++      text-align: center;
++    }
++
++    .return-link {
++      display: inline-flex;
++      align-items: center;
++      justify-content: center;
++      min-height: 44px;
++      padding: 10px 20px;
++      border-radius: 999px;
++      border: 1px solid var(--line);
++      background: #fff;
++      font-weight: 700;
++    }
++
++    footer {
++      margin-top: 40px;
++      background: var(--deep);
++      color: #c7d7ed;
++      padding: 28px 0;
++      font-size: 13px;
++    }
++
++    @media (max-width: 960px) {
++      .hero-grid,
++      .grid-3,
++      .gallery,
++      .contact-wrap,
++      .stats {
++        grid-template-columns: 1fr 1fr;
++      }
++
++      .grid-2 {
++        grid-template-columns: 1fr;
++      }
++
++      .gallery-sub {
++        grid-template-columns: 1fr 1fr;
++      }
++
++      .hero-points {
++        grid-template-columns: 1fr;
++      }
++    }
++
++    @media (max-width: 720px) {
++      .hero-grid,
++      .grid-3,
++      .gallery,
++      .gallery-sub,
++      .contact-wrap,
++      .stats {
++        grid-template-columns: 1fr;
++      }
++
++      .header-inner {
++        flex-direction: column;
++        align-items: flex-start;
++      }
++
++      .header-nav {
++        width: 100%;
++      }
++
++      .nav-link {
++        flex: 1;
++      }
++
++      .hero-main,
++      .panel,
++      .contact-card {
++        padding: 20px;
++      }
++
++      .company-table th,
++      .company-table td {
++        display: block;
++        width: 100%;
++      }
++
++      .company-table th {
++        border-bottom: none;
++        padding-bottom: 4px;
++      }
++
++      .company-table td {
++        padding-top: 2px;
++      }
++    }
++  </style>
++</head>
++<body>
++  <header class="site-header">
++    <div class="container header-inner">
++      <a class="brand" href="#top" aria-label="ページ上部へ移動">
++        <small>法人向け機械加工・精密部品対応</small>
++        <strong>旭東精機株式会社</strong>
++      </a>
++      <nav class="header-nav" aria-label="ページ内ナビゲーション">
++        <a class="nav-link" href="#company">会社紹介</a>
++        <a class="nav-link" href="#services">対応内容</a>
++        <a class="nav-link" href="#strengths">強み</a>
++        <a class="nav-link" href="#cases">実績・対応分野</a>
++        <a class="nav-link" href="#contact">お問い合わせ</a>
++        <a class="nav-link nav-return" href="index.html#price">料金一覧に戻る</a>
+       </nav>
+-    </div>
+-  </header>
+-
+-  <main>
+-    <section class="hero">
+-      <div class="container hero-grid">
+-        <div class="hero-main">
+-          <span class="eyebrow">STANDARD PLAN SAMPLE</span>
+-          <h1>信頼感をしっかり出しながら、<br>仕事につながるホームページを作りたい方向けの見本です。</h1>
+-          <p class="hero-lead">
+-            このベースは、会社情報や対応業務だけでなく、
+-            選ばれる理由、仕事の流れ、よくある質問、お問い合わせ導線まで整理して、
+-            初めて見る相手にも安心感を持ってもらいやすい構成です。
+-          </p>
+-
+-          <div class="hero-points">
+-            <div class="hero-point">会社の内容が伝わりやすい</div>
+-            <div class="hero-point">依頼前の安心感を出しやすい</div>
+-            <div class="hero-point">問い合わせにつなげやすい構成</div>
+-          </div>
+-
+-          <div class="cta-group">
+-            <a class="btn btn-primary" href="#contact">この形で相談する</a>
+-            <a class="btn btn-secondary" href="index.html#price">料金ページに戻る</a>
+-          </div>
+-        </div>
+-
+-        <aside class="hero-side" aria-label="補足情報">
+-          <div class="side-card">
+-            <h2>こんな方に向いています</h2>
+-            <ul class="check-list">
+-              <li>ちゃんとした会社感を出したい</li>
+-              <li>何を頼めるかを伝わりやすくしたい</li>
+-              <li>初めての相手にも安心してもらいたい</li>
+-              <li>問い合わせにつながる流れを作りたい</li>
+-            </ul>
+-          </div>
+-
+-          <div class="side-card">
+-            <h3>このベースで入れやすい内容</h3>
+-            <ul class="check-list">
+-              <li>会社案内</li>
+-              <li>対応業務</li>
+-              <li>選ばれる理由</li>
+-              <li>制作・対応の流れ</li>
+-              <li>問い合わせ導線</li>
+-            </ul>
+-          </div>
+-        </aside>
+-      </div>
+-    </section>
+-
+-    <section class="section" id="overview">
+-      <div class="container">
+-        <div class="section-head">
+-          <span class="section-kicker">OVERVIEW</span>
+-          <h2 class="section-title">このベースが向いているケース</h2>
+-          <p class="section-lead">
+-            名刺代わりで終わらず、仕事の相談や依頼につながる流れまで考えたい場合に向いています。
+-          </p>
+-        </div>
+-
+-        <div class="grid-3">
+-          <article class="card">
+-            <div class="card-body">
+-              <span class="tag">信頼感を出したい方</span>
+-              <h3>初見でも安心してもらいやすい</h3>
+-              <p>会社概要や対応内容だけでなく、選ばれる理由や流れを入れることで、印象がかなり変わります。</p>
+-            </div>
+-          </article>
+-
+-          <article class="card">
+-            <div class="card-body">
+-              <span class="tag">問い合わせにつなげたい方</span>
+-              <h3>依頼前の不安を減らしやすい</h3>
+-              <p>何をしている会社か、どう相談すればいいかが見えると、問い合わせのハードルが下がります。</p>
+-            </div>
+-          </article>
+-
+-          <article class="card">
+-            <div class="card-body">
+-              <span class="tag">小規模事業者向け</span>
+-              <h3>情報を整理して見せたい</h3>
+-              <p>ページ数を増やしすぎなくても、構成を整えるだけで見やすさと信頼感はかなり上げられます。</p>
+-            </div>
+-          </article>
+-        </div>
+-      </div>
+-    </section>
+-
+-    <section class="section" id="reasons">
+-      <div class="container">
+-        <div class="section-head">
+-          <span class="section-kicker">REASONS</span>
+-          <h2 class="section-title">この形で入れると効果が出やすい項目</h2>
+-          <p class="section-lead">
+-            会社案内や業務内容だけより、見た人が判断しやすい情報を少し足すことで、相談しやすさがかなり上がります。
+-          </p>
+-        </div>
+-
+-        <div class="grid-3">
+-          <article class="card reason-card">
+-            <div class="card-body">
+-              <h3>選ばれる理由</h3>
+-              <p>対応の丁寧さ、業種への理解、スピード感、柔軟さなどを整理して伝えやすいです。</p>
+-              <ul class="point-list">
+-                <li>安心感を出しやすい</li>
+-                <li>違いが伝わりやすい</li>
+-                <li>他社との比較材料になる</li>
+-              </ul>
+-            </div>
+-          </article>
+-
+-          <article class="card reason-card">
+-            <div class="card-body">
+-              <h3>仕事の流れ</h3>
+-              <p>相談から対応までの流れが見えると、初めての相手でも問い合わせしやすくなります。</p>
+-              <ul class="point-list">
+-                <li>相談前の不安を減らせる</li>
+-                <li>やり取りを想像しやすい</li>
+-                <li>依頼のしやすさにつながる</li>
+-              </ul>
+-            </div>
+-          </article>
+-
+-          <article class="card reason-card">
+-            <div class="card-body">
+-              <h3>よくある質問</h3>
+-              <p>料金感や対応範囲、写真の有無、連絡方法などを入れておくと、やり取りがスムーズになります。</p>
+-              <ul class="point-list">
+-                <li>事前説明の負担が減る</li>
+-                <li>問い合わせ精度が上がる</li>
+-                <li>安心感が出しやすい</li>
+-              </ul>
+-            </div>
+-          </article>
+-        </div>
+-      </div>
+-    </section>
+-
+-    <section class="section">
+-      <div class="container">
+-        <div class="grid-2">
+-          <article class="card">
+-            <div class="card-body">
+-              <span class="tag">載せる内容の例</span>
+-              <h3>このベースで整理しやすい情報</h3>
+-              <ul class="point-list">
+-                <li>会社概要</li>
+-                <li>対応業務</li>
+-                <li>強み・特徴</li>
+-                <li>選ばれる理由</li>
+-                <li>依頼の流れ</li>
+-                <li>よくある質問</li>
+-                <li>お問い合わせ導線</li>
+-              </ul>
+-            </div>
+-          </article>
+-
+-          <article class="card">
+-            <div class="card-body">
+-              <span class="tag">向いている業種</span>
+-              <h3>相性がいい使い方</h3>
+-              <ul class="point-list">
+-                <li>工事業・設備業</li>
+-                <li>法人向けサービス業</li>
+-                <li>地域密着の事業</li>
+-                <li>紹介だけでなく新規相談も増やしたい会社</li>
+-              </ul>
+-            </div>
+-          </article>
+-        </div>
+-      </div>
+-    </section>
+-
+-    <section class="section">
+-      <div class="container">
+-        <div class="info-box">
+-          <div class="section-head">
+-            <span class="section-kicker">POINT</span>
+-            <h2 class="section-title">標準プランは「見せ方の整理」でかなり差が出ます</h2>
+-            <p class="section-lead">
+-              情報量を少し増やしても、並べ方と導線を整えれば見づらくはなりません。
+-            </p>
+-          </div>
+-          <p>
+-            このベースは、会社としての見え方をしっかり整えながら、
+-            見た人が「ここなら相談してみてもいいかも」と感じやすい流れを作るための構成です。
+-            小規模事業者でも、必要な情報を丁寧に見せるだけで、かなり印象が良くなります。
+-          </p>
+-        </div>
+-      </div>
+-    </section>
+-
+-    <section class="section" id="flow">
+-      <div class="container">
+-        <div class="section-head">
+-          <span class="section-kicker">FLOW</span>
+-          <h2 class="section-title">このベースで作る時の流れ</h2>
+-          <p class="section-lead">
+-            ヒアリングしながら内容を整理していけば、信頼感のあるページ構成にしやすいです。
+-          </p>
+-        </div>
+-
+-        <div class="flow-grid">
+-          <article class="flow-step">
+-            <div class="flow-number">1</div>
+-            <h3>掲載内容を整理</h3>
+-            <p>会社情報、仕事内容、強み、連絡方法など、見せたい内容を整理します。</p>
+-          </article>
+-
+-          <article class="flow-step">
+-            <div class="flow-number">2</div>
+-            <h3>見せ方を整える</h3>
+-            <p>見た人が迷わないように、順番や導線を整えていきます。</p>
+-          </article>
+-
+-          <article class="flow-step">
+-            <div class="flow-number">3</div>
+-            <h3>問い合わせにつなげる</h3>
+-            <p>よくある不安を減らしながら、相談しやすい形を作ります。</p>
+-          </article>
+-
+-          <article class="flow-step">
+-            <div class="flow-number">4</div>
+-            <h3>公開後も調整しやすい</h3>
+-            <p>必要に応じてFAQや実績などを後から追加しやすい構成です。</p>
+-          </article>
+-        </div>
+-      </div>
+-    </section>
+-
+-    <section class="section">
+-      <div class="container">
+-        <div class="cta-band">
+-          <h2>「ちゃんとして見える会社HP」にしたいなら、この型が使いやすいです。</h2>
+-          <p>
+-            シンプルすぎず、でも重くなりすぎない範囲で、
+-            会社の内容と問い合わせ導線をしっかり整えたい場合に向いています。
+-          </p>
+-          <div class="cta-group">
+-            <a class="btn btn-primary" href="#contact">この形で相談する</a>
+-            <a class="btn btn-secondary" href="index.html#price">料金一覧へ戻る</a>
+-          </div>
+-        </div>
+-      </div>
+-    </section>
+-
+-    <section class="section" id="contact">
+-      <div class="container">
+-        <div class="contact-box">
+-          <div class="section-head">
+-            <span class="section-kicker">CONTACT</span>
+-            <h2 class="section-title">この標準型をベースに相談できます</h2>
+-            <p class="section-lead">
+-              会社としての見え方を整えつつ、問い合わせにつながる流れまで作りたい場合に向いています。
+-            </p>
+-          </div>
+-
+-          <div class="cta-group">
+-            <a class="btn btn-primary" href="#" aria-disabled="true" onclick="return false;">メールで問い合わせる</a>
+-            <a class="btn btn-secondary" href="#" aria-disabled="true" onclick="return false;">電話で相談する</a>
+-          </div>
+-
+-          <p>※このページは見本のため、ボタンは動作しません。</p>
+-        </div>
+-
+-        <div class="back-links">
+-          <a class="btn btn-secondary" href="base-simple.html">シンプル型を見る</a>
+-          <a class="btn btn-secondary" href="base-standard.html">標準型を見る</a>
+-          <a class="btn btn-secondary" href="index.html#price">料金一覧に戻る</a>
+-        </div>
+-      </div>
+-    </section>
+-  </main>
+-
+-  <footer class="site-footer">
+-    <div class="container footer-inner">
+-      <div>
+-        <div class="footer-title">標準プラン向けベース構成</div>
+-        <div class="footer-text">会社情報、対応業務、選ばれる理由、流れ、お問い合わせ導線まで整理した見本ページです。</div>
+-      </div>
+-      <div class="footer-copy">© 2026 Small Business Web.</div>
+-    </div>
+-  </footer>
+-</body>
++    </div>
++  </header>
++
++  <main id="top">
++    <section class="hero" aria-labelledby="hero-title">
++      <div class="container hero-grid">
++        <div class="hero-main">
++          <p class="eyebrow">製造業・設備保全部門向けの加工パートナー</p>
++          <h1 id="hero-title">図面支給案件から継続生産まで。<br>精密加工を、実務に強い体制で。</h1>
++          <p class="hero-copy">旭東精機株式会社は、機械加工・精密部品製作・設備部品対応を主軸に、法人のお客様向けに加工サービスを提供する架空会社ホームページ見本です。試作段階の検討、治具・交換部品の手配、量産立ち上げ支援まで、現場の工程に合わせた提案で調達負荷を抑えます。</p>
++          <div class="hero-points">
++            <div class="hero-point">
++              <strong>精密部品加工</strong>
++              <span>寸法公差・幾何公差を意識した対応</span>
++            </div>
++            <div class="hero-point">
++              <strong>試作〜量産</strong>
++              <span>小ロット短納期から継続生産へ接続</span>
++            </div>
++            <div class="hero-point">
++              <strong>設備部品対応</strong>
++              <span>保全現場の交換部品・改造部品に対応</span>
++            </div>
++          </div>
++          <div class="hero-cta">
++            <a class="btn btn-primary" href="#contact">お問い合わせ・ご相談</a>
++            <a class="btn btn-secondary" href="#services">対応内容を見る</a>
++          </div>
++        </div>
++        <aside class="hero-side" aria-label="補足情報">
++          <div class="side-card">
++            <h2>法人担当者様へ</h2>
++            <p>図面支給案件、仕様変更が発生する試作案件、既存設備の改修向け部品製作など、技術窓口と調達窓口の双方が扱いやすい情報整理を心がけています。</p>
++            <div class="hero-photo">
++              <img src="https://images.unsplash.com/photo-1565439518243-7f2b0fe3f4a0?auto=format&fit=crop&w=1200&q=80" alt="マシニングセンタで加工を行う工場内の様子（仮画像）" loading="lazy">
++            </div>
++          </div>
++          <div class="side-card">
++            <h3>初回相談で確認する内容</h3>
++            <ul>
++              <li>図面データ形式（2D/3D）と要求精度</li>
++              <li>材質、熱処理、表面処理の有無</li>
++              <li>数量、希望納期、検査成績書の要否</li>
++            </ul>
++          </div>
++        </aside>
++      </div>
++    </section>
++
++    <section id="company" aria-labelledby="company-title">
++      <div class="container">
++        <h2 class="section-title" id="company-title">会社紹介 / メッセージ</h2>
++        <p class="section-lead">旭東精機株式会社は、加工現場で必要とされる「品質」「納期」「相談のしやすさ」のバランスを重視し、法人取引に適した標準化された進行管理で部品調達を支援します。初めてのお取引でも、技術仕様・検査基準・納入条件を段階的にすり合わせるため、業務負担を最小化しながら継続しやすい体制づくりを進めます。</p>
++        <div class="panel grid-2">
++          <div>
++            <h3>私たちが大切にすること</h3>
++            <p>単に加工を請け負うだけでなく、後工程での組付性や保守性を踏まえた提案を行うことを基本方針としています。図面通りの製作を前提にしつつ、加工可否やコスト・納期に影響する要素は早い段階で共有し、判断材料を明確にします。品質要求が高い案件でも、検査項目の定義と記録フォーマットを統一し、安定した運用を目指します。</p>
++          </div>
++          <div>
++            <h3>対応するお客様像</h3>
++            <p>産業機械メーカー、装置メーカー、工場の生産技術・保全部門、商社経由の部品調達案件など、法人実務における発注フローを理解した対応を行います。単発案件だけでなく、定期補給部品や改造案件の継続相談にも対応し、調達先を増やしすぎずに安定供給を目指す企業様に適した体制です。</p>
++          </div>
++        </div>
++      </div>
++    </section>
++
++    <section id="services" aria-labelledby="services-title">
++      <div class="container">
++        <h2 class="section-title" id="services-title">対応内容</h2>
++        <p class="section-lead">用途・数量・納期に応じて、下記のような加工と進行管理に対応します。図面支給案件を中心に、仕様確認〜納入までを一貫してサポートします。</p>
++        <div class="panel grid-3">
++          <article class="service-item">
++            <h3>精密部品加工</h3>
++            <p>マシニング、旋盤、穴加工、ねじ加工などを組み合わせ、要求公差に応じた工程設計で対応します。重要寸法は検査記録を残し、再発注時の再現性を確保します。</p>
++            <ul class="list-check">
++              <li>単品〜中ロットの切削加工</li>
++              <li>検査成績書の提出相談</li>
++              <li>組立前提の公差管理</li>
++            </ul>
++          </article>
++          <article class="service-item">
++            <h3>試作対応</h3>
++            <p>開発段階の部品について、加工可否の確認や工程の簡略化提案を実施。設計変更が発生しやすい段階でも、都度の情報更新に追従できるよう管理します。</p>
++            <ul class="list-check">
++              <li>設計検証向け短納期製作</li>
++              <li>試作後の改善フィードバック</li>
++              <li>量産移行時の仕様引き継ぎ</li>
++            </ul>
++          </article>
++          <article class="service-item">
++            <h3>小ロット〜量産</h3>
++            <p>先行試作から月次生産まで、数量変動を見据えた加工体制を構築。発注の波に合わせた納入計画で、過剰在庫と欠品のリスクを抑えます。</p>
++            <ul class="list-check">
++              <li>定期発注に向けた生産計画</li>
++              <li>ロットごとのトレーサビリティ</li>
++              <li>発注点に合わせた分納相談</li>
++            </ul>
++          </article>
++          <article class="service-item">
++            <h3>設備部品対応</h3>
++            <p>既設設備の交換部品・補修部品・改造部品に対応し、生産停止時間の最小化を支援。現物参照が必要な案件も、仕様確認の上で柔軟に進めます。</p>
++            <ul class="list-check">
++              <li>突発故障時の優先相談</li>
++              <li>旧図面案件の整理対応</li>
++              <li>治具・ブラケット製作</li>
++            </ul>
++          </article>
++          <article class="service-item">
++            <h3>図面支給案件</h3>
++            <p>2D図・3Dデータの双方を受領し、加工上の不明点を事前に確認。仕様解釈のズレを減らし、初回製作時の手戻り防止につなげます。</p>
++            <ul class="list-check">
++              <li>PDF / DXF / STEP などに対応</li>
++              <li>重要箇所の事前レビュー</li>
++              <li>検査基準の擦り合わせ</li>
++            </ul>
++          </article>
++          <article class="service-item">
++            <h3>調達実務サポート</h3>
++            <p>見積依頼時に必要な情報の整理、納入形態の取り決め、継続取引時の連絡フロー整備まで対応し、法人調達の運用を円滑にします。</p>
++            <ul class="list-check">
++              <li>見積項目の標準化</li>
++              <li>納期回答の明確化</li>
++              <li>継続案件の窓口一本化</li>
++            </ul>
++          </article>
++        </div>
++      </div>
++    </section>
++
++    <section id="strengths" aria-labelledby="strengths-title">
++      <div class="container">
++        <h2 class="section-title" id="strengths-title">旭東精機の強み</h2>
++        <p class="section-lead">「品質管理」「納期対応」「加工相談」「継続取引のしやすさ」を軸に、企業間取引で必要な安心感を整えています。</p>
++        <div class="panel grid-2">
++          <article class="strength-item">
++            <h3>品質管理</h3>
++            <p>受注時の仕様確認から出荷前検査まで、案件ごとにチェック項目を明文化。重要寸法は記録を残し、継続案件での品質のばらつきを抑制します。</p>
++          </article>
++          <article class="strength-item">
++            <h3>納期対応</h3>
++            <p>工程ごとのリードタイムを共有し、優先案件は段取り調整で対応。短納期のご相談でも、対応可否を早期に回答して調達判断を支援します。</p>
++          </article>
++          <article class="strength-item">
++            <h3>加工相談</h3>
++            <p>図面上で判断しづらい箇所は、目的機能と使用条件を確認しながら最適な加工方法を提案。コストと品質のバランスを見える化します。</p>
++          </article>
++          <article class="strength-item">
++            <h3>継続取引しやすさ</h3>
++            <p>窓口の固定化、履歴管理、共通フォーマット運用で、再発注時のコミュニケーションコストを軽減。企業担当者が社内説明しやすい情報提供を行います。</p>
++          </article>
++        </div>
++        <div class="stats">
++          <div class="stat"><strong>96%</strong><span>納期遵守率（想定）</span></div>
++          <div class="stat"><strong>1個〜</strong><span>単品加工相談に対応</span></div>
++          <div class="stat"><strong>300+</strong><span>加工部品カテゴリ（想定）</span></div>
++          <div class="stat"><strong>24h</strong><span>一次回答目安（営業日）</span></div>
++        </div>
++      </div>
++    </section>
++
++    <section id="cases" aria-labelledby="cases-title">
++      <div class="container">
++        <h2 class="section-title" id="cases-title">実績・対応分野（イメージ）</h2>
++        <p class="section-lead">案件検討時の参考として、加工事例・対応材質・製作部品例・対応業界をまとめています。実務で比較しやすいよう、用途別に整理しています。</p>
++        <div class="panel grid-2">
++          <article class="case-item">
++            <h3>加工事例</h3>
++            <ul class="list-check">
++              <li>搬送装置用ガイドプレートの高精度加工</li>
++              <li>自動機向けブラケット・スペーサーの短納期製作</li>
++              <li>保全部門向け交換軸・固定治具の再製作</li>
++            </ul>
++          </article>
++          <article class="case-item">
++            <h3>対応材質</h3>
++            <ul class="list-check">
++              <li>一般鋼材、ステンレス、アルミ合金</li>
++              <li>真鍮・銅系材、樹脂材（用途に応じて）</li>
++              <li>熱処理前後を含む案件相談</li>
++            </ul>
++          </article>
++          <article class="case-item">
++            <h3>製作部品例</h3>
++            <ul class="list-check">
++              <li>シャフト、フランジ、治具プレート</li>
++              <li>装置内部の機構部品、取付ブラケット</li>
++              <li>設備改造時の追加パーツ・調整部品</li>
++            </ul>
++          </article>
++          <article class="case-item">
++            <h3>対応業界</h3>
++            <ul class="list-check">
++              <li>産業機械、食品設備、包装装置</li>
++              <li>半導体・電子部品製造ラインの周辺設備</li>
++              <li>研究開発設備・検査設備関連</li>
++            </ul>
++          </article>
++        </div>
++      </div>
++    </section>
++
++    <section id="photos" aria-labelledby="photos-title">
++      <div class="container">
++        <h2 class="section-title" id="photos-title">写真ギャラリー（仮画像）</h2>
++        <p class="section-lead">工場・加工機・部品・打ち合わせ風景など、完成イメージを掴みやすいように複数の仮画像を配置しています。後からローカル画像へ差し替えやすいよう、各画像は独立したカード構成です。</p>
++        <div class="gallery">
++          <figure class="photo-card">
++            <img src="https://images.unsplash.com/photo-1581092588421-4f4a0a5f945c?auto=format&fit=crop&w=1400&q=80" alt="精密加工機が並ぶ製造フロアの全景（仮画像）" loading="lazy">
++            <figcaption>工場内の加工ライン（仮画像）</figcaption>
++          </figure>
++          <div class="gallery-sub">
++            <figure class="photo-card">
++              <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80" alt="金属部品を計測している作業者の手元（仮画像）" loading="lazy">
++              <figcaption>寸法確認・品質チェック（仮画像）</figcaption>
++            </figure>
++            <figure class="photo-card">
++              <img src="https://images.unsplash.com/photo-1581092160607-ee22731a0f71?auto=format&fit=crop&w=900&q=80" alt="金属部品のクローズアップ写真（仮画像）" loading="lazy">
++              <figcaption>製作部品イメージ（仮画像）</figcaption>
++            </figure>
++            <figure class="photo-card">
++              <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=900&q=80" alt="商談資料を確認する打ち合わせ風景（仮画像）" loading="lazy">
++              <figcaption>技術・調達打ち合わせ（仮画像）</figcaption>
++            </figure>
++          </div>
++        </div>
++      </div>
++    </section>
++
++    <section id="overview" aria-labelledby="overview-title">
++      <div class="container">
++        <h2 class="section-title" id="overview-title">会社概要</h2>
++        <p class="section-lead">以下は見本ページ用に設定した架空情報です。法人サイトとして必要な基本情報を整理した掲載例になっています。</p>
++        <table class="company-table" aria-label="会社概要テーブル">
++          <tr>
++            <th>会社名</th>
++            <td>旭東精機株式会社（Kyokuto Precision Works Co., Ltd.）</td>
++          </tr>
++          <tr>
++            <th>所在地</th>
++            <td>〒222-0033 神奈川県横浜市港北区新横浜3-10-5 旭東テクニカルセンター 2F</td>
++          </tr>
++          <tr>
++            <th>代表者</th>
++            <td>代表取締役　山岸 恒一（架空）</td>
++          </tr>
++          <tr>
++            <th>設立</th>
++            <td>2008年4月</td>
++          </tr>
++          <tr>
++            <th>事業内容</th>
++            <td>機械加工、精密部品製作、設備部品対応、試作部品製作、図面支給案件対応、法人向け調達支援</td>
++          </tr>
++          <tr>
++            <th>対応エリア</th>
++            <td>関東圏を中心に全国対応（配送・宅配便・定期便相談可）</td>
++          </tr>
++          <tr>
++            <th>問い合わせ先</th>
++            <td>TEL: 045-555-0188（平日 9:00-18:00） / E-mail: info@kyokuto-seiki.example.jp</td>
++          </tr>
++        </table>
++      </div>
++    </section>
++
++    <section id="contact" aria-labelledby="contact-title">
++      <div class="container">
++        <h2 class="section-title" id="contact-title">お問い合わせ</h2>
++        <p class="section-lead">図面段階でのご相談、試作見積、既存部品の置き換え検討など、お気軽にお問い合わせください。担当者が内容を確認し、必要情報をご案内します。</p>
++        <div class="contact-wrap">
++          <div class="contact-card">
++            <h3>お問い合わせ窓口（見本）</h3>
++            <p>法人のお客様を想定した窓口表示例です。実運用時はメールフォームや電話受付システムに接続してください。</p>
++            <div class="contact-actions">
++              <a class="btn btn-primary" href="javascript:void(0)" role="button" aria-disabled="true">メールで問い合わせる</a>
++              <a class="btn btn-secondary" href="javascript:void(0)" role="button" aria-disabled="true">電話で相談する</a>
++            </div>
++            <p class="note">※このページは見本のため、ボタンは動作しません。</p>
++          </div>
++          <div class="contact-card" id="map" aria-label="Googleマップ風セクション">
++            <h3>アクセス（Googleマップ風表示）</h3>
++            <p>本社所在地付近を示す埋め込み例です。実サイト化の際は、正式な住所・ピン位置・営業時間情報へ差し替えてご利用ください。</p>
++            <iframe class="map-frame" title="旭東精機株式会社 周辺地図（見本）" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%E6%96%B0%E6%A8%AA%E6%B5%9C%E9%A7%85&output=embed"></iframe>
++          </div>
++        </div>
++        <div class="return-area">
++          <a class="return-link" href="index.html#price">料金一覧に戻る</a>
++        </div>
++      </div>
++    </section>
++  </main>
++
++  <footer>
++    <div class="container">
++      <p>© 2026 旭東精機株式会社（架空サイト見本）. 本ページはデモ用サンプルです。</p>
++    </div>
++  </footer>
++</body>
+ </html>
 
-  <style>
-    :root {
-      --bg: #f4f8fc;
-      --surface: #ffffff;
-      --surface-soft: #f7fbff;
-      --text: #10223d;
-      --muted: #456181;
-      --line: #d7e3f0;
-      --primary: #1e5bb7;
-      --primary-dark: #144286;
-      --deep: #0f2747;
-      --accent: #2b7be4;
-      --shadow: 0 16px 36px rgba(16, 34, 61, 0.12);
-      --radius-xl: 24px;
-      --radius-lg: 18px;
-      --radius-md: 14px;
-      --max: 1120px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
-      background: radial-gradient(circle at top right, rgba(30, 91, 183, 0.08), transparent 32%), var(--bg);
-      line-height: 1.8;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: var(--radius-md);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(calc(100% - 32px), var(--max));
-      margin-inline: auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(8px);
-      background: rgba(244, 248, 252, 0.9);
-      border-bottom: 1px solid rgba(215, 227, 240, 0.9);
-    }
-
-    .header-inner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 12px 0;
-    }
-
-    .brand {
-      min-width: 0;
-    }
-
-    .brand small {
-      display: block;
-      color: var(--primary);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-    }
-
-    .brand strong {
-      font-size: 19px;
-      font-weight: 800;
-      line-height: 1.4;
-    }
-
-    .header-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .nav-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 40px;
-      padding: 8px 14px;
-      border: 1px solid var(--line);
-      background: #fff;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .nav-link:hover {
-      border-color: #b4c9e6;
-      transform: translateY(-1px);
-    }
-
-    .nav-return {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
-    }
-
-    .nav-return:hover {
-      background: var(--primary-dark);
-      border-color: var(--primary-dark);
-    }
-
-    .hero {
-      padding: 54px 0 34px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 22px;
-    }
-
-    .hero-main,
-    .hero-side {
-      background: rgba(255, 255, 255, 0.94);
-      border: 1px solid #d9e6f2;
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-main {
-      padding: 34px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: #e6f0ff;
-      color: var(--primary-dark);
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    h1 {
-      margin: 0 0 14px;
-      font-size: clamp(29px, 4.2vw, 44px);
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-    }
-
-    .hero-copy {
-      margin: 0;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .hero-points {
-      margin-top: 22px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .hero-point {
-      padding: 12px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background: #fff;
-    }
-
-    .hero-point strong {
-      display: block;
-      font-size: 13px;
-      line-height: 1.4;
-    }
-
-    .hero-point span {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .hero-cta {
-      margin-top: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      border-radius: 999px;
-      font-weight: 700;
-      padding: 10px 18px;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
-    }
-
-    .btn-secondary {
-      background: #fff;
-      border-color: var(--line);
-      color: var(--text);
-    }
-
-    .hero-side {
-      padding: 18px;
-      display: grid;
-      gap: 14px;
-      align-content: start;
-    }
-
-    .side-card {
-      padding: 16px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, #ffffff, #f7fbff);
-    }
-
-    .side-card h2,
-    .side-card h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    .side-card p,
-    .side-card li {
-      margin: 0;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .side-card ul {
-      margin: 0;
-      padding-left: 18px;
-      display: grid;
-      gap: 6px;
-    }
-
-    .hero-photo {
-      overflow: hidden;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--line);
-      margin-top: 12px;
-    }
-
-    main section {
-      padding: 32px 0;
-    }
-
-    .section-title {
-      margin: 0;
-      font-size: clamp(24px, 3vw, 34px);
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-    }
-
-    .section-lead {
-      margin: 12px 0 0;
-      color: var(--muted);
-    }
-
-    .panel {
-      margin-top: 20px;
-      padding: 24px;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--line);
-      background: var(--surface);
-      box-shadow: 0 10px 24px rgba(16, 34, 61, 0.06);
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .service-item,
-    .strength-item,
-    .case-item {
-      padding: 18px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--line);
-      background: var(--surface-soft);
-    }
-
-    h3 {
-      margin: 0 0 8px;
-      font-size: 19px;
-      line-height: 1.45;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    .list-check {
-      margin: 12px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      display: grid;
-      gap: 6px;
-      font-size: 14px;
-    }
-
-    .stats {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .stat {
-      text-align: center;
-      padding: 14px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--line);
-      background: #fff;
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--deep);
-      font-size: 22px;
-      line-height: 1.2;
-    }
-
-    .stat span {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 14px;
-      margin-top: 20px;
-    }
-
-    .gallery-sub {
-      display: grid;
-      gap: 14px;
-    }
-
-    .photo-card {
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      background: #fff;
-    }
-
-    .photo-card figcaption {
-      padding: 10px 12px;
-      font-size: 13px;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-      background: #fff;
-    }
-
-    .company-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 18px;
-      background: #fff;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid var(--line);
-    }
-
-    .company-table th,
-    .company-table td {
-      text-align: left;
-      padding: 12px 14px;
-      border-bottom: 1px solid #e2ebf5;
-      vertical-align: top;
-      font-size: 14px;
-    }
-
-    .company-table th {
-      width: 180px;
-      color: #193b67;
-      background: #f3f8ff;
-      font-weight: 700;
-    }
-
-    .company-table tr:last-child th,
-    .company-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .contact-wrap {
-      margin-top: 20px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .contact-card {
-      padding: 22px;
-      border-radius: var(--radius-lg);
-      background: #fff;
-      border: 1px solid var(--line);
-      box-shadow: 0 10px 20px rgba(16, 34, 61, 0.06);
-    }
-
-    .contact-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .note {
-      margin-top: 12px;
-      font-size: 13px;
-      color: #b45309;
-      background: #fff7ed;
-      border: 1px solid #fed7aa;
-      border-radius: 10px;
-      padding: 10px 12px;
-    }
-
-    .map-frame {
-      width: 100%;
-      min-height: 320px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-    }
-
-    .return-area {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .return-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 10px 20px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: #fff;
-      font-weight: 700;
-    }
-
-    footer {
-      margin-top: 40px;
-      background: var(--deep);
-      color: #c7d7ed;
-      padding: 28px 0;
-      font-size: 13px;
-    }
-
-    @media (max-width: 960px) {
-      .hero-grid,
-      .grid-3,
-      .gallery,
-      .contact-wrap,
-      .stats {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-sub {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero-points {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .hero-grid,
-      .grid-3,
-      .gallery,
-      .gallery-sub,
-      .contact-wrap,
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .header-nav {
-        width: 100%;
-      }
-
-      .nav-link {
-        flex: 1;
-      }
-
-      .hero-main,
-      .panel,
-      .contact-card {
-        padding: 20px;
-      }
-
-      .company-table th,
-      .company-table td {
-        display: block;
-        width: 100%;
-      }
-
-      .company-table th {
-        border-bottom: none;
-        padding-bottom: 4px;
-      }
-
-      .company-table td {
-        padding-top: 2px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="ページ上部へ移動">
-        <small>法人向け機械加工・精密部品対応</small>
-        <strong>旭東精機株式会社</strong>
-      </a>
-      <nav class="header-nav" aria-label="ページ内ナビゲーション">
-        <a class="nav-link" href="#company">会社紹介</a>
-        <a class="nav-link" href="#services">対応内容</a>
-        <a class="nav-link" href="#strengths">強み</a>
-        <a class="nav-link" href="#cases">実績・対応分野</a>
-        <a class="nav-link" href="#contact">お問い合わせ</a>
-        <a class="nav-link nav-return" href="index.html#price">料金一覧に戻る</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-main">
-          <p class="eyebrow">製造業・設備保全部門向けの加工パートナー</p>
-          <h1 id="hero-title">図面支給案件から継続生産まで。<br>精密加工を、実務に強い体制で。</h1>
-          <p class="hero-copy">旭東精機株式会社は、機械加工・精密部品製作・設備部品対応を主軸に、法人のお客様向けに加工サービスを提供する架空会社ホームページ見本です。試作段階の検討、治具・交換部品の手配、量産立ち上げ支援まで、現場の工程に合わせた提案で調達負荷を抑えます。</p>
-          <div class="hero-points">
-            <div class="hero-point">
-              <strong>精密部品加工</strong>
-              <span>寸法公差・幾何公差を意識した対応</span>
-            </div>
-            <div class="hero-point">
-              <strong>試作〜量産</strong>
-              <span>小ロット短納期から継続生産へ接続</span>
-            </div>
-            <div class="hero-point">
-              <strong>設備部品対応</strong>
-              <span>保全現場の交換部品・改造部品に対応</span>
-            </div>
-          </div>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#contact">お問い合わせ・ご相談</a>
-            <a class="btn btn-secondary" href="#services">対応内容を見る</a>
-          </div>
-        </div>
-        <aside class="hero-side" aria-label="補足情報">
-          <div class="side-card">
-            <h2>法人担当者様へ</h2>
-            <p>図面支給案件、仕様変更が発生する試作案件、既存設備の改修向け部品製作など、技術窓口と調達窓口の双方が扱いやすい情報整理を心がけています。</p>
-            <div class="hero-photo">
-              <img src="https://images.unsplash.com/photo-1565439518243-7f2b0fe3f4a0?auto=format&fit=crop&w=1200&q=80" alt="マシニングセンタで加工を行う工場内の様子（仮画像）" loading="lazy">
-            </div>
-          </div>
-          <div class="side-card">
-            <h3>初回相談で確認する内容</h3>
-            <ul>
-              <li>図面データ形式（2D/3D）と要求精度</li>
-              <li>材質、熱処理、表面処理の有無</li>
-              <li>数量、希望納期、検査成績書の要否</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="company" aria-labelledby="company-title">
-      <div class="container">
-        <h2 class="section-title" id="company-title">会社紹介 / メッセージ</h2>
-        <p class="section-lead">旭東精機株式会社は、加工現場で必要とされる「品質」「納期」「相談のしやすさ」のバランスを重視し、法人取引に適した標準化された進行管理で部品調達を支援します。初めてのお取引でも、技術仕様・検査基準・納入条件を段階的にすり合わせるため、業務負担を最小化しながら継続しやすい体制づくりを進めます。</p>
-        <div class="panel grid-2">
-          <div>
-            <h3>私たちが大切にすること</h3>
-            <p>単に加工を請け負うだけでなく、後工程での組付性や保守性を踏まえた提案を行うことを基本方針としています。図面通りの製作を前提にしつつ、加工可否やコスト・納期に影響する要素は早い段階で共有し、判断材料を明確にします。品質要求が高い案件でも、検査項目の定義と記録フォーマットを統一し、安定した運用を目指します。</p>
-          </div>
-          <div>
-            <h3>対応するお客様像</h3>
-            <p>産業機械メーカー、装置メーカー、工場の生産技術・保全部門、商社経由の部品調達案件など、法人実務における発注フローを理解した対応を行います。単発案件だけでなく、定期補給部品や改造案件の継続相談にも対応し、調達先を増やしすぎずに安定供給を目指す企業様に適した体制です。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" aria-labelledby="services-title">
-      <div class="container">
-        <h2 class="section-title" id="services-title">対応内容</h2>
-        <p class="section-lead">用途・数量・納期に応じて、下記のような加工と進行管理に対応します。図面支給案件を中心に、仕様確認〜納入までを一貫してサポートします。</p>
-        <div class="panel grid-3">
-          <article class="service-item">
-            <h3>精密部品加工</h3>
-            <p>マシニング、旋盤、穴加工、ねじ加工などを組み合わせ、要求公差に応じた工程設計で対応します。重要寸法は検査記録を残し、再発注時の再現性を確保します。</p>
-            <ul class="list-check">
-              <li>単品〜中ロットの切削加工</li>
-              <li>検査成績書の提出相談</li>
-              <li>組立前提の公差管理</li>
-            </ul>
-          </article>
-          <article class="service-item">
-            <h3>試作対応</h3>
-            <p>開発段階の部品について、加工可否の確認や工程の簡略化提案を実施。設計変更が発生しやすい段階でも、都度の情報更新に追従できるよう管理します。</p>
-            <ul class="list-check">
-              <li>設計検証向け短納期製作</li>
-              <li>試作後の改善フィードバック</li>
-              <li>量産移行時の仕様引き継ぎ</li>
-            </ul>
-          </article>
-          <article class="service-item">
-            <h3>小ロット〜量産</h3>
-            <p>先行試作から月次生産まで、数量変動を見据えた加工体制を構築。発注の波に合わせた納入計画で、過剰在庫と欠品のリスクを抑えます。</p>
-            <ul class="list-check">
-              <li>定期発注に向けた生産計画</li>
-              <li>ロットごとのトレーサビリティ</li>
-              <li>発注点に合わせた分納相談</li>
-            </ul>
-          </article>
-          <article class="service-item">
-            <h3>設備部品対応</h3>
-            <p>既設設備の交換部品・補修部品・改造部品に対応し、生産停止時間の最小化を支援。現物参照が必要な案件も、仕様確認の上で柔軟に進めます。</p>
-            <ul class="list-check">
-              <li>突発故障時の優先相談</li>
-              <li>旧図面案件の整理対応</li>
-              <li>治具・ブラケット製作</li>
-            </ul>
-          </article>
-          <article class="service-item">
-            <h3>図面支給案件</h3>
-            <p>2D図・3Dデータの双方を受領し、加工上の不明点を事前に確認。仕様解釈のズレを減らし、初回製作時の手戻り防止につなげます。</p>
-            <ul class="list-check">
-              <li>PDF / DXF / STEP などに対応</li>
-              <li>重要箇所の事前レビュー</li>
-              <li>検査基準の擦り合わせ</li>
-            </ul>
-          </article>
-          <article class="service-item">
-            <h3>調達実務サポート</h3>
-            <p>見積依頼時に必要な情報の整理、納入形態の取り決め、継続取引時の連絡フロー整備まで対応し、法人調達の運用を円滑にします。</p>
-            <ul class="list-check">
-              <li>見積項目の標準化</li>
-              <li>納期回答の明確化</li>
-              <li>継続案件の窓口一本化</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="strengths" aria-labelledby="strengths-title">
-      <div class="container">
-        <h2 class="section-title" id="strengths-title">旭東精機の強み</h2>
-        <p class="section-lead">「品質管理」「納期対応」「加工相談」「継続取引のしやすさ」を軸に、企業間取引で必要な安心感を整えています。</p>
-        <div class="panel grid-2">
-          <article class="strength-item">
-            <h3>品質管理</h3>
-            <p>受注時の仕様確認から出荷前検査まで、案件ごとにチェック項目を明文化。重要寸法は記録を残し、継続案件での品質のばらつきを抑制します。</p>
-          </article>
-          <article class="strength-item">
-            <h3>納期対応</h3>
-            <p>工程ごとのリードタイムを共有し、優先案件は段取り調整で対応。短納期のご相談でも、対応可否を早期に回答して調達判断を支援します。</p>
-          </article>
-          <article class="strength-item">
-            <h3>加工相談</h3>
-            <p>図面上で判断しづらい箇所は、目的機能と使用条件を確認しながら最適な加工方法を提案。コストと品質のバランスを見える化します。</p>
-          </article>
-          <article class="strength-item">
-            <h3>継続取引しやすさ</h3>
-            <p>窓口の固定化、履歴管理、共通フォーマット運用で、再発注時のコミュニケーションコストを軽減。企業担当者が社内説明しやすい情報提供を行います。</p>
-          </article>
-        </div>
-        <div class="stats">
-          <div class="stat"><strong>96%</strong><span>納期遵守率（想定）</span></div>
-          <div class="stat"><strong>1個〜</strong><span>単品加工相談に対応</span></div>
-          <div class="stat"><strong>300+</strong><span>加工部品カテゴリ（想定）</span></div>
-          <div class="stat"><strong>24h</strong><span>一次回答目安（営業日）</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cases" aria-labelledby="cases-title">
-      <div class="container">
-        <h2 class="section-title" id="cases-title">実績・対応分野（イメージ）</h2>
-        <p class="section-lead">案件検討時の参考として、加工事例・対応材質・製作部品例・対応業界をまとめています。実務で比較しやすいよう、用途別に整理しています。</p>
-        <div class="panel grid-2">
-          <article class="case-item">
-            <h3>加工事例</h3>
-            <ul class="list-check">
-              <li>搬送装置用ガイドプレートの高精度加工</li>
-              <li>自動機向けブラケット・スペーサーの短納期製作</li>
-              <li>保全部門向け交換軸・固定治具の再製作</li>
-            </ul>
-          </article>
-          <article class="case-item">
-            <h3>対応材質</h3>
-            <ul class="list-check">
-              <li>一般鋼材、ステンレス、アルミ合金</li>
-              <li>真鍮・銅系材、樹脂材（用途に応じて）</li>
-              <li>熱処理前後を含む案件相談</li>
-            </ul>
-          </article>
-          <article class="case-item">
-            <h3>製作部品例</h3>
-            <ul class="list-check">
-              <li>シャフト、フランジ、治具プレート</li>
-              <li>装置内部の機構部品、取付ブラケット</li>
-              <li>設備改造時の追加パーツ・調整部品</li>
-            </ul>
-          </article>
-          <article class="case-item">
-            <h3>対応業界</h3>
-            <ul class="list-check">
-              <li>産業機械、食品設備、包装装置</li>
-              <li>半導体・電子部品製造ラインの周辺設備</li>
-              <li>研究開発設備・検査設備関連</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="photos" aria-labelledby="photos-title">
-      <div class="container">
-        <h2 class="section-title" id="photos-title">写真ギャラリー（仮画像）</h2>
-        <p class="section-lead">工場・加工機・部品・打ち合わせ風景など、完成イメージを掴みやすいように複数の仮画像を配置しています。後からローカル画像へ差し替えやすいよう、各画像は独立したカード構成です。</p>
-        <div class="gallery">
-          <figure class="photo-card">
-            <img src="https://images.unsplash.com/photo-1581092588421-4f4a0a5f945c?auto=format&fit=crop&w=1400&q=80" alt="精密加工機が並ぶ製造フロアの全景（仮画像）" loading="lazy">
-            <figcaption>工場内の加工ライン（仮画像）</figcaption>
-          </figure>
-          <div class="gallery-sub">
-            <figure class="photo-card">
-              <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80" alt="金属部品を計測している作業者の手元（仮画像）" loading="lazy">
-              <figcaption>寸法確認・品質チェック（仮画像）</figcaption>
-            </figure>
-            <figure class="photo-card">
-              <img src="https://images.unsplash.com/photo-1581092160607-ee22731a0f71?auto=format&fit=crop&w=900&q=80" alt="金属部品のクローズアップ写真（仮画像）" loading="lazy">
-              <figcaption>製作部品イメージ（仮画像）</figcaption>
-            </figure>
-            <figure class="photo-card">
-              <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=900&q=80" alt="商談資料を確認する打ち合わせ風景（仮画像）" loading="lazy">
-              <figcaption>技術・調達打ち合わせ（仮画像）</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="overview" aria-labelledby="overview-title">
-      <div class="container">
-        <h2 class="section-title" id="overview-title">会社概要</h2>
-        <p class="section-lead">以下は見本ページ用に設定した架空情報です。法人サイトとして必要な基本情報を整理した掲載例になっています。</p>
-        <table class="company-table" aria-label="会社概要テーブル">
-          <tr>
-            <th>会社名</th>
-            <td>旭東精機株式会社（Kyokuto Precision Works Co., Ltd.）</td>
-          </tr>
-          <tr>
-            <th>所在地</th>
-            <td>〒222-0033 神奈川県横浜市港北区新横浜3-10-5 旭東テクニカルセンター 2F</td>
-          </tr>
-          <tr>
-            <th>代表者</th>
-            <td>代表取締役　山岸 恒一（架空）</td>
-          </tr>
-          <tr>
-            <th>設立</th>
-            <td>2008年4月</td>
-          </tr>
-          <tr>
-            <th>事業内容</th>
-            <td>機械加工、精密部品製作、設備部品対応、試作部品製作、図面支給案件対応、法人向け調達支援</td>
-          </tr>
-          <tr>
-            <th>対応エリア</th>
-            <td>関東圏を中心に全国対応（配送・宅配便・定期便相談可）</td>
-          </tr>
-          <tr>
-            <th>問い合わせ先</th>
-            <td>TEL: 045-555-0188（平日 9:00-18:00） / E-mail: info@kyokuto-seiki.example.jp</td>
-          </tr>
-        </table>
-      </div>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 class="section-title" id="contact-title">お問い合わせ</h2>
-        <p class="section-lead">図面段階でのご相談、試作見積、既存部品の置き換え検討など、お気軽にお問い合わせください。担当者が内容を確認し、必要情報をご案内します。</p>
-        <div class="contact-wrap">
-          <div class="contact-card">
-            <h3>お問い合わせ窓口（見本）</h3>
-            <p>法人のお客様を想定した窓口表示例です。実運用時はメールフォームや電話受付システムに接続してください。</p>
-            <div class="contact-actions">
-              <a class="btn btn-primary" href="javascript:void(0)" role="button" aria-disabled="true">メールで問い合わせる</a>
-              <a class="btn btn-secondary" href="javascript:void(0)" role="button" aria-disabled="true">電話で相談する</a>
-            </div>
-            <p class="note">※このページは見本のため、ボタンは動作しません。</p>
-          </div>
-          <div class="contact-card" id="map" aria-label="Googleマップ風セクション">
-            <h3>アクセス（Googleマップ風表示）</h3>
-            <p>本社所在地付近を示す埋め込み例です。実サイト化の際は、正式な住所・ピン位置・営業時間情報へ差し替えてご利用ください。</p>
-            <iframe class="map-frame" title="旭東精機株式会社 周辺地図（見本）" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%E6%96%B0%E6%A8%AA%E6%B5%9C%E9%A7%85&output=embed"></iframe>
-          </div>
-        </div>
-        <div class="return-area">
-          <a class="return-link" href="index.html#price">料金一覧に戻る</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2026 旭東精機株式会社（架空サイト見本）. 本ページはデモ用サンプルです。</p>
-    </div>
-  </footer>
-</body>
-</html>
