@@ -1291,7 +1291,332 @@
             業種や規模に合わせて、必要な内容を整理しながら進めます。
             まだ内容がはっきり決まっていない段階でも大丈夫です。
           </p>
+<style>
+  .contact-form-wrap {
+    margin-top: 24px;
+    padding: 22px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
 
+  .contact-form-intro {
+    margin: 0 0 18px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .contact-form {
+    display: grid;
+    gap: 16px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .form-group {
+    display: grid;
+    gap: 8px;
+  }
+
+  .form-group.full {
+    grid-column: 1 / -1;
+  }
+
+  .form-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.5;
+  }
+
+  .form-note {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.72);
+    margin-left: 6px;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.96);
+    color: #0f172a;
+    font-size: 14px;
+    line-height: 1.6;
+    appearance: none;
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: #64748b;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: #93c5fd;
+    box-shadow: 0 0 0 4px rgba(147, 197, 253, 0.18);
+  }
+
+  .form-textarea {
+    min-height: 130px;
+    resize: vertical;
+  }
+
+  .check-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 14px;
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .check-item input {
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+    accent-color: #f59e0b;
+    flex: 0 0 auto;
+  }
+
+  .form-submit {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .form-submit .btn {
+    width: 100%;
+  }
+
+  .form-help {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.8;
+  }
+
+  @media (max-width: 768px) {
+    .form-grid,
+    .check-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrap {
+      padding: 18px;
+    }
+  }
+</style>
+
+<form
+  class="contact-form"
+  action="https://formspree.io/f/xxxxxxxx"
+  method="POST"
+>
+  <div class="contact-form-wrap">
+    <p class="contact-form-intro">
+      ご相談前に、わかる範囲でご入力いただくとご案内がスムーズです。<br>
+      まだ決まっていない項目は、未定のままで大丈夫です。まずは「こういうホームページがほしい」という段階でもお気軽にご相談ください。
+    </p>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label class="form-label" for="company-name">
+          お名前または会社名
+          <span class="form-note">必須</span>
+        </label>
+        <input
+          class="form-input"
+          type="text"
+          id="company-name"
+          name="お名前または会社名"
+          placeholder="株式会社○○ / 山田太郎"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">
+          メールアドレス
+          <span class="form-note">必須</span>
+        </label>
+        <input
+          class="form-input"
+          type="email"
+          id="email"
+          name="メールアドレス"
+          placeholder="example@mail.com"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="plan">ご希望のプラン <span class="form-note">任意</span></label>
+        <select class="form-select" id="plan" name="ご希望のプラン">
+          <option value="">選択してください</option>
+          <option value="ライトプラン">ライトプラン</option>
+          <option value="標準プラン">標準プラン</option>
+          <option value="まだ未定">まだ未定</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="base-type">ご希望のベース <span class="form-note">任意</span></label>
+        <select class="form-select" id="base-type" name="ご希望のベース">
+          <option value="">選択してください</option>
+          <option value="シンプル型">シンプル型</option>
+          <option value="信頼感しっかり型">信頼感しっかり型</option>
+          <option value="コーポレート型">コーポレート型</option>
+          <option value="まだ未定">まだ未定</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="industry">業種 <span class="form-note">任意</span></label>
+        <input
+          class="form-input"
+          type="text"
+          id="industry"
+          name="業種"
+          placeholder="電気工事業 / 設備工事業 / 製造業 など"
+        >
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="publish-timing">ご希望の公開時期 <span class="form-note">任意</span></label>
+        <select class="form-select" id="publish-timing" name="ご希望の公開時期">
+          <option value="">選択してください</option>
+          <option value="できるだけ早め">できるだけ早め</option>
+          <option value="1か月以内">1か月以内</option>
+          <option value="2〜3か月以内">2〜3か月以内</option>
+          <option value="まだ未定">まだ未定</option>
+        </select>
+      </div>
+
+      <div class="form-group full">
+        <label class="form-label" for="contents">載せたい内容・必要なページ <span class="form-note">できれば入力</span></label>
+        <textarea
+          class="form-textarea"
+          id="contents"
+          name="載せたい内容・必要なページ"
+          placeholder="会社概要、対応業務、お問い合わせフォームを入れたいです。"
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="photo-status">載せたい写真や画像はありますか？ <span class="form-note">任意</span></label>
+        <select class="form-select" id="photo-status" name="載せたい写真や画像の有無">
+          <option value="">選択してください</option>
+          <option value="ある">ある</option>
+          <option value="一部ある">一部ある</option>
+          <option value="まだない">まだない</option>
+          <option value="これから撮る予定">これから撮る予定</option>
+          <option value="未定">未定</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="photo-count">使えそうな写真はどのくらいありますか？ <span class="form-note">任意</span></label>
+        <select class="form-select" id="photo-count" name="使えそうな写真の枚数">
+          <option value="">選択してください</option>
+          <option value="1〜3枚">1〜3枚</option>
+          <option value="4〜10枚">4〜10枚</option>
+          <option value="10枚以上">10枚以上</option>
+          <option value="まだわからない">まだわからない</option>
+          <option value="写真はまだない">写真はまだない</option>
+        </select>
+      </div>
+
+      <div class="form-group full">
+        <label class="form-label" for="photo-kind">どんな写真がありますか？ <span class="form-note">任意</span></label>
+        <input
+          class="form-input"
+          type="text"
+          id="photo-kind"
+          name="写真の内容"
+          placeholder="会社外観、施工写真、作業風景、設備写真 など"
+        >
+      </div>
+
+      <div class="form-group full">
+        <label class="form-label" for="reference-site">参考にしたいサイトや見た目 <span class="form-note">任意</span></label>
+        <textarea
+          class="form-textarea"
+          id="reference-site"
+          name="参考にしたいサイトや見た目"
+          placeholder="https://example.com/ のような落ち着いた雰囲気が希望です。"
+        ></textarea>
+      </div>
+
+      <div class="form-group full">
+        <label class="form-label">追加で希望する内容 <span class="form-note">任意</span></label>
+        <div class="check-grid">
+          <label class="check-item">
+            <input type="checkbox" name="追加希望[]" value="お問い合わせフォームを付けたい">
+            <span>お問い合わせフォームを付けたい</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="追加希望[]" value="独自ドメインも相談したい">
+            <span>独自ドメインも相談したい</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="追加希望[]" value="Google設定補助も相談したい">
+            <span>Google設定補助も相談したい</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="追加希望[]" value="クレジットカード決済も相談したい">
+            <span>クレジットカード決済も相談したい</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="追加希望[]" value="公開後の修正についても知りたい">
+            <span>公開後の修正についても知りたい</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group full">
+        <label class="form-label" for="message">その他ご相談内容 <span class="form-note">任意</span></label>
+        <textarea
+          class="form-textarea"
+          id="message"
+          name="その他ご相談内容"
+          placeholder="まだ内容がまとまっていないので、相談しながら決めたいです。"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="form-submit">
+      <button class="btn btn-primary" type="submit">制作相談を送る</button>
+      <p class="form-help">
+        送信後、内容を確認のうえご連絡いたします。<br>
+        まだ内容がまとまっていない場合でも、わかる範囲でご入力いただければ大丈夫です。写真がまだない場合も、文字中心で見やすくまとめる形で作成できます。
+      </p>
+    </div>
+  </div>
+</form>
           <div class="cta-group">
             <a class="btn btn-primary" href="mailto:yourmail@example.com">メールで問い合わせる</a>
             <a class="btn btn-secondary" href="#price">料金の目安をもう一度見る</a>
