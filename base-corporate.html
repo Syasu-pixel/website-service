@@ -88,7 +88,10 @@
     }
 
     .site-header {
-      position: relative;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 10;
       padding: 24px 0;
     }
@@ -152,10 +155,22 @@
       background: rgba(255, 255, 255, 0.14);
     }
 
+    .nav-return {
+      background: rgba(255, 255, 255, 0.94);
+      border-color: rgba(255, 255, 255, 0.94);
+      color: var(--primary);
+      white-space: nowrap;
+    }
+
+    .nav-return:hover {
+      background: #fff;
+      border-color: #fff;
+    }
+
     .hero-body {
       position: relative;
       z-index: 3;
-      padding: 58px 0 126px;
+      padding: 112px 0 126px;
     }
 
     .hero-subcopy {
@@ -609,7 +624,7 @@
       }
 
       .hero-body {
-        padding: 30px 0 110px;
+        padding: 86px 0 110px;
       }
 
       h1 {
@@ -663,18 +678,19 @@
   <main>
     <section class="hero">
       <header class="site-header">
-        <div class="container header-inner">
-          <a class="brand" href="index.html" aria-label="サービス案内トップへ戻る">
-            <span class="brand-label">TOWA FACILITY SOLUTIONS</span>
-            <span class="brand-name">東和設備ソリューションズ株式会社</span>
-          </a>
-          <nav class="header-nav" aria-label="主要メニュー">
-            <a class="nav-link" href="#strength">当社の強み</a>
-            <a class="nav-link" href="#business">事業内容</a>
-            <a class="nav-link" href="#company">会社概要</a>
-            <a class="nav-link" href="#contact">お問い合わせ</a>
-          </nav>
-        </div>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="サービス案内トップへ戻る">
+          <span class="brand-label">TOWA FACILITY SOLUTIONS</span>
+          <span class="brand-name">東和設備ソリューションズ株式会社</span>
+        </a>
+        <nav class="header-nav" aria-label="主要メニュー">
+          <a class="nav-link nav-return" href="index.html#price">プラン選択へ戻る</a>
+          <a class="nav-link" href="#strength">当社の強み</a>
+          <a class="nav-link" href="#business">事業内容</a>
+          <a class="nav-link" href="#company">会社概要</a>
+          <a class="nav-link" href="#contact">お問い合わせ</a>
+        </nav>
+      </div>
       </header>
 
       <div class="hero-body">

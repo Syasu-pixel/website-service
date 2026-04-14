@@ -144,6 +144,18 @@
       transform: translateY(-1px);
     }
 
+    .nav-return {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .nav-return:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+    }
+
     .hero {
       padding: 52px 0 28px;
     }
@@ -657,6 +669,7 @@
         <span class="brand-name">Google設定補助込み向けベース構成</span>
       </a>
       <nav class="header-nav" aria-label="主要メニュー">
+        <a class="nav-link nav-return" href="index.html#price">プラン選択へ戻る</a>
         <a class="nav-link" href="#overview">概要</a>
         <a class="nav-link" href="#features">向いている内容</a>
         <a class="nav-link" href="#steps">流れ</a>
