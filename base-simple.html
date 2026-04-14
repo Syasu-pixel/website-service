@@ -471,6 +471,13 @@
       border-color: rgba(255, 255, 255, 0.32);
     }
 
+    .back-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
     .site-footer {
       padding: 22px 0 36px;
     }
@@ -548,7 +555,8 @@
         width: 100%;
       }
 
-      .cta-group {
+      .cta-group,
+      .back-links {
         flex-direction: column;
       }
 
@@ -792,16 +800,17 @@
             </p>
           </div>
 
-          <p>
-            お問い合わせの際は「材質」「数量」「希望納期」「図面データの有無」をお知らせいただくと、
-            よりスムーズにご案内できます。
-          </p>
-
           <div class="cta-group">
             <button class="btn btn-primary" type="button">メールで問い合わせる</button>
-            <button class="btn btn-secondary" type="button">06-1234-5678 に電話する</button>
+            <button class="btn btn-secondary" type="button">電話で相談する</button>
           </div>
           <p style="margin-top: 10px; font-size: 12px; color: var(--muted);">※このページは見本のため、ボタンは動作しません。</p>
+        </div>
+
+        <div class="back-links">
+          <a class="btn btn-secondary" href="base-simple.html">シンプル型を見る</a>
+          <a class="btn btn-secondary" href="base-standard.html">標準型を見る</a>
+          <a class="btn btn-secondary" href="index.html#price">料金一覧に戻る</a>
         </div>
       </div>
     </section>
