@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>公開後の集客準備まで見せやすいホームページの見本｜Google設定補助込みプラン向けベース構成</title>
+  <meta name="description" content="会社情報、対応業務、お問い合わせ導線に加えて、Google検索やGoogleマップ向けの初期整備も意識した、Google設定補助込みプラン向けのホームページ見本です。">
+  <meta name="robots" content="index,follow">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://syasu-pixel.github.io/website-service/base-works.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="小規模事業者向けホームページ制作">
+  <meta property="og:title" content="公開後の集客準備まで見せやすいホームページの見本｜Google設定補助込みプラン向けベース構成">
+  <meta property="og:description" content="会社情報、対応業務、お問い合わせ導線に加えて、Google検索やGoogleマップ向けの初期整備も意識した、Google設定補助込みプラン向けのホームページ見本です。">
+  <meta property="og:url" content="https://syasu-pixel.github.io/website-service/base-works.html">
+  <meta property="og:image" content="https://example.com/assets/images/common/ogp.jpg">
+  <meta property="og:image:alt" content="Google設定補助込みプラン向けホームページ見本のイメージ">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="公開後の集客準備まで見せやすいホームページの見本｜Google設定補助込みプラン向けベース構成">
+  <meta name="twitter:description" content="会社情報、対応業務、お問い合わせ導線に加えて、Google検索やGoogleマップ向けの初期整備も意識した、Google設定補助込みプラン向けのホームページ見本です。">
+  <meta name="twitter:image" content="https://example.com/assets/images/common/ogp.jpg">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-soft: #f8fbff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe4f0;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #f59e0b;
+      --accent-dark: #d97706;
+      --success: #16a34a;
+      --shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.10), transparent 28%),
+        radial-gradient(circle at top left, rgba(245, 158, 11, 0.07), transparent 24%),
+        var(--bg);
+      line-height: 1.8;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(248, 250, 252, 0.82);
+      border-bottom: 1px solid rgba(219, 228, 240, 0.9);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .brand-label {
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-link {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 999px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .nav-link:hover {
+      border-color: #bfd2ff;
+      background: #fff;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 52px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-main,
+    .hero-side {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(219, 228, 240, 0.95);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main::before {
+      content: "";
+      position: absolute;
+      inset: auto -50px -50px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.14), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-side {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: space-between;
+    }
+
+    .side-card {
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+      border: 1px solid var(--line);
+    }
+
+    .side-card h2,
+    .side-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .side-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #e8f0ff;
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(30px, 4.2vw, 44px);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .hero-point {
+      padding: 14px 14px 13px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      min-height: 50px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.4;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: #bfd2ff;
+      background: #f8fbff;
+      transform: translateY(-1px);
+    }
+
+    .section {
+      padding: 28px 0;
+    }
+
+    .section-head {
+      margin-bottom: 20px;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 3.1vw, 34px);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    .section-lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      height: 100%;
+    }
+
+    .card-body {
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      line-height: 1.5;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      min-height: 32px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .point-list,
+    .check-list {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .point-list li,
+    .check-list li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .point-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--success);
+      font-weight: 900;
+    }
+
+    .feature-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    .status-box {
+      padding: 28px;
+      background: linear-gradient(180deg, #fff, #f7fbff);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .status-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .step-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      font-size: 16px;
+      font-weight: 900;
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.20);
+    }
+
+    .step-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .step-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .highlight-band {
+      padding: 28px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #eff6ff, #fff8eb);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .highlight-band h2 {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 3vw, 32px);
+      line-height: 1.35;
+    }
+
+    .highlight-band p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .contact-box {
+      padding: 30px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      border-radius: var(--radius-xl);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.22);
+    }
+
+    .contact-box .section-kicker,
+    .contact-box .section-title,
+    .contact-box .section-lead,
+    .contact-box p {
+      color: #fff;
+    }
+
+    .contact-box .section-lead {
+      opacity: 0.86;
+    }
+
+    .contact-box .btn-secondary {
+      background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(255, 255, 255, 0.22);
+      color: #fff;
+    }
+
+    .contact-box .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.32);
+    }
+
+    .back-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .site-footer {
+      padding: 22px 0 36px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-title {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .footer-text,
+    .footer-copy {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .hero-points,
+      .grid-3,
+      .grid-2,
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .brand {
+        align-items: flex-start;
+      }
+
+      .header-nav {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding-top: 24px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .card-body,
+      .status-box,
+      .highlight-band,
+      .contact-box {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .section {
+        padding: 22px 0;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cta-group,
+      .back-links {
+        flex-direction: column;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .nav-link {
+        min-height: 40px;
+        font-size: 12px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "小規模事業者向けホームページ制作",
+    "url": "https://syasu-pixel.github.io/website-service/base-works.html",
+    "description": "会社情報、対応業務、お問い合わせ導線に加えて、Google検索やGoogleマップ向けの初期整備も意識した、Google設定補助込みプラン向けのホームページ見本です。",
+    "areaServed": "Japan",
+    "serviceType": "ホームページ制作",
+    "offers": {
+      "@type": "Offer",
+      "name": "Google設定補助込みプラン向けベース構成",
+      "price": "110000",
+      "priceCurrency": "JPY"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="サービス案内トップへ戻る">
+        <span class="brand-label">WORKS & GOOGLE SAMPLE</span>
+        <span class="brand-name">Google設定補助込み向けベース構成</span>
+      </a>
+      <nav class="header-nav" aria-label="主要メニュー">
+        <a class="nav-link" href="#overview">概要</a>
+        <a class="nav-link" href="#features">向いている内容</a>
+        <a class="nav-link" href="#steps">流れ</a>
+        <a class="nav-link" href="#contact">相談する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <span class="eyebrow">GOOGLE SUPPORT PLAN SAMPLE</span>
+          <h1>ホームページ公開後の<br>検索・マップ準備まで見せやすい構成の見本です。</h1>
+          <p class="hero-lead">
+            このベースは、会社情報や対応業務、お問い合わせ導線だけでなく、
+            Google検索やGoogleマップで見つけてもらうための初期整備も意識した構成です。
+            公開して終わりではなく、仕事につながる入口まで整えたい場合に向いています。
+          </p>
+
+          <div class="hero-points">
+            <div class="hero-point">会社情報を整理して見せやすい</div>
+            <div class="hero-point">問い合わせ導線を作りやすい</div>
+            <div class="hero-point">Google向けの初期整備も説明しやすい</div>
+          </div>
+
+          <div class="cta-group">
+            <a class="btn btn-primary" href="#contact">この形で相談する</a>
+            <a class="btn btn-secondary" href="index.html#price">料金ページに戻る</a>
+          </div>
+        </div>
+
+        <aside class="hero-side" aria-label="補足情報">
+          <div class="side-card">
+            <h2>こんな方に向いています</h2>
+            <ul class="check-list">
+              <li>ホームページ公開後の動き出しも意識したい</li>
+              <li>Google検索やGoogleマップも整えたい</li>
+              <li>会社情報をきちんと見せたい</li>
+              <li>地域や業種での見つかりやすさも意識したい</li>
+            </ul>
+          </div>
+
+          <div class="side-card">
+            <h3>このベースで見せやすいこと</h3>
+            <ul class="check-list">
+              <li>会社案内</li>
+              <li>対応業務</li>
+              <li>強みや特徴</li>
+              <li>問い合わせ導線</li>
+              <li>Google初期設定補助の案内</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">OVERVIEW</span>
+          <h2 class="section-title">このベースが向いているケース</h2>
+          <p class="section-lead">
+            ただ公開するだけでなく、検索やGoogleマップ経由で見つけてもらう準備まで一緒に整えたい場合に向いています。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">公開後も意識したい方</span>
+              <h3>ホームページを仕事の入口にしたい</h3>
+              <p>会社情報と問い合わせ導線を整理することで、見た人が次の行動を取りやすくなります。</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">地域密着向け</span>
+              <h3>Googleマップとの相性も考えたい</h3>
+              <p>業種や地域によっては、Google検索やGoogleマップを見て連絡される流れと相性がいいです。</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">初期設定まで任せたい方</span>
+              <h3>公開後の動き出しをスムーズにしたい</h3>
+              <p>公開後の設定や見せ方まで最初から考えると、後で整え直す手間を減らしやすいです。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">FEATURES</span>
+          <h2 class="section-title">このベースで入れやすい内容</h2>
+          <p class="section-lead">
+            会社のことを伝えるだけでなく、検索やマップで見た人にもわかりやすい情報設計にしやすい構成です。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card feature-card">
+            <div class="card-body">
+              <h3>会社情報の整理</h3>
+              <p>会社名、所在地、連絡先、対応エリアなど、Google系の情報と揃えて見せやすいです。</p>
+              <ul class="point-list">
+                <li>会社名</li>
+                <li>住所</li>
+                <li>電話・メール</li>
+                <li>対応エリア</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card feature-card">
+            <div class="card-body">
+              <h3>対応業務の見せ方</h3>
+              <p>何を依頼できる会社かを整理して、検索やマップから見た人にも伝わりやすくできます。</p>
+              <ul class="point-list">
+                <li>主な仕事内容</li>
+                <li>相談しやすい業務例</li>
+                <li>強み・特徴</li>
+                <li>対応可能な内容</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card feature-card">
+            <div class="card-body">
+              <h3>問い合わせ導線</h3>
+              <p>メール、フォーム、電話など、見た人が行動しやすい導線に整理しやすいです。</p>
+              <ul class="point-list">
+                <li>相談方法の案内</li>
+                <li>フォームやメール導線</li>
+                <li>問い合わせ前の説明</li>
+                <li>対応時間の記載</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card feature-card">
+            <div class="card-body">
+              <h3>Google検索向け初期整備</h3>
+              <p>タイトル、説明文、会社情報の出し方など、公開後の基本整備を説明しやすいです。</p>
+              <ul class="point-list">
+                <li>タイトル設定</li>
+                <li>説明文設定</li>
+                <li>URL整理</li>
+                <li>基本的な公開設定</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card feature-card">
+            <div class="card-body">
+              <h3>Googleマップ向け初期整備</h3>
+              <p>Googleビジネスプロフィールと内容を揃えやすく、見た人の混乱を減らしやすいです。</p>
+              <ul class="point-list">
+                <li>会社情報の統一</li>
+                <li>業務内容の整理</li>
+                <li>写真追加の導線</li>
+                <li>公開後の補助案内</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card feature-card">
+            <div class="card-body">
+              <h3>あとから足しやすい内容</h3>
+              <p>実績紹介、よくある質問、写真、対応事例なども後から足していきやすいです。</p>
+              <ul class="point-list">
+                <li>施工例・実績</li>
+                <li>FAQ</li>
+                <li>写真追加</li>
+                <li>案内文の調整</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="status-box">
+          <div class="section-head">
+            <span class="section-kicker">POINT</span>
+            <h2 class="section-title">公開して終わりではなく、見つけてもらう準備まで考える型です</h2>
+            <p class="section-lead">
+              Google検索やGoogleマップにすぐ強くなるという意味ではなく、まずは整えておいたほうがいい基本を揃えるイメージです。
+            </p>
+          </div>
+          <p>
+            このベースは、会社情報や業務内容をホームページとGoogle系の見せ方で揃えやすくし、
+            公開後の動き出しをスムーズにするための構成です。
+            特に地域密着型の事業や、検索・マップ経由の相談と相性がいい業種に向いています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="steps">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">STEPS</span>
+          <h2 class="section-title">このベースで進める時の流れ</h2>
+          <p class="section-lead">
+            ホームページの見た目だけでなく、公開後の基本設定まで見据えて進めやすい流れです。
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">1</div>
+            <h3>掲載内容を整理</h3>
+            <p>会社情報、対応業務、連絡方法などを、ホームページとGoogle向けに整理しやすい形にします。</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <h3>ページを見やすく整える</h3>
+            <p>見た人が内容を理解しやすく、問い合わせしやすい構成にしていきます。</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <h3>公開時の基本設定を確認</h3>
+            <p>タイトルや説明文、公開時の基本整備など、最低限そろえたい部分を確認します。</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">4</div>
+            <h3>Google系の初期補助</h3>
+            <p>必要に応じて、Google検索やGoogleマップに向けた初期設定補助を案内しやすい形です。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="highlight-band">
+          <h2>「ホームページを公開したあと、どう見せるか」まで考えたいならこの型が使いやすいです。</h2>
+          <p>
+            会社情報や問い合わせ導線だけでなく、Google検索やGoogleマップとのつながりも意識して、
+            仕事につながる入り口を整えたい場合に向いています。
+          </p>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="#contact">この形で相談する</a>
+            <a class="btn btn-secondary" href="index.html#price">料金一覧へ戻る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="section-head">
+            <span class="section-kicker">CONTACT</span>
+            <h2 class="section-title">このGoogle設定補助込み型をベースに相談できます</h2>
+            <p class="section-lead">
+              ホームページ公開後の検索・マップ準備まで含めて、仕事につながる入口を整えたい場合に向いています。
+            </p>
+          </div>
+
+          <p>
+            実際の業種や地域、載せたい内容に合わせて、文言や構成は調整できます。
+            まずは会社ホームページとGoogle系の初期整備をまとめて考えたい場合は、このベースをもとに相談いただけます。
+          </p>
+
+          <div class="cta-group">
+            <a class="btn btn-primary" href="mailto:yourmail@example.com?subject=Google設定補助込みプランの相談">この形で問い合わせる</a>
+            <a class="btn btn-secondary" href="index.html#price">料金一覧に戻る</a>
+          </div>
+
+          <div class="back-links">
+            <a class="btn btn-secondary" href="base-simple.html">ライトプランの見本を見る</a>
+            <a class="btn btn-secondary" href="base-standard.html">標準プランの見本を見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">Google設定補助込み向けベース構成</div>
+        <div class="footer-text">会社情報、対応業務、問い合わせ導線に加えて、公開後の検索・マップ準備まで見せやすい見本ページです。</div>
+      </div>
+      <div class="footer-copy">© 2026 Small Business Web.</div>
+    </div>
+  </footer>
+</body>
+</html>
