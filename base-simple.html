@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>シンプルな会社ホームページの見本｜ライトプラン向けベース構成</title>
-  <meta name="description" content="小規模事業者向けのシンプルな会社ホームページ見本です。会社情報、対応業務、お問い合わせ導線をわかりやすく整理したライトプラン向けベース構成です。">
+  <title>東成技研株式会社｜精密機械加工・試作対応</title>
+  <meta name="description" content="東成技研株式会社は、金属部品の精密機械加工を中心に、試作から小ロット・量産まで対応する架空の機械加工会社です。">
   <meta name="robots" content="index,follow">
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#0f172a">
@@ -12,17 +12,17 @@
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:site_name" content="小規模事業者向けホームページ制作">
-  <meta property="og:title" content="シンプルな会社ホームページの見本｜ライトプラン向けベース構成">
-  <meta property="og:description" content="会社情報、対応業務、お問い合わせ導線をわかりやすく整理した、ライトプラン向けのシンプルな会社ホームページ見本です。">
+  <meta property="og:site_name" content="東成技研株式会社">
+  <meta property="og:title" content="東成技研株式会社｜精密機械加工・試作対応">
+  <meta property="og:description" content="東成技研株式会社は、図面支給での部品加工や試作・小ロット対応を行う架空の機械加工会社です。">
   <meta property="og:url" content="https://syasu-pixel.github.io/website-service/base-simple.html">
-  <meta property="og:image" content="https://example.com/assets/images/common/ogp.jpg">
-  <meta property="og:image:alt" content="シンプルな会社ホームページ見本のイメージ">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:image:alt" content="工場での機械加工イメージ">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="シンプルな会社ホームページの見本｜ライトプラン向けベース構成">
-  <meta name="twitter:description" content="会社情報、対応業務、お問い合わせ導線をわかりやすく整理した、ライトプラン向けのシンプルな会社ホームページ見本です。">
-  <meta name="twitter:image" content="https://example.com/assets/images/common/ogp.jpg">
+  <meta name="twitter:title" content="東成技研株式会社｜精密機械加工・試作対応">
+  <meta name="twitter:description" content="金属部品の精密機械加工、試作対応、小ロット製作のご相談を承ります。">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1200&q=80">
 
   <style>
     :root {
@@ -32,8 +32,8 @@
       --text: #0f172a;
       --muted: #475569;
       --line: #dbe4f0;
-      --primary: #2563eb;
-      --primary-dark: #1d4ed8;
+      --primary: #1d4ed8;
+      --primary-dark: #1e3a8a;
       --accent: #f59e0b;
       --shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
       --radius-xl: 24px;
@@ -55,7 +55,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(37, 99, 235, 0.10), transparent 28%),
+        radial-gradient(circle at top right, rgba(29, 78, 216, 0.10), transparent 28%),
         radial-gradient(circle at top left, rgba(245, 158, 11, 0.07), transparent 24%),
         var(--bg);
       line-height: 1.8;
@@ -162,7 +162,7 @@
       inset: auto -50px -50px auto;
       width: 220px;
       height: 220px;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.14), transparent 70%);
+      background: radial-gradient(circle, rgba(29, 78, 216, 0.14), transparent 70%);
       pointer-events: none;
     }
 
@@ -210,6 +210,46 @@
       line-height: 1.6;
     }
 
+    .hero-image-wrap {
+      margin-top: 22px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .hero-image {
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      object-fit: cover;
+    }
+
+    .gallery {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .gallery-item figcaption {
+      padding: 8px 10px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
     .cta-group {
       display: flex;
       flex-wrap: wrap;
@@ -235,12 +275,12 @@
     .btn-primary {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: #fff;
-      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+      box-shadow: 0 12px 24px rgba(29, 78, 216, 0.22);
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 16px 28px rgba(37, 99, 235, 0.28);
+      box-shadow: 0 16px 28px rgba(29, 78, 216, 0.28);
     }
 
     .btn-secondary {
@@ -389,45 +429,6 @@
       font-size: 15px;
     }
 
-    .simple-flow {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .flow-step {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-      padding: 22px;
-    }
-
-    .flow-number {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      margin-bottom: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: #fff;
-      font-size: 16px;
-      font-weight: 900;
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.20);
-    }
-
-    .flow-step h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
-    }
-
-    .flow-step p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
     .contact-box {
       padding: 30px;
       background: linear-gradient(135deg, #0f172a, #1e293b);
@@ -456,13 +457,6 @@
     .contact-box .btn-secondary:hover {
       background: rgba(255, 255, 255, 0.16);
       border-color: rgba(255, 255, 255, 0.32);
-    }
-
-    .back-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
     }
 
     .site-footer {
@@ -495,8 +489,12 @@
       .hero-points,
       .grid-3,
       .grid-2,
-      .simple-flow {
+      .gallery {
         grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        aspect-ratio: 4 / 3;
       }
     }
 
@@ -538,8 +536,7 @@
         width: 100%;
       }
 
-      .cta-group,
-      .back-links {
+      .cta-group {
         flex-direction: column;
       }
 
@@ -557,17 +554,25 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "小規模事業者向けホームページ制作",
+    "@type": "LocalBusiness",
+    "name": "東成技研株式会社",
     "url": "https://syasu-pixel.github.io/website-service/base-simple.html",
-    "description": "会社情報、対応業務、お問い合わせ導線をわかりやすく整理した、ライトプラン向けのシンプルな会社ホームページ見本です。",
-    "areaServed": "Japan",
-    "serviceType": "ホームページ制作",
-    "offers": {
+    "description": "金属部品の精密機械加工を中心に、試作・小ロットにも対応する架空の機械加工会社です。",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP",
+      "addressRegion": "大阪府",
+      "addressLocality": "東大阪市",
+      "streetAddress": "高井田本通2-8-14"
+    },
+    "telephone": "06-1234-5678",
+    "areaServed": "近畿一円",
+    "makesOffer": {
       "@type": "Offer",
-      "name": "ライトプラン向けベース構成",
-      "price": "55000",
-      "priceCurrency": "JPY"
+      "itemOffered": {
+        "@type": "Service",
+        "name": "精密機械加工"
+      }
     }
   }
   </script>
@@ -575,40 +580,44 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="サービス案内トップへ戻る">
-        <span class="brand-label">BASE TEMPLATE</span>
-        <span class="brand-name">ライトプラン向けベース構成</span>
+      <a class="brand" href="#top" aria-label="ページ上部へ戻る">
+        <span class="brand-label">MACHINING SERVICE</span>
+        <span class="brand-name">東成技研株式会社</span>
       </a>
       <nav class="header-nav" aria-label="主要メニュー">
-        <a class="nav-link" href="#overview">概要</a>
-        <a class="nav-link" href="#features">載せる内容</a>
-        <a class="nav-link" href="#flow">流れ</a>
-        <a class="nav-link" href="#contact">相談する</a>
+        <a class="nav-link" href="#overview">会社概要</a>
+        <a class="nav-link" href="#services">対応内容</a>
+        <a class="nav-link" href="#strength">強み</a>
+        <a class="nav-link" href="#contact">お問い合わせ</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
       <div class="container">
         <div class="hero-card">
-          <span class="eyebrow">LIGHT PLAN SAMPLE</span>
-          <h1>まずは名刺代わりになる<br>シンプルな会社ホームページ向けの見本です。</h1>
+          <span class="eyebrow">PRECISION MACHINING</span>
+          <h1>図面支給の部品加工を、<br>試作から小ロットまで丁寧に対応します。</h1>
           <p class="hero-lead">
-            このベースは、会社名・対応業務・連絡先・お問い合わせ導線など、
-            必要な情報を見やすくまとめたい方向けのシンプル構成です。
-            まずはきちんと伝わるホームページを持ちたい場合に向いています。
+            東成技研株式会社は、金属部品の精密機械加工を行う架空の会社です。
+            製造現場向けの機械部品や治具を中心に、
+            「まずは1点から相談したい」という案件にも、現実的な工程でお応えします。
           </p>
 
           <div class="hero-points">
-            <div class="hero-point">1ページ完結で見やすい構成</div>
-            <div class="hero-point">会社情報と業務内容を整理</div>
-            <div class="hero-point">問い合わせ導線をわかりやすく配置</div>
+            <div class="hero-point">アルミ・SUS・鉄の切削加工に対応</div>
+            <div class="hero-point">試作1点から小ロット量産まで相談可能</div>
+            <div class="hero-point">図面支給での加工相談を歓迎</div>
+          </div>
+
+          <div class="hero-image-wrap">
+            <img class="hero-image" src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1400&q=80" alt="機械加工の作業風景">
           </div>
 
           <div class="cta-group">
-            <a class="btn btn-primary" href="#contact">この形で相談する</a>
-            <a class="btn btn-secondary" href="index.html">料金ページに戻る</a>
+            <a class="btn btn-primary" href="#contact">加工相談をする</a>
+            <a class="btn btn-secondary" href="#services">対応内容を見る</a>
           </div>
         </div>
       </div>
@@ -617,148 +626,143 @@
     <section class="section" id="overview">
       <div class="container">
         <div class="section-head">
-          <span class="section-kicker">OVERVIEW</span>
-          <h2 class="section-title">このベースが向いている方</h2>
+          <span class="section-kicker">COMPANY</span>
+          <h2 class="section-title">会社概要</h2>
           <p class="section-lead">
-            最低限ではなく、必要な情報をきちんと整えた上で、できるだけシンプルに見せたい方に向いています。
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <div class="card-body">
-              <span class="tag">会社HPがまだない方</span>
-              <h3>まずは形をしっかり作りたい</h3>
-              <p>会社案内と連絡先が整理されているだけでも、見た人の印象はかなり変わります。</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-body">
-              <span class="tag">小規模事業者向け</span>
-              <h3>必要な内容だけを見やすく載せたい</h3>
-              <p>情報を詰め込みすぎず、仕事で使いやすい形でまとめたい場合に向いています。</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-body">
-              <span class="tag">予算を抑えたい方</span>
-              <h3>まずは名刺代わりになるページがほしい</h3>
-              <p>最初からページ数を増やしすぎず、必要になったら後から足していく進め方もしやすいです。</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="features">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-kicker">FEATURES</span>
-          <h2 class="section-title">このベースで載せやすい内容</h2>
-          <p class="section-lead">
-            ライトプランでも、見た人に「どんな会社か」「何を頼めるか」「どう連絡するか」が伝わる形にできます。
+            東大阪エリアを拠点に、産業機械・装置向け部品の加工を中心に対応しています。
           </p>
         </div>
 
         <div class="grid-2">
           <article class="card">
             <div class="card-body">
-              <h3>基本情報</h3>
+              <h3>会社情報</h3>
               <ul class="point-list">
-                <li>会社名・屋号</li>
-                <li>所在地</li>
-                <li>連絡先</li>
-                <li>対応エリア</li>
+                <li>会社名：東成技研株式会社</li>
+                <li>所在地：〒577-0066 大阪府東大阪市高井田本通2-8-14</li>
+                <li>代表者：代表取締役　山城 恒一</li>
+                <li>設立：2012年4月（架空設定）</li>
               </ul>
             </div>
           </article>
 
           <article class="card">
             <div class="card-body">
-              <h3>対応業務</h3>
+              <h3>事業内容</h3>
               <ul class="point-list">
-                <li>主な仕事内容</li>
-                <li>依頼しやすい業務例</li>
-                <li>簡単な強みや特徴</li>
-                <li>よくある相談内容</li>
+                <li>金属部品の精密切削加工</li>
+                <li>治具・ブラケット等の機械部品製作</li>
+                <li>試作・小ロット加工</li>
+                <li>図面支給案件の加工検討</li>
               </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">SERVICES</span>
+          <h2 class="section-title">対応内容</h2>
+          <p class="section-lead">
+            加工内容とロット規模に応じて、無理のない納期・工程をご提案します。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-body">
+              <span class="tag">精密加工</span>
+              <h3>切削加工</h3>
+              <p>マシニングセンタ・NC旋盤を用いた金属部品加工に対応します。</p>
             </div>
           </article>
 
           <article class="card">
             <div class="card-body">
-              <h3>お問い合わせ導線</h3>
-              <ul class="point-list">
-                <li>フォームまたはメール導線</li>
-                <li>問い合わせ前の案内文</li>
-                <li>対応可能な相談内容</li>
-                <li>連絡方法の整理</li>
-              </ul>
+              <span class="tag">試作対応</span>
+              <h3>1点からの試作</h3>
+              <p>設計検証段階の部品製作や、形状確認用の先行試作もご相談いただけます。</p>
             </div>
           </article>
 
           <article class="card">
             <div class="card-body">
-              <h3>追加しやすい項目</h3>
-              <ul class="point-list">
-                <li>よくある質問</li>
-                <li>簡単な実績紹介</li>
-                <li>写真の追加</li>
-                <li>Google向け基本設定</li>
-              </ul>
+              <span class="tag">小ロット</span>
+              <h3>継続製作</h3>
+              <p>月次で必要になる機械部品の小ロット反復生産にも対応可能です。</p>
             </div>
           </article>
+        </div>
+
+        <div class="gallery" aria-label="加工イメージギャラリー">
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=70" alt="加工機の操作盤">
+            <figcaption>加工機の段取り・条件管理を丁寧に実施</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=900&q=70" alt="金属部品加工のイメージ">
+            <figcaption>金属材の特性に合わせて加工工程を調整</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=70" alt="工場設備のイメージ">
+            <figcaption>量産前の試作段階から現場目線でサポート</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="strength">
+      <div class="container">
+        <div class="info-box">
+          <div class="section-head">
+            <span class="section-kicker">STRENGTH</span>
+            <h2 class="section-title">東成技研の強み</h2>
+            <p class="section-lead">
+              過剰な提案ではなく、現場で使いやすい部品を確実にお届けすることを大切にしています。
+            </p>
+          </div>
+          <ul class="check-list">
+            <li>加工可否の確認を早めに行い、手戻りを減らす進行を重視</li>
+            <li>納期・数量・コストのバランスを踏まえた現実的な提案</li>
+            <li>図面支給時の材質・公差条件の確認を丁寧に実施</li>
+            <li>関西圏を中心に、継続発注しやすい体制で対応</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="info-box">
-          <div class="section-head">
-            <span class="section-kicker">POINT</span>
-            <h2 class="section-title">シンプルでも、伝わる形に整えるのが大事です</h2>
-            <p class="section-lead">
-              情報量が少ないホームページでも、並べ方や見せ方を整えるだけで、かなり見やすくなります。
-            </p>
-          </div>
-          <p>
-            このベースでは、まず必要な情報を無理なく整理して、見た人が迷わず内容を理解できることを重視しています。
-            会社のホームページを初めて作る場合や、まずは名刺代わりになるページを持ちたい場合に使いやすい構成です。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="flow">
-      <div class="container">
         <div class="section-head">
-          <span class="section-kicker">FLOW</span>
-          <h2 class="section-title">このベースで作る時の流れ</h2>
-          <p class="section-lead">
-            内容がまだ整理できていなくても、最低限必要な情報から形にしていけます。
-          </p>
+          <span class="section-kicker">WORKS</span>
+          <h2 class="section-title">加工事例・対応分野</h2>
+          <p class="section-lead">これまでに多いご相談内容を、対応分野として掲載しています。</p>
         </div>
-
-        <div class="simple-flow">
-          <article class="flow-step">
-            <div class="flow-number">1</div>
-            <h3>掲載内容を確認</h3>
-            <p>会社名、連絡先、仕事内容など、最低限載せたい情報を整理します。</p>
+        <div class="grid-2">
+          <article class="card">
+            <div class="card-body">
+              <h3>産業機械向け部品</h3>
+              <ul class="point-list">
+                <li>搬送装置用ブラケット</li>
+                <li>治具プレート</li>
+                <li>センサ固定金具</li>
+                <li>シャフト周辺部品</li>
+              </ul>
+            </div>
           </article>
-
-          <article class="flow-step">
-            <div class="flow-number">2</div>
-            <h3>見やすく配置</h3>
-            <p>情報量を増やしすぎず、見た人が迷わない流れで整えていきます。</p>
-          </article>
-
-          <article class="flow-step">
-            <div class="flow-number">3</div>
-            <h3>公開して必要なら追加</h3>
-            <p>まずは公開し、その後に写真や実績、FAQなどを追加していく形もできます。</p>
+          <article class="card">
+            <div class="card-body">
+              <h3>装置メンテナンス向け部品</h3>
+              <ul class="point-list">
+                <li>既存部品の再製作</li>
+                <li>材料置換時の加工相談</li>
+                <li>小ロット補修部品</li>
+                <li>図面なし案件の確認相談（現物確認ベース）</li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>
@@ -769,25 +773,20 @@
         <div class="contact-box">
           <div class="section-head">
             <span class="section-kicker">CONTACT</span>
-            <h2 class="section-title">このシンプル型をベースに相談できます</h2>
+            <h2 class="section-title">お問い合わせ</h2>
             <p class="section-lead">
-              まずは会社情報や仕事内容を整理して、名刺代わりになるホームページを作りたい場合に向いています。
+              試作・小ロット加工のご相談、図面支給での可否確認など、お気軽にご連絡ください。
             </p>
           </div>
 
           <p>
-            実際の業種や載せたい内容に合わせて、文言や見せ方は調整できます。
-            シンプル寄りで進めたい場合は、このベースをもとに相談いただけます。
+            お問い合わせの際は「材質」「数量」「希望納期」「図面データの有無」をお知らせいただくと、
+            よりスムーズにご案内できます。
           </p>
 
           <div class="cta-group">
-            <a class="btn btn-primary" href="mailto:yourmail@example.com?subject=ライトプランの相談">この形で問い合わせる</a>
-            <a class="btn btn-secondary" href="index.html#price">料金一覧に戻る</a>
-          </div>
-
-          <div class="back-links">
-            <a class="btn btn-secondary" href="base-standard.html">標準プランの見本を見る</a>
-            <a class="btn btn-secondary" href="base-works.html">Google設定補助込みの見本を見る</a>
+            <a class="btn btn-primary" href="mailto:info@tosei-giken.example.jp?subject=加工相談">メールで問い合わせる</a>
+            <a class="btn btn-secondary" href="tel:0612345678">06-1234-5678 に電話する</a>
           </div>
         </div>
       </div>
@@ -797,10 +796,10 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <div class="footer-title">ライトプラン向けベース構成</div>
-        <div class="footer-text">会社情報、対応業務、お問い合わせ導線をシンプルに整理した見本ページです。</div>
+        <div class="footer-title">東成技研株式会社</div>
+        <div class="footer-text">対応エリア：大阪府・京都府・兵庫県・奈良県（近畿一円）</div>
       </div>
-      <div class="footer-copy">© 2026 Small Business Web.</div>
+      <div class="footer-copy">© 2026 Tosei Giken Co., Ltd.</div>
     </div>
   </footer>
 </body>
