@@ -506,6 +506,12 @@
       box-shadow: none;
     }
 
+    .contact-note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
     .back-links {
       display: flex;
       flex-wrap: wrap;
@@ -864,14 +870,16 @@
             <div class="contact-info">
               <p><strong>会社名</strong>東和設備ソリューションズ株式会社</p>
               <p><strong>住所</strong>〒455-0028 愛知県名古屋市港区潮見町12-4</p>
-              <p><strong>電話</strong><a href="tel:0523891147">052-389-1147</a></p>
-              <p><strong>メール</strong><a href="mailto:info@towa-fs.co.jp?subject=東和設備ソリューションズ株式会社へのお問い合わせ">info@towa-fs.co.jp</a></p>
+              <p><strong>電話</strong><a href="#" aria-disabled="true" onclick="return false;">052-389-1147</a></p>
+              <p><strong>メール</strong><a href="#" aria-disabled="true" onclick="return false;">info@towa-fs.co.jp</a></p>
             </div>
 
             <div class="contact-actions">
-              <a class="btn btn-primary" href="mailto:info@towa-fs.co.jp?subject=東和設備ソリューションズ株式会社へのお問い合わせ">メールで問い合わせる</a>
-              <a class="btn btn-secondary" href="tel:0523891147">電話で相談する</a>
+              <a class="btn btn-primary" href="#" aria-disabled="true" onclick="return false;">メールで問い合わせる</a>
+              <a class="btn btn-secondary" href="#" aria-disabled="true" onclick="return false;">電話で相談する</a>
             </div>
+
+            <p class="contact-note">※このページは見本のため、ボタンは動作しません。</p>
 
             <div class="back-links">
               <a class="btn btn-secondary" href="base-simple.html">シンプル型を見る</a>
