@@ -26,20 +26,17 @@
 
   <style>
     :root {
-      --bg: #f5f7fa;
       --surface: #ffffff;
-      --surface-soft: #f8fafc;
+      --surface-soft: #f7f8fa;
       --text: #1f2937;
-      --muted: #5b6574;
-      --line: #dde3ea;
-      --primary: #1f4b7a;
-      --primary-dark: #15385d;
-      --accent: #b98a44;
-      --accent-soft: #f5ede1;
-      --shadow-soft: 0 12px 32px rgba(15, 23, 42, 0.06);
-      --radius-xl: 24px;
-      --radius-lg: 18px;
-      --radius-md: 14px;
+      --muted: #5e6674;
+      --line: #e3e7ec;
+      --primary: #254c74;
+      --primary-dark: #173652;
+      --accent: #ae8251;
+      --shadow-soft: 0 22px 50px rgba(14, 22, 34, 0.14);
+      --radius-xl: 30px;
+      --radius-lg: 20px;
       --max: 1140px;
     }
 
@@ -55,8 +52,9 @@
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
       color: var(--text);
-      background: linear-gradient(180deg, #f7f9fb 0%, #f2f5f8 100%);
-      line-height: 1.85;
+      background: #f2f4f7;
+      line-height: 1.9;
+      letter-spacing: 0.01em;
     }
 
     a {
@@ -71,25 +69,41 @@
     }
 
     .container {
-      width: min(calc(100% - 32px), var(--max));
+      width: min(calc(100% - 40px), var(--max));
       margin: 0 auto;
     }
 
+    .hero {
+      min-height: min(88vh, 840px);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+      background-image:
+        linear-gradient(112deg, rgba(9, 18, 30, 0.76), rgba(9, 18, 30, 0.44)),
+        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
     .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(221, 227, 234, 0.9);
+      position: relative;
+      z-index: 10;
+      padding: 24px 0;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      padding: 14px 0;
+      gap: 24px;
+      padding: 16px 22px;
+      border-radius: 16px;
+      background: rgba(10, 18, 31, 0.38);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
     }
 
     .brand {
@@ -100,102 +114,77 @@
     }
 
     .brand-label {
-      font-size: 12px;
-      color: var(--primary);
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.8);
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.12em;
     }
 
     .brand-name {
-      font-size: 18px;
-      font-weight: 800;
+      font-size: 19px;
+      font-weight: 700;
       line-height: 1.35;
+      color: #fff;
     }
 
     .header-nav {
       display: flex;
-      gap: 10px;
       flex-wrap: wrap;
+      gap: 8px;
       justify-content: flex-end;
     }
 
     .nav-link {
-      min-height: 42px;
+      min-height: 40px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 14px;
+      padding: 8px 14px;
       border-radius: 999px;
-      border: 1px solid var(--line);
-      background: #fff;
-      font-size: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      font-size: 12px;
       font-weight: 700;
-      color: var(--text);
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
       transition: 0.2s ease;
     }
 
     .nav-link:hover {
-      border-color: #c4d1de;
-      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.14);
     }
 
-    .hero {
-      padding: 56px 0 34px;
-    }
-
-    .hero-wrap {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-
-    .hero-main {
-      background: linear-gradient(135deg, rgba(31, 75, 122, 0.95), rgba(23, 45, 74, 0.96));
-      color: #fff;
-      border-radius: 28px;
-      padding: 42px 38px;
+    .hero-body {
       position: relative;
-      overflow: hidden;
-      box-shadow: 0 18px 44px rgba(15, 23, 42, 0.14);
-    }
-
-    .hero-main::before {
-      content: "";
-      position: absolute;
-      inset: auto -60px -60px auto;
-      width: 240px;
-      height: 240px;
-      background: radial-gradient(circle, rgba(255,255,255,0.13), transparent 70%);
-      pointer-events: none;
+      z-index: 3;
+      padding: 58px 0 126px;
     }
 
     .hero-subcopy {
       display: inline-flex;
       align-items: center;
       min-height: 34px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+      padding: 6px 13px;
       margin-bottom: 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
     }
 
     h1 {
-      margin: 0 0 18px;
-      font-size: clamp(30px, 4.2vw, 46px);
-      line-height: 1.2;
+      margin: 0 0 16px;
+      font-size: clamp(30px, 4.6vw, 54px);
+      line-height: 1.22;
       letter-spacing: -0.02em;
     }
 
     .hero-lead {
       margin: 0;
-      color: rgba(255,255,255,0.9);
-      font-size: 16px;
       max-width: 720px;
+      font-size: clamp(14px, 1.8vw, 17px);
+      color: rgba(255, 255, 255, 0.9);
     }
 
     .hero-actions {
@@ -205,122 +194,87 @@
       margin-top: 28px;
     }
 
-    .hero-side {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .hero-panel {
-      background: rgba(255,255,255,0.92);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: var(--shadow-soft);
-      padding: 24px;
-    }
-
-    .hero-panel h2,
-    .hero-panel h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    .hero-panel p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .check-list {
-      list-style: none;
-      padding: 0;
-      margin: 14px 0 0;
-      display: grid;
-      gap: 9px;
-    }
-
-    .check-list li {
-      position: relative;
-      padding-left: 24px;
-      font-size: 14px;
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--primary);
-      font-weight: 900;
-    }
-
     .btn {
       min-height: 50px;
-      padding: 12px 18px;
-      border-radius: 14px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
       font-size: 14px;
-      font-weight: 800;
+      font-weight: 700;
       line-height: 1.4;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      border: 1px solid transparent;
       transition: 0.2s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #9c7237);
       color: #fff;
-      box-shadow: 0 12px 24px rgba(185, 138, 68, 0.22);
+      background: linear-gradient(135deg, var(--accent), #8f6a3f);
+      box-shadow: 0 16px 30px rgba(88, 62, 30, 0.34);
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 16px 28px rgba(185, 138, 68, 0.28);
     }
 
     .btn-secondary {
-      background: #fff;
-      color: var(--text);
-      border-color: rgba(255,255,255,0.2);
-    }
-
-    .hero-main .btn-secondary {
-      background: rgba(255,255,255,0.12);
       color: #fff;
-      border-color: rgba(255,255,255,0.22);
+      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.12);
     }
 
-    .hero-main .btn-secondary:hover {
-      background: rgba(255,255,255,0.18);
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .content-shell {
+      position: relative;
+      z-index: 5;
+      margin-top: -84px;
+      padding-bottom: 70px;
+    }
+
+    .content-panel {
+      background: var(--surface);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .intro-block {
+      padding: 52px 52px 44px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
     }
 
     .section {
-      padding: 34px 0;
+      padding: 44px 52px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
     }
 
     .section-head {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .section-kicker {
       display: inline-block;
       margin-bottom: 10px;
-      color: var(--primary);
       font-size: 12px;
-      font-weight: 800;
+      color: var(--primary);
       letter-spacing: 0.1em;
+      font-weight: 700;
     }
 
     .section-title {
       margin: 0 0 10px;
-      font-size: clamp(24px, 3.1vw, 34px);
+      font-size: clamp(24px, 3vw, 35px);
       line-height: 1.35;
-      letter-spacing: -0.01em;
     }
 
     .section-lead {
@@ -329,10 +283,16 @@
       font-size: 15px;
     }
 
+    .text-block {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
     .grid-3,
     .grid-2 {
       display: grid;
-      gap: 18px;
+      gap: 16px;
     }
 
     .grid-3 {
@@ -343,25 +303,20 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .card {
-      background: var(--surface);
+    .quiet-card {
       border: 1px solid var(--line);
-      border-radius: 22px;
-      box-shadow: var(--shadow-soft);
-      height: 100%;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      background: #fff;
     }
 
-    .card-body {
-      padding: 26px;
-    }
-
-    .card h3 {
+    .quiet-card h3 {
       margin: 0 0 10px;
-      font-size: 20px;
-      line-height: 1.5;
+      font-size: 18px;
+      line-height: 1.55;
     }
 
-    .card p {
+    .quiet-card p {
       margin: 0;
       color: var(--muted);
       font-size: 14px;
@@ -370,18 +325,19 @@
     .tag {
       display: inline-flex;
       align-items: center;
-      min-height: 32px;
-      padding: 6px 10px;
+      min-height: 30px;
+      padding: 5px 10px;
       border-radius: 999px;
-      margin-bottom: 12px;
-      background: var(--accent-soft);
-      color: #8b6731;
-      font-size: 12px;
-      font-weight: 800;
+      margin-bottom: 10px;
+      background: #f2ece3;
+      color: #8e6b3d;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
     }
 
     .point-list {
-      margin: 14px 0 0;
+      margin: 12px 0 0;
       padding: 0;
       list-style: none;
       display: grid;
@@ -390,10 +346,10 @@
 
     .point-list li {
       position: relative;
-      padding-left: 20px;
-      color: var(--text);
+      padding-left: 17px;
+      color: var(--muted);
       font-size: 14px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .point-list li::before {
@@ -401,114 +357,71 @@
       position: absolute;
       left: 0;
       top: 11px;
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: var(--accent);
     }
 
-    .feature-strip {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .feature-box {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .feature-box strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 16px;
-    }
-
-    .feature-box span {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.75;
-    }
-
     .message-box {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 18px;
-      align-items: stretch;
-      background: #fff;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 0;
       border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: var(--shadow-soft);
+      border-radius: var(--radius-lg);
       overflow: hidden;
+      background: #fff;
     }
 
     .message-aside {
-      background: linear-gradient(180deg, #eef3f8, #f8fafc);
-      padding: 28px;
+      padding: 24px;
+      background: #f5f7fa;
       border-right: 1px solid var(--line);
     }
 
-    .message-aside .tag {
-      margin-bottom: 14px;
-    }
-
-    .message-aside p {
+    .message-aside p,
+    .message-main p {
       margin: 0;
       color: var(--muted);
       font-size: 14px;
     }
 
     .message-main {
-      padding: 28px;
+      padding: 24px;
     }
 
     .message-main h3 {
-      margin: 0 0 12px;
+      margin: 0 0 10px;
       font-size: 22px;
-      line-height: 1.5;
-    }
-
-    .message-main p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .company-table-wrap {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
+      line-height: 1.55;
     }
 
     .company-table {
       width: 100%;
       border-collapse: collapse;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
     }
 
     .company-table th,
     .company-table td {
-      padding: 16px 20px;
-      border-bottom: 1px solid var(--line);
+      padding: 16px 18px;
       text-align: left;
       vertical-align: top;
+      border-bottom: 1px solid var(--line);
       font-size: 14px;
-      line-height: 1.8;
     }
 
     .company-table th {
       width: 28%;
-      background: #f8fafc;
-      font-weight: 800;
-      color: var(--text);
+      background: #f7f8fa;
+      font-weight: 700;
     }
 
     .company-table td {
       color: var(--muted);
+      background: #fff;
     }
 
     .company-table tr:last-child th,
@@ -517,11 +430,10 @@
     }
 
     .contact-box {
+      border-radius: var(--radius-lg);
       padding: 32px;
-      background: linear-gradient(135deg, #1f2937, #111827);
       color: #fff;
-      border-radius: 28px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+      background: linear-gradient(135deg, #1b2533, #121924);
     }
 
     .contact-box .section-kicker,
@@ -531,60 +443,57 @@
       color: #fff;
     }
 
-    .contact-box .section-lead {
-      opacity: 0.88;
-    }
-
-    .contact-box .btn-secondary {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.2);
-      color: #fff;
-    }
-
-    .contact-box .btn-secondary:hover {
-      background: rgba(255,255,255,0.14);
+    .contact-box .section-lead,
+    .contact-box p {
+      opacity: 0.9;
     }
 
     .back-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       margin-top: 18px;
     }
 
+    .back-links .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
     .site-footer {
-      padding: 22px 0 36px;
+      padding: 22px 0 34px;
     }
 
     .footer-inner {
       display: flex;
-      align-items: flex-start;
       justify-content: space-between;
-      gap: 16px;
-      padding-top: 22px;
-      border-top: 1px solid var(--line);
+      gap: 14px;
+      align-items: flex-start;
+      color: #6b7482;
+      font-size: 13px;
     }
 
     .footer-title {
-      font-size: 14px;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .footer-text,
-    .footer-copy {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.7;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #364152;
     }
 
     @media (max-width: 980px) {
-      .hero-wrap,
+      .hero {
+        min-height: 720px;
+        background-attachment: scroll;
+      }
+
       .grid-3,
       .grid-2,
-      .feature-strip,
       .message-box {
         grid-template-columns: 1fr;
+      }
+
+      .message-aside {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
       }
 
       .company-table th,
@@ -604,43 +513,30 @@
     }
 
     @media (max-width: 768px) {
-      .header-inner {
-        flex-direction: column;
-        align-items: stretch;
+      .container {
+        width: min(calc(100% - 28px), var(--max));
       }
 
-      .brand {
+      .site-header {
+        padding: 16px 0;
+      }
+
+      .header-inner {
+        flex-direction: column;
         align-items: flex-start;
+        padding: 14px;
       }
 
       .header-nav {
         justify-content: flex-start;
       }
 
-      .hero {
-        padding-top: 24px;
-      }
-
-      .hero-main,
-      .hero-panel,
-      .card-body,
-      .message-aside,
-      .message-main,
-      .contact-box {
-        padding-left: 20px;
-        padding-right: 20px;
+      .hero-body {
+        padding: 30px 0 110px;
       }
 
       h1 {
-        font-size: 31px;
-      }
-
-      .section {
-        padding: 24px 0;
-      }
-
-      .btn {
-        width: 100%;
+        font-size: 32px;
       }
 
       .hero-actions,
@@ -648,13 +544,25 @@
         flex-direction: column;
       }
 
-      .footer-inner {
-        flex-direction: column;
+      .btn {
+        width: 100%;
       }
 
-      .nav-link {
-        min-height: 40px;
-        font-size: 12px;
+      .content-shell {
+        margin-top: -58px;
+      }
+
+      .intro-block,
+      .section {
+        padding: 34px 20px;
+      }
+
+      .contact-box {
+        padding: 24px 18px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
       }
     }
   </style>
@@ -670,31 +578,30 @@
   </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="サービス案内トップへ戻る">
-        <span class="brand-label">TOWA FACILITY SOLUTIONS</span>
-        <span class="brand-name">東和設備ソリューションズ株式会社</span>
-      </a>
-      <nav class="header-nav" aria-label="主要メニュー">
-        <a class="nav-link" href="#strength">当社の強み</a>
-        <a class="nav-link" href="#business">事業内容</a>
-        <a class="nav-link" href="#company">会社概要</a>
-        <a class="nav-link" href="#contact">お問い合わせ</a>
-      </nav>
-    </div>
-  </header>
-
   <main>
     <section class="hero">
-      <div class="container hero-wrap">
-        <div class="hero-main">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="index.html" aria-label="サービス案内トップへ戻る">
+            <span class="brand-label">TOWA FACILITY SOLUTIONS</span>
+            <span class="brand-name">東和設備ソリューションズ株式会社</span>
+          </a>
+          <nav class="header-nav" aria-label="主要メニュー">
+            <a class="nav-link" href="#strength">当社の強み</a>
+            <a class="nav-link" href="#business">事業内容</a>
+            <a class="nav-link" href="#company">会社概要</a>
+            <a class="nav-link" href="#contact">お問い合わせ</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="hero-body">
+        <div class="container">
           <span class="hero-subcopy">COMPANY PROFILE</span>
           <h1>設備を止めないための工事と保守を、<br>確実に、計画的に。</h1>
           <p class="hero-lead">
-            東和設備ソリューションズ株式会社は、工場・物流施設・オフィスビルの
-            空調・給排水・受変電設備を中心に、設計補助から施工、保守まで一貫対応します。
-            設備停止リスクを抑える工程計画と、法人案件に求められる報連相の精度を重視し、
+            東和設備ソリューションズ株式会社は、工場・物流施設・オフィスビルの空調・給排水・受変電設備を中心に、
+            設計補助から施工、保守まで一貫対応します。設備停止リスクを抑える工程計画と、法人案件に求められる報連相の精度を重視し、
             事業継続に貢献する現場運用を提供しています。
           </p>
           <div class="hero-actions">
@@ -702,251 +609,219 @@
             <a class="btn btn-secondary" href="#company">会社概要を見る</a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <aside class="hero-side" aria-label="補足情報">
-          <section class="hero-panel">
-            <h2>当社サイトで重視していること</h2>
-            <ul class="check-list">
-              <li>会社としての信頼感</li>
-              <li>どんな工事に対応しているか</li>
-              <li>対応エリアや相談しやすさ</li>
-              <li>問い合わせまでの流れ</li>
-            </ul>
-          </section>
-
-          <section class="hero-panel">
-            <h3>主な対応先</h3>
-            <p>
-              製造業、物流業、食品工場、医薬品関連施設、ビル管理会社など、
-              設備停止や品質管理に配慮が必要な法人拠点を中心に対応しています。
+    <div class="content-shell">
+      <div class="container">
+        <div class="content-panel">
+          <section class="intro-block">
+            <div class="section-head">
+              <span class="section-kicker">INTRODUCTION</span>
+              <h2 class="section-title">止められない設備に、止めない提案を。</h2>
+            </div>
+            <p class="text-block">
+              工場や物流拠点では、設備の一時停止が生産・出荷・品質に直結します。
+              東和設備ソリューションズ株式会社は、現場運用を理解した工程設計、実行力のある施工体制、
+              施工後まで見据えた保守運用を通じて、設備インフラの安定稼働を支えています。
             </p>
           </section>
-        </aside>
-      </div>
-    </section>
 
-    <section class="section" id="strength">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-kicker">STRENGTH</span>
-          <h2 class="section-title">当社の強み</h2>
-          <p class="section-lead">
-            施工品質と保守性の両立を軸に、長期運用を見据えた提案を行っています。
-          </p>
-        </div>
-
-        <div class="feature-strip">
-          <div class="feature-box">
-            <strong>現場稼働を止めない工程設計</strong>
-            <span>夜間・休日工事や段階切替を組み合わせ、操業への影響を抑えた施工計画を提案します。</span>
-          </div>
-          <div class="feature-box">
-            <strong>改修から保守までワンストップ</strong>
-            <span>更新工事・部分改修・定期点検・緊急一次対応まで、同じ窓口で一貫して支援します。</span>
-          </div>
-          <div class="feature-box">
-            <strong>法人案件向けの管理体制</strong>
-            <span>安全書類、工程会議、完了報告書まで標準化し、関係部署との調整負荷を軽減します。</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="business">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-kicker">BUSINESS</span>
-          <h2 class="section-title">事業内容</h2>
-          <p class="section-lead">
-            設備の新設・更新・維持管理に関する主要サービスを紹介します。
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <div class="card-body">
-              <span class="tag">事業内容 01</span>
-              <h3>設備工事</h3>
-              <p>空調・換気・給排水・電気設備の新設工事、更新工事、移設工事に対応します。</p>
-              <ul class="point-list">
-                <li>空調・換気設備の施工</li>
-                <li>受変電設備更新の施工調整</li>
-                <li>配管・ダクトの改修提案</li>
-              </ul>
+          <section class="section" id="strength">
+            <div class="section-head">
+              <span class="section-kicker">STRENGTH</span>
+              <h2 class="section-title">当社の強み</h2>
+              <p class="section-lead">施工品質と保守性を両立し、長期運用に耐える設備環境をつくります。</p>
             </div>
-          </article>
 
-          <article class="card">
-            <div class="card-body">
-              <span class="tag">事業内容 02</span>
-              <h3>保守・メンテナンス対応</h3>
-              <p>巡回点検、予防保全、突発不具合への一次復旧まで、運用現場に寄り添って対応します。</p>
-              <ul class="point-list">
-                <li>定期点検・報告書提出</li>
-                <li>予防保全計画の策定</li>
-                <li>緊急一次対応（平日）</li>
-              </ul>
+            <div class="grid-3">
+              <article class="quiet-card">
+                <h3>現場稼働を止めない工程設計</h3>
+                <p>夜間・休日工事や段階切替を組み合わせ、操業への影響を抑えた施工計画を提案します。</p>
+              </article>
+              <article class="quiet-card">
+                <h3>改修から保守までワンストップ</h3>
+                <p>更新工事・部分改修・定期点検・緊急一次対応まで、同じ窓口で一貫して支援します。</p>
+              </article>
+              <article class="quiet-card">
+                <h3>法人案件向けの管理体制</h3>
+                <p>安全書類、工程会議、完了報告書まで標準化し、関係部署との調整負荷を軽減します。</p>
+              </article>
             </div>
-          </article>
+          </section>
 
-          <article class="card">
-            <div class="card-body">
-              <span class="tag">事業内容 03</span>
-              <h3>法人向け施工サポート</h3>
-              <p>事前打ち合わせから施工後の確認まで、法人案件向けの管理体制を大切にしています。</p>
-              <ul class="point-list">
-                <li>仕様・図面の整理支援</li>
-                <li>工程会議・進捗共有</li>
-                <li>竣工書類・写真台帳作成</li>
-              </ul>
+          <section class="section" id="business">
+            <div class="section-head">
+              <span class="section-kicker">BUSINESS</span>
+              <h2 class="section-title">事業内容</h2>
+              <p class="section-lead">設備の新設・更新・維持管理に関する主要サービスをご案内します。</p>
             </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="message-box">
-          <div class="message-aside">
-            <span class="tag">代表メッセージ</span>
-            <p>
-              長期契約の現場ほど、初動対応と情報共有の質が問われます。だからこそ、基本動作の徹底を重視しています。
-            </p>
-          </div>
-          <div class="message-main">
-            <h3>運用を理解した施工が、設備トラブルの再発を防ぎます。</h3>
-            <p>
-              当社は、現場ヒアリングを起点に「止められない設備」「更新優先度」「保守履歴」を整理し、
-              実行可能な施工計画へ落とし込みます。大規模更新だけでなく、
-              不具合の再発防止を目的とした部分改修にも対応し、長期的な設備安定稼働を支援します。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="grid-3">
+              <article class="quiet-card">
+                <span class="tag">事業内容 01</span>
+                <h3>設備工事</h3>
+                <p>空調・換気・給排水・電気設備の新設工事、更新工事、移設工事に対応します。</p>
+                <ul class="point-list">
+                  <li>空調・換気設備の施工</li>
+                  <li>受変電設備更新の施工調整</li>
+                  <li>配管・ダクトの改修提案</li>
+                </ul>
+              </article>
 
-    <section class="section" id="company">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-kicker">COMPANY</span>
-          <h2 class="section-title">会社概要</h2>
-          <p class="section-lead">
-            企業情報と事業体制を公開し、継続的に取引できるパートナー像を明確にしています。
-          </p>
-        </div>
+              <article class="quiet-card">
+                <span class="tag">事業内容 02</span>
+                <h3>保守・メンテナンス対応</h3>
+                <p>巡回点検、予防保全、突発不具合への一次復旧まで、運用現場に寄り添って対応します。</p>
+                <ul class="point-list">
+                  <li>定期点検・報告書提出</li>
+                  <li>予防保全計画の策定</li>
+                  <li>緊急一次対応（平日）</li>
+                </ul>
+              </article>
 
-        <div class="company-table-wrap">
-          <table class="company-table">
-            <tbody>
-              <tr>
-                <th>会社名</th>
-                <td>東和設備ソリューションズ株式会社</td>
-              </tr>
-              <tr>
-                <th>所在地</th>
-                <td>愛知県名古屋市港区潮見町12-4</td>
-              </tr>
-              <tr>
-                <th>設立</th>
-                <td>2011年10月</td>
-              </tr>
-              <tr>
-                <th>代表者</th>
-                <td>東和 恒一</td>
-              </tr>
-              <tr>
-                <th>事業内容</th>
-                <td>設備工事、改修工事、保守対応、法人向け施工サポート</td>
-              </tr>
-              <tr>
-                <th>対応エリア</th>
-                <td>愛知・岐阜・三重・静岡（西部）</td>
-              </tr>
-              <tr>
-                <th>営業時間</th>
-                <td>平日 8:30〜17:30（緊急受付 24時間一次対応）</td>
-              </tr>
-              <tr>
-                <th>お問い合わせ</th>
-                <td>TEL 052-389-1147 / Mail info@towa-fs.co.jp / Webフォーム</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="grid-2">
-          <article class="card">
-            <div class="card-body">
-              <span class="tag">対応実績の多い案件</span>
-              <h3>ご相談が多いテーマ</h3>
-              <ul class="point-list">
-                <li>老朽化した空調設備の更新</li>
-                <li>倉庫・工場の省エネ改修</li>
-                <li>漏水・異音など不具合の再発対策</li>
-                <li>保守契約の見直し・新規導入</li>
-              </ul>
+              <article class="quiet-card">
+                <span class="tag">事業内容 03</span>
+                <h3>法人向け施工サポート</h3>
+                <p>事前打ち合わせから施工後の確認まで、法人案件向けの管理体制を大切にしています。</p>
+                <ul class="point-list">
+                  <li>仕様・図面の整理支援</li>
+                  <li>工程会議・進捗共有</li>
+                  <li>竣工書類・写真台帳作成</li>
+                </ul>
+              </article>
             </div>
-          </article>
+          </section>
 
-          <article class="card">
-            <div class="card-body">
-              <span class="tag">品質管理体制</span>
-              <h3>施工後まで責任を持つ運用</h3>
-              <ul class="point-list">
-                <li>現場責任者による品質確認</li>
-                <li>写真付き完了報告書の提出</li>
-                <li>月次点検時の改善提案</li>
-                <li>協力会社との安全連携</li>
-              </ul>
+          <section class="section">
+            <div class="message-box">
+              <div class="message-aside">
+                <span class="tag">代表メッセージ</span>
+                <p>
+                  長期契約の現場ほど、初動対応と情報共有の質が問われます。だからこそ、基本動作の徹底を重視しています。
+                </p>
+              </div>
+              <div class="message-main">
+                <h3>運用を理解した施工が、設備トラブルの再発を防ぎます。</h3>
+                <p>
+                  当社は、現場ヒアリングを起点に「止められない設備」「更新優先度」「保守履歴」を整理し、
+                  実行可能な施工計画へ落とし込みます。大規模更新だけでなく、不具合の再発防止を目的とした部分改修にも対応し、
+                  長期的な設備安定稼働を支援します。
+                </p>
+              </div>
             </div>
-          </article>
+          </section>
+
+          <section class="section" id="company">
+            <div class="section-head">
+              <span class="section-kicker">COMPANY</span>
+              <h2 class="section-title">会社概要</h2>
+              <p class="section-lead">企業情報と事業体制を公開し、継続的に取引できるパートナー像を明確にしています。</p>
+            </div>
+
+            <table class="company-table">
+              <tbody>
+                <tr>
+                  <th>会社名</th>
+                  <td>東和設備ソリューションズ株式会社</td>
+                </tr>
+                <tr>
+                  <th>所在地</th>
+                  <td>愛知県名古屋市港区潮見町12-4</td>
+                </tr>
+                <tr>
+                  <th>設立</th>
+                  <td>2011年10月</td>
+                </tr>
+                <tr>
+                  <th>代表者</th>
+                  <td>東和 恒一</td>
+                </tr>
+                <tr>
+                  <th>事業内容</th>
+                  <td>設備工事、改修工事、保守対応、法人向け施工サポート</td>
+                </tr>
+                <tr>
+                  <th>対応エリア</th>
+                  <td>愛知・岐阜・三重・静岡（西部）</td>
+                </tr>
+                <tr>
+                  <th>営業時間</th>
+                  <td>平日 8:30〜17:30（緊急受付 24時間一次対応）</td>
+                </tr>
+                <tr>
+                  <th>お問い合わせ</th>
+                  <td>TEL 052-389-1147 / Mail info@towa-fs.co.jp / Webフォーム</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="section">
+            <div class="grid-2">
+              <article class="quiet-card">
+                <span class="tag">対応実績の多い案件</span>
+                <h3>ご相談が多いテーマ</h3>
+                <ul class="point-list">
+                  <li>老朽化した空調設備の更新</li>
+                  <li>倉庫・工場の省エネ改修</li>
+                  <li>漏水・異音など不具合の再発対策</li>
+                  <li>保守契約の見直し・新規導入</li>
+                </ul>
+              </article>
+
+              <article class="quiet-card">
+                <span class="tag">品質管理体制</span>
+                <h3>施工後まで責任を持つ運用</h3>
+                <ul class="point-list">
+                  <li>現場責任者による品質確認</li>
+                  <li>写真付き完了報告書の提出</li>
+                  <li>月次点検時の改善提案</li>
+                  <li>協力会社との安全連携</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section" id="contact">
+            <div class="contact-box">
+              <div class="section-head">
+                <span class="section-kicker">CONTACT</span>
+                <h2 class="section-title">お問い合わせ</h2>
+                <p class="section-lead">
+                  新規工事、設備更新、保守契約のご相談は下記窓口よりお問い合わせください。
+                </p>
+              </div>
+
+              <p>
+                現地確認の可否、概算のご相談、発注前の技術的なすり合わせにも対応しています。
+                まずは現状とご希望の運用条件をお知らせください。
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="mailto:info@towa-fs.co.jp?subject=東和設備ソリューションズ株式会社へのお問い合わせ">メールで問い合わせる</a>
+                <a class="btn btn-secondary" href="tel:0523891147">電話で相談する</a>
+              </div>
+
+              <div class="back-links">
+                <a class="btn btn-secondary" href="base-simple.html">シンプル型を見る</a>
+                <a class="btn btn-secondary" href="base-standard.html">標準型を見る</a>
+                <a class="btn btn-secondary" href="index.html#price">料金一覧に戻る</a>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-box">
-          <div class="section-head">
-            <span class="section-kicker">CONTACT</span>
-            <h2 class="section-title">お問い合わせ</h2>
-            <p class="section-lead">
-              新規工事、設備更新、保守契約のご相談は下記窓口よりお問い合わせください。
-            </p>
-          </div>
-
-          <p>
-            現地確認の可否、概算のご相談、発注前の技術的なすり合わせにも対応しています。
-            まずは現状とご希望の運用条件をお知らせください。
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:info@towa-fs.co.jp?subject=東和設備ソリューションズ株式会社へのお問い合わせ">メールで問い合わせる</a>
-            <a class="btn btn-secondary" href="tel:0523891147">電話で相談する</a>
-          </div>
-
-          <div class="back-links">
-            <a class="btn btn-secondary" href="base-simple.html">シンプル型を見る</a>
-            <a class="btn btn-secondary" href="base-standard.html">標準型を見る</a>
-            <a class="btn btn-secondary" href="index.html#price">料金一覧に戻る</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
         <div class="footer-title">東和設備ソリューションズ株式会社</div>
-        <div class="footer-text">設備工事・保守対応・法人向け施工サポートを提供する架空の企業サイトです。</div>
+        <div>設備工事・保守対応・法人向け施工サポートを提供する架空の企業サイトです。</div>
       </div>
-      <div class="footer-copy">© 2026 Towa Facility Solutions Co., Ltd.</div>
+      <div>© 2026 Towa Facility Solutions Co., Ltd.</div>
     </div>
   </footer>
 </body>
