@@ -187,9 +187,14 @@
       border: 1px solid #cddcf1;
       color: #1e3a8a;
       font-size: 12px;
+      line-height: 1.35;
       font-weight: 800;
       margin-bottom: 16px;
+      white-space: normal;
+      text-wrap: pretty;
     }
+
+    .eyebrow-line { display: inline; }
 
     h1 {
       margin: 0;
@@ -1188,6 +1193,15 @@
       .hero-frame { width: min(calc(100% - 16px), var(--hero-max)); }
       .hero-main { padding: 30px 20px; }
       .hero-side { padding: 18px; }
+      .eyebrow {
+        display: inline-grid;
+        gap: 2px;
+        padding: 8px 12px;
+        font-size: 11px;
+        line-height: 1.45;
+      }
+      .eyebrow-line { display: block; }
+      .eyebrow-sep { display: none; }
       h1 {
         font-size: 28px;
         line-height: 1.32;
@@ -1257,7 +1271,7 @@
       <div class="hero-frame hero-wrap">
         <div class="hero-grid">
           <div class="hero-main">
-            <span class="eyebrow">小規模事業者向け・営業サイトの顔としてのトップページ</span>
+            <span class="eyebrow"><span class="eyebrow-line">小規模事業者向け</span><span class="eyebrow-sep" aria-hidden="true">・</span><span class="eyebrow-line">営業サイトの顔としてのトップページ</span></span>
             <h1>小さな会社にも、ちゃんと伝わるホームページを。<br>見やすく、相談しやすく、仕事につながる形へ。</h1>
             <p class="hero-sub">
               会社案内として最低限をそろえるだけでなく、「問い合わせしやすい」「依頼できる内容がわかる」「安心して連絡できる」までを、
