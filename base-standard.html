@@ -157,6 +157,10 @@
       border-color: var(--primary-dark);
     }
 
+    .label-mobile {
+      display: none;
+    }
+
     .hero {
       padding: 54px 0 34px;
     }
@@ -666,10 +670,27 @@
 
       .header-nav {
         width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      .nav-mobile-hide {
+        display: none;
       }
 
       .nav-link {
-        flex: 1;
+        min-height: 34px;
+        padding: 6px 8px;
+        font-size: 12px;
+      }
+
+      .label-default {
+        display: none;
+      }
+
+      .label-mobile {
+        display: inline;
       }
 
       .hero-main,
@@ -741,10 +762,10 @@
       <nav class="header-nav" aria-label="ページ内ナビゲーション">
         <a class="nav-link" href="#company">会社紹介</a>
         <a class="nav-link" href="#services">対応内容</a>
-        <a class="nav-link" href="#strengths">強み</a>
-        <a class="nav-link" href="#cases">実績・対応分野</a>
-        <a class="nav-link" href="#contact">お問い合わせ</a>
-        <a class="nav-link nav-return" href="index.html#price">料金一覧に戻る</a>
+        <a class="nav-link nav-mobile-hide" href="#strengths">強み</a>
+        <a class="nav-link nav-mobile-hide" href="#cases">実績・対応分野</a>
+        <a class="nav-link" href="#contact"><span class="label-default">お問い合わせ</span><span class="label-mobile">問合せ</span></a>
+        <a class="nav-link nav-return" href="index.html#price"><span class="label-default">料金一覧に戻る</span><span class="label-mobile">料金へ戻る</span></a>
       </nav>
     </div>
   </header>
