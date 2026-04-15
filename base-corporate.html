@@ -167,6 +167,10 @@
       border-color: #fff;
     }
 
+    .label-mobile {
+      display: none;
+    }
+
     .hero-body {
       position: relative;
       z-index: 3;
@@ -620,7 +624,28 @@
       }
 
       .header-nav {
-        justify-content: flex-start;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      .nav-mobile-hide {
+        display: none;
+      }
+
+      .nav-link {
+        min-height: 34px;
+        padding: 6px 8px;
+        font-size: 12px;
+      }
+
+      .label-default {
+        display: none;
+      }
+
+      .label-mobile {
+        display: inline;
       }
 
       .hero-body {
@@ -684,11 +709,11 @@
           <span class="brand-name">東和設備ソリューションズ株式会社</span>
         </a>
         <nav class="header-nav" aria-label="主要メニュー">
-          <a class="nav-link nav-return" href="index.html#price">プラン選択へ戻る</a>
+          <a class="nav-link nav-return" href="index.html#price"><span class="label-default">プラン選択へ戻る</span><span class="label-mobile">料金へ戻る</span></a>
           <a class="nav-link" href="#strength">当社の強み</a>
           <a class="nav-link" href="#business">事業内容</a>
-          <a class="nav-link" href="#company">会社概要</a>
-          <a class="nav-link" href="#contact">お問い合わせ</a>
+          <a class="nav-link nav-mobile-hide" href="#company">会社概要</a>
+          <a class="nav-link" href="#contact"><span class="label-default">お問い合わせ</span><span class="label-mobile">問合せ</span></a>
         </nav>
       </div>
       </header>
