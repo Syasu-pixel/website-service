@@ -627,6 +627,8 @@
       box-shadow: 0 10px 26px rgba(31, 79, 146, 0.08);
       isolation: isolate;
       --option-image-url: none;
+      --option-image-position: center;
+      --option-image-opacity: 0.14;
     }
 
     .option-card::before,
@@ -641,8 +643,8 @@
     .option-card::before {
       background:
         radial-gradient(circle at 82% 20%, rgba(255,255,255,0.42), transparent 56%),
-        var(--option-image-url) center / cover no-repeat;
-      opacity: 0.13;
+        var(--option-image-url) var(--option-image-position) / cover no-repeat;
+      opacity: var(--option-image-opacity);
       transform: scale(1.02);
     }
 
@@ -660,15 +662,42 @@
       gap: 8px;
     }
 
-    .option-card--page { --option-image-url: url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80"); }
-    .option-card--form { --option-image-url: url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80"); }
-    .option-card--google { --option-image-url: url("https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80"); }
-    .option-card--domain { --option-image-url: url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80"); }
-    .option-card--edit { --option-image-url: url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80"); }
-    .option-card--image { --option-image-url: url("https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1200&q=80"); }
-    .option-card--favicon { --option-image-url: url("https://images.unsplash.com/photo-1618788372246-79faff0c3742?auto=format&fit=crop&w=1200&q=80"); }
-    .option-card--logo { --option-image-url: url("https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=80"); }
-    .option-card--booking { --option-image-url: url("https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80"); }
+    .option-card--page {
+      --option-image-url: url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80");
+      --option-image-position: center;
+    }
+    .option-card--form {
+      --option-image-url: url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80");
+      --option-image-position: center;
+    }
+    .option-card--google {
+      --option-image-url: url("https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80");
+      --option-image-position: center;
+    }
+    .option-card--domain {
+      --option-image-url: url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80");
+      --option-image-position: center;
+    }
+    .option-card--edit {
+      --option-image-url: url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80");
+      --option-image-position: 28% center;
+    }
+    .option-card--image {
+      --option-image-url: url("https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1200&q=80");
+      --option-image-position: center;
+    }
+    .option-card--favicon {
+      --option-image-url: url("https://images.unsplash.com/photo-1618788372246-79faff0c3742?auto=format&fit=crop&w=1200&q=80");
+      --option-image-position: center;
+    }
+    .option-card--logo {
+      --option-image-url: url("https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=80");
+      --option-image-position: center;
+    }
+    .option-card--booking {
+      --option-image-url: url("https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80");
+      --option-image-position: center;
+    }
 
     .option-price {
       display: inline-flex;
@@ -867,6 +896,7 @@
       h1 br { display: none; }
       .hero-wrap::before,
       .hero-wrap::after { opacity: 0.55; }
+      .option-card { --option-image-opacity: 0.1; }
       .btn { width: 100%; }
       .cta-group { display: grid; }
       .section { padding: 24px 0; }
