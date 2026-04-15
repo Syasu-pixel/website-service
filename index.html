@@ -724,6 +724,171 @@
       color: #4d6381;
     }
 
+    .step-flow {
+      display: grid;
+      gap: 16px;
+    }
+
+    .step-card {
+      border: 1px solid #cfe0f7;
+      background: linear-gradient(170deg, rgba(255,255,255,0.96), rgba(243,249,255,0.94));
+    }
+
+    .step-title {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #143860;
+      line-height: 1.4;
+    }
+
+    .step-description {
+      margin: 0;
+      font-size: 14px;
+      color: #355273;
+    }
+
+    .select-grid {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .select-grid.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .select-card {
+      position: relative;
+      width: 100%;
+      min-height: 84px;
+      text-align: left;
+      border: 1px solid #cddff7;
+      border-radius: 14px;
+      background: #fff;
+      color: #16385f;
+      padding: 14px;
+      display: grid;
+      gap: 4px;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, background-color .15s ease, opacity .15s ease;
+    }
+
+    .select-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(31, 79, 146, 0.14);
+      border-color: #9ec0ef;
+    }
+
+    .select-card .select-name {
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .select-card .select-meta {
+      font-size: 12px;
+      color: #4e6686;
+      line-height: 1.6;
+    }
+
+    .select-card.is-selected {
+      border-color: #2f6dc4;
+      background: #eaf3ff;
+      box-shadow: 0 12px 24px rgba(47, 109, 196, 0.2);
+    }
+
+    .select-card.is-unselected {
+      opacity: 0.5;
+      background: #f4f7fb;
+      border-color: #d9e4f4;
+    }
+
+    .select-card.is-disabled,
+    .select-card:disabled {
+      opacity: 0.5;
+      color: #6b7280;
+      border-color: #d2dae5;
+      background: #eef2f7;
+      box-shadow: none;
+      cursor: not-allowed;
+      transform: none;
+      pointer-events: none;
+    }
+
+    .select-card.is-disabled:hover,
+    .select-card:disabled:hover {
+      box-shadow: none;
+      transform: none;
+    }
+
+    .selected-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, #2f6dc4, #1f4f92);
+      opacity: 0;
+      transform: translateY(-3px);
+      transition: opacity .15s ease, transform .15s ease;
+    }
+
+    .select-card.is-selected .selected-badge {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .select-card .disable-note {
+      display: none;
+      font-size: 11px;
+      color: #5f6f86;
+      font-weight: 700;
+    }
+
+    .select-card.is-disabled .disable-note {
+      display: inline-block;
+    }
+
+    .mini-links {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      font-size: 12px;
+    }
+
+    .mini-links a {
+      color: #2a568f;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .selection-summary {
+      margin-top: 4px;
+      border: 1px solid #cfe1f7;
+      border-radius: 14px;
+      background: #f4f9ff;
+      padding: 14px;
+    }
+
+    .selection-summary h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      color: #163961;
+    }
+
+    .summary-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      font-size: 14px;
+      color: #355274;
+    }
+
     .faq-item {
       background: #fff;
       border: 1px solid var(--line);
@@ -1088,119 +1253,86 @@
       <div class="container">
         <div class="section-head">
           <span class="section-kicker">PRICE</span>
-          <h2 class="section-title">料金の目安</h2>
-          <p class="section-lead">上の見本比較で方向性を決めたあと、プランを選ぶとスムーズです。価格だけでなく、公開後にどこまで説明しやすいサイトになるかも合わせて判断できるように整理しています。</p>
+          <h2 class="section-title">料金比較から、そのまま申込み内容を選べます</h2>
+          <p class="section-lead">以下のステップで「プラン → 型 → オプション → 決済方法」を順番に選ぶと、選択内容が下のご相談フォームへ自動反映されます。</p>
         </div>
 
-        <div class="plans">
-          <article class="card plan-card">
+        <div class="step-flow">
+          <article class="card step-card">
             <div class="card-body">
-              <span class="tag">まずは形にしたい方向け</span>
-              <h3>ライトプラン</h3>
-              <p class="plan-price">55,000<span>円（税込）〜</span></p>
-              <p>1ページをしっかり作り、まず公開まで進めたい方向けのシンプルな会社HPプランです。</p>
-              <ul class="plain-list">
-                <li>1ページを丁寧に制作</li>
-                <li>会社情報掲載</li>
-                <li>対応業務掲載</li>
-                <li>お問い合わせ導線設置</li>
-                <li>スマホ対応</li>
-                <li>軽微な修正対応あり</li>
-              </ul>
-              <div class="plan-summary">名刺交換後に「まず見てもらえる状態」を短期間で整えたい場合に向いています。</div>
-              <div class="plan-subblock">
-                <strong>軽微な修正対応あり</strong>
-                <p>公開後の文章差し替えや、簡単な内容修正に対応します。</p>
-              </div>
-              <div class="plan-subblock">
-                <strong>向いている進め方</strong>
-                <ul>
-                  <li>最初は1ページで公開を優先する</li>
-                  <li>打ち合わせ負担をできるだけ軽く始める</li>
-                  <li>追加ページは必要に応じてオプションで選ぶ</li>
-                </ul>
-                <p>※ライトで公開後、標準に近い構成へ段階的に育てる流れにも対応できます</p>
-              </div>
-              <div class="plan-showcase-actions">
-                <a class="btn showcase-cta" href="base-simple.html">シンプル型の見本を見る</a>
+              <h3 class="step-title">ステップ1：プランを選ぶ</h3>
+              <p class="step-description">どちらか1つだけ選択できます。選択中のカードは強調表示され、もう一方は薄く表示されます。</p>
+              <div class="select-grid" role="radiogroup" aria-label="ご希望プラン">
+                <button type="button" class="select-card js-single-select" data-group="plan" data-value="ライトプラン" aria-pressed="false">
+                  <span class="selected-badge" aria-hidden="true">選択中</span>
+                  <span class="select-name">ライトプラン</span>
+                  <span class="select-meta">55,000円（税込）〜 / まずは公開優先で始めたい方向け</span>
+                </button>
+                <button type="button" class="select-card js-single-select" data-group="plan" data-value="標準プラン" aria-pressed="false">
+                  <span class="selected-badge" aria-hidden="true">選択中</span>
+                  <span class="select-name">標準プラン</span>
+                  <span class="select-meta">88,000円（税込）〜 / 問い合わせ導線まで整えたい方向け</span>
+                </button>
               </div>
             </div>
           </article>
 
-          <article class="card plan-card featured">
+          <article class="card step-card">
             <div class="card-body">
-              <span class="tag warm">いちばん選びやすい標準</span>
-              <h3>標準プラン</h3>
-              <p class="plan-price">88,000<span>円（税込）〜</span></p>
-              <p>1ページをしっかり作り込み、公開後の微調整まで含めて営業サイトとしての完成度を高めたい場合に向いています。</p>
-              <ul class="plain-list">
-                <li>1ページを丁寧に制作</li>
-                <li>会社情報掲載</li>
-                <li>対応業務整理</li>
-                <li>お問い合わせフォーム設置</li>
-                <li>スマホ対応</li>
-                <li>2回までの修正対応あり</li>
-              </ul>
-              <div class="plan-summary">STANDARD型〜コーポレート型の方向性に合わせて、情報整理の厚みを調整しやすいプランです。</div>
-              <div class="plan-subblock">
-                <strong>2回までの修正対応あり</strong>
-                <p>公開後の見え方や文面調整も含めて、仕上げやすいプランです。</p>
+              <h3 class="step-title">ステップ2：型を選ぶ</h3>
+              <p class="step-description">ご希望の型を1つだけ選択できます。迷った場合はSTANDARD型を基準に選ぶと決めやすいです。</p>
+              <div class="select-grid three-col" role="radiogroup" aria-label="ご希望の型">
+                <button type="button" class="select-card js-single-select" data-group="type" data-value="シンプル型" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">シンプル型</span></button>
+                <button type="button" class="select-card js-single-select" data-group="type" data-value="STANDARD型" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">STANDARD型</span></button>
+                <button type="button" class="select-card js-single-select" data-group="type" data-value="コーポレート型" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">コーポレート型</span></button>
               </div>
-              <div class="plan-subblock">
-                <strong>想定しやすい使い方</strong>
-                <ul>
-                  <li>営業導線と信頼感を同時に整えたい</li>
-                  <li>公開後の見え方も調整しながら完成度を上げたい</li>
-                  <li>中期運用を見据えて情報を整理したい</li>
-                </ul>
-                <p>※追加ページはオプションとして、必要なタイミングで柔軟に追加できます</p>
-              </div>
-              <div class="plan-showcase-actions">
-                <a class="btn showcase-cta" href="base-standard.html">STANDARD型の見本を見る</a>
-                <a class="btn showcase-cta" href="base-corporate.html">コーポレート型の見本を見る</a>
+              <div class="mini-links" aria-label="型の見本ページ">
+                <a href="base-simple.html">シンプル型の見本を見る</a>
+                <a href="base-standard.html">STANDARD型の見本を見る</a>
+                <a href="base-corporate.html">コーポレート型の見本を見る</a>
               </div>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" id="options">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-kicker">OPTION</span>
-          <h2 class="section-title">必要に応じて追加できるオプション</h2>
-          <p class="section-lead">まずは本体を作り、必要なものだけ追加できます。<br>下記は目安価格です。内容によって変わる場合があります。</p>
-        </div>
+          <article class="card step-card">
+            <div class="card-body">
+              <h3 class="step-title">ステップ3：必要に応じて追加できるオプション</h3>
+              <p class="step-description">オプションは複数選択できます。標準プラン選択時は「お問い合わせフォーム追加」は含まれるため選択不可になります。</p>
+              <div class="select-grid three-col" aria-label="ご希望オプション">
+                <button type="button" class="select-card js-option-select" data-value="1ページ追加" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">1ページ追加</span><span class="select-meta">11,000円（税込）〜16,500円（税込）</span></button>
+                <button type="button" class="select-card js-option-select" data-value="お問い合わせフォーム追加" data-disabled-for-plan="標準プラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">お問い合わせフォーム追加</span><span class="select-meta">5,500円（税込）〜11,000円（税込）</span><span class="disable-note">標準プランに含まれています</span></button>
+                <button type="button" class="select-card js-option-select" data-value="Google設定補助" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">Google設定補助</span><span class="select-meta">5,500円（税込）〜11,000円（税込）</span></button>
+                <button type="button" class="select-card js-option-select" data-value="独自ドメイン接続・設定代行" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">独自ドメイン接続・設定代行</span><span class="select-meta">5,500円（税込）〜8,800円（税込）</span></button>
+                <button type="button" class="select-card js-option-select" data-value="独自ドメイン移管サポート" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">独自ドメイン移管サポート</span><span class="select-meta">5,500円（税込）〜8,800円（税込）</span></button>
+                <button type="button" class="select-card js-option-select" data-value="軽微修正・文章差し替え" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">軽微修正・文章差し替え</span><span class="select-meta">3,300円（税込）〜5,500円（税込）</span></button>
+                <button type="button" class="select-card js-option-select" data-value="画像追加・差し替え" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">画像追加・差し替え</span><span class="select-meta">3,300円（税込）〜</span></button>
+                <button type="button" class="select-card js-option-select" data-value="ファビコン設置" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">ファビコン設置</span><span class="select-meta">3,300円（税込）〜5,500円（税込）</span></button>
+                <button type="button" class="select-card js-option-select" data-value="ロゴ作成" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">ロゴ作成</span><span class="select-meta">16,500円（税込）〜33,000円（税込）</span></button>
+                <button type="button" class="select-card js-option-select" data-value="予約サービス導入補助" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">予約サービス導入補助</span><span class="select-meta">11,000円（税込）〜22,000円（税込）</span></button>
+              </div>
+              <p class="option-note">※ドメイン取得費・更新費、外部サービス利用料などの実費は別途必要です。</p>
+            </div>
+          </article>
 
-        <div class="option-grid">
-          <article class="card option-card option-card--page"><div class="card-body"><h3>1ページ追加</h3><p class="option-price">11,000円（税込）〜16,500円（税込）</p><p>ページを分けて見やすくしたい場合に追加できます。会社概要、事業内容、お問い合わせページなどの追加に対応します。1ページで公開したあと、必要に応じて段階的に広げていく形にも向いています。</p></div></article>
-          <article class="card option-card option-card--form"><div class="card-body"><h3>お問い合わせフォーム追加</h3><p class="option-price">5,500円（税込）〜11,000円（税込）</p><p>お問い合わせ導線をしっかり作りたい場合に追加できます。用途に合わせて、必要な入力項目を整理して設置します。</p></div></article>
-          <article class="card option-card option-card--google"><div class="card-body"><h3>Google設定補助</h3><p class="option-price">5,500円（税込）〜11,000円（税込）</p><p>検索やGoogleマップまわりの初期設定を補助します。公開後の動き出しで困りにくいように整えます。</p></div></article>
-          <article class="card option-card option-card--domain"><div class="card-body"><h3>独自ドメイン接続・設定代行</h3><p class="option-price">5,500円（税込）〜8,800円（税込）</p><p>独自ドメインを使って運用したい方向けに、接続設定を代行します。初めての設定でも進めやすいよう、公開までの流れを整理してご案内します。</p></div></article>
-          <article class="card option-card option-card--domain"><div class="card-body"><h3>独自ドメイン移管サポート</h3><p class="option-price">5,500円（税込）〜8,800円（税込）</p><p>管理先の変更や移管手続きを進める際に、必要な確認ポイントを整理しながらサポートします。現在の運用状況に合わせて、無理のない進め方をご提案します。</p></div></article>
-          <article class="card option-card option-card--edit"><div class="card-body"><h3>軽微修正・文章差し替え</h3><p class="option-price">3,300円（税込）〜5,500円（税込）</p><p>公開後の文章修正や、ちょっとした内容変更に対応します。必要な時だけ追加しやすい形です。</p></div></article>
-          <article class="card option-card option-card--image"><div class="card-body"><h3>画像追加・差し替え</h3><p class="option-price">3,300円（税込）〜</p><p>写真や画像の追加、差し替えに対応します。掲載内容に合わせて見やすく整えます。</p></div></article>
-          <article class="card option-card option-card--favicon"><div class="card-body"><h3>ファビコン設置</h3><p class="option-price">3,300円（税込）〜5,500円（税込）</p><p>ブラウザのタブに表示される小さなアイコンを設置します。細かい部分まで整えたい場合におすすめです。</p></div></article>
-          <article class="card option-card option-card--logo"><div class="card-body"><h3>ロゴ作成</h3><p class="option-price">16,500円（税込）〜33,000円（税込）</p><p>会社ロゴがまだない方向けに、シンプルなロゴ案作成に対応します。ホームページに載せやすい見た目で整えます。</p></div></article>
-          <article class="card option-card option-card--booking"><div class="card-body"><h3>予約サービス導入補助</h3><p class="option-price">11,000円（税込）〜22,000円（税込）</p><p>外部予約サービスの導入や案内ページの整備を補助します。静的サイトに合う形で、無理のない導線づくりを行います。</p></div></article>
-        </div>
-        <p class="option-note">※ドメイン取得費・更新費、外部サービス利用料などの実費は別途必要です。</p>
-        <p class="option-note">※現在メール利用中のドメイン移管は、設定確認が必要になるため内容により要相談です。</p>
-        <p class="option-note">※必要な作業だけを追加できるよう、オプションは目安価格で掲載しています。内容に応じて事前にご案内します。</p>
-      </div>
-    </section>
+          <article class="card step-card">
+            <div class="card-body">
+              <h3 class="step-title">ステップ4：決済方法を選ぶ</h3>
+              <div class="select-grid" role="radiogroup" aria-label="ご希望の決済方法">
+                <button type="button" class="select-card js-single-select" data-group="payment" data-value="銀行振込" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">銀行振込</span></button>
+                <button type="button" class="select-card js-single-select" data-group="payment" data-value="その他相談" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">その他相談</span></button>
+              </div>
+            </div>
+          </article>
 
-    <section class="section" id="payment">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-kicker">PAYMENT</span>
-          <h2 class="section-title">お支払い方法</h2>
-          <p class="section-lead">銀行振込を基本にしつつ、クレジットカード決済にも対応できます。</p>
-        </div>
-        <div class="payment-grid">
-          <article class="card"><div class="card-body"><h3>銀行振込</h3><p>銀行振込に対応しています。請求書ベースで進めたい場合にもわかりやすい方法です。</p></div></article>
-          <article class="card"><div class="card-body"><h3>クレジットカード決済</h3><p>クレジットカード決済をご希望の場合は、オンライン決済用のご案内を別途お送りします。</p></div></article>
+          <article class="selection-summary" aria-live="polite">
+            <h3>現在の選択内容</h3>
+            <ul class="summary-list">
+              <li>ご希望プラン：<strong id="summary-plan">未選択</strong></li>
+              <li>ご希望の型：<strong id="summary-type">未選択</strong></li>
+              <li>ご希望オプション：<strong id="summary-options">未選択</strong></li>
+              <li>ご希望の決済方法：<strong id="summary-payment">未選択</strong></li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -1231,14 +1363,15 @@
 
           <div class="contact-intro">
             <div class="contact-quick">
-              <a class="btn btn-primary" href="#contact-form">まずは相談内容を入力する</a>
-              <a class="btn btn-secondary" href="#showcase">見本の違いを確認してから相談する</a>
+              <a class="btn btn-primary" href="#contact-form">選択内容を確認して相談内容を入力する</a>
+              <a class="btn btn-secondary" href="#price">選択ステップに戻る</a>
             </div>
-            <p class="contact-note">「内容がまだ未整理」「何から決めればいいかわからない」状態でも、そのままご相談いただけます。まずは短い内容でも送っていただければ、必要事項をこちらからご案内します。</p>
+            <p class="contact-note">上で選択した内容はこのフォームに自動反映されます。「内容がまだ未整理」「何から決めればいいかわからない」状態でも、そのままご相談いただけます。</p>
           </div>
 
           <form class="contact-form" id="contact-form" action="https://formspree.io/f/mdayorwa" method="POST">
             <input type="hidden" name="form_type" value="ホームページ制作相談">
+            <input type="hidden" name="選択サマリー" id="selection-hidden" value="">
 
             <div class="form-grid">
               <div class="form-group">
@@ -1269,6 +1402,14 @@
                   <option value="まだ未定">まだ未定</option>
                 </select>
               </div>
+              <div class="form-group">
+                <label class="form-label" for="payment-method">ご希望の決済方法 <span class="form-note">任意</span></label>
+                <select class="form-select" id="payment-method" name="ご希望の決済方法">
+                  <option value="">選択してください</option>
+                  <option value="銀行振込">銀行振込</option>
+                  <option value="その他相談">その他相談</option>
+                </select>
+              </div>
 
               <div class="form-group full">
                 <label class="form-label" for="message">その他ご相談内容 <span class="form-note">任意</span></label>
@@ -1276,7 +1417,7 @@
               </div>
 
               <div class="form-group full">
-                <label class="form-label">追加で希望する内容 <span class="form-note">任意</span></label>
+                <label class="form-label">追加で希望する内容（手動追加） <span class="form-note">任意</span></label>
                 <div class="check-grid">
                   <label class="check-item"><input type="checkbox" name="追加希望[]" value="お問い合わせフォームを付けたい"><span>お問い合わせフォームを付けたい</span></label>
                   <label class="check-item"><input type="checkbox" name="追加希望[]" value="独自ドメインも相談したい"><span>独自ドメインも相談したい</span></label>
@@ -1301,5 +1442,120 @@
       <div>© 2026 Small Business Web.</div>
     </div>
   </footer>
+  <script>
+    (() => {
+      const state = {
+        plan: "",
+        type: "",
+        payment: "",
+        options: new Set()
+      };
+
+      const singleButtons = [...document.querySelectorAll(".js-single-select")];
+      const optionButtons = [...document.querySelectorAll(".js-option-select")];
+      const summaryPlan = document.getElementById("summary-plan");
+      const summaryType = document.getElementById("summary-type");
+      const summaryOptions = document.getElementById("summary-options");
+      const summaryPayment = document.getElementById("summary-payment");
+
+      const planSelect = document.getElementById("plan");
+      const typeSelect = document.getElementById("base-type");
+      const paymentSelect = document.getElementById("payment-method");
+      const message = document.getElementById("message");
+      const hiddenSummary = document.getElementById("selection-hidden");
+
+      const buildSummaryText = () => {
+        const optionsText = state.options.size ? [...state.options].join("、") : "未選択";
+        return [
+          `ご希望プラン：${state.plan || "未選択"}`,
+          `ご希望の型：${state.type || "未選択"}`,
+          `ご希望オプション：${optionsText}`,
+          `ご希望の決済方法：${state.payment || "未選択"}`
+        ].join("\n");
+      };
+
+      const updateMessage = () => {
+        const next = `${buildSummaryText()}\n`;
+        const current = message.value.trim();
+        const currentWithoutSummary = current.replace(/^ご希望プラン：[\s\S]*?ご希望の決済方法：.*\n?/m, "").trim();
+        message.value = currentWithoutSummary ? `${next}\n${currentWithoutSummary}` : next;
+        hiddenSummary.value = buildSummaryText();
+      };
+
+      const updateSummary = () => {
+        summaryPlan.textContent = state.plan || "未選択";
+        summaryType.textContent = state.type || "未選択";
+        summaryOptions.textContent = state.options.size ? [...state.options].join("、") : "未選択";
+        summaryPayment.textContent = state.payment || "未選択";
+
+        if (planSelect) { planSelect.value = state.plan || ""; }
+        if (typeSelect) { typeSelect.value = state.type || ""; }
+        if (paymentSelect) { paymentSelect.value = state.payment || ""; }
+        updateMessage();
+      };
+
+      const syncSingleState = (group) => {
+        const targets = singleButtons.filter((button) => button.dataset.group === group);
+        const selectedValue = state[group] || "";
+        targets.forEach((button) => {
+          const isSelected = button.dataset.value === selectedValue;
+          const hasSelection = selectedValue !== "";
+          button.classList.toggle("is-selected", isSelected);
+          button.classList.toggle("is-unselected", hasSelection && !isSelected);
+          button.setAttribute("aria-pressed", String(isSelected));
+        });
+      };
+
+      const syncOptionAvailability = () => {
+        optionButtons.forEach((button) => {
+          const disabledPlan = button.dataset.disabledForPlan;
+          const shouldDisable = disabledPlan && state.plan === disabledPlan;
+
+          button.disabled = !!shouldDisable;
+          button.classList.toggle("is-disabled", !!shouldDisable);
+          if (shouldDisable) {
+            state.options.delete(button.dataset.value);
+          }
+          const isSelected = state.options.has(button.dataset.value);
+          button.classList.toggle("is-selected", isSelected);
+          button.classList.toggle("is-unselected", state.options.size > 0 && !isSelected);
+          button.setAttribute("aria-pressed", String(isSelected));
+        });
+      };
+
+      singleButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const group = button.dataset.group;
+          const value = button.dataset.value;
+          state[group] = state[group] === value ? "" : value;
+          syncSingleState(group);
+          if (group === "plan") {
+            syncOptionAvailability();
+          }
+          updateSummary();
+        });
+      });
+
+      optionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const value = button.dataset.value;
+          if (button.disabled) { return; }
+          if (state.options.has(value)) {
+            state.options.delete(value);
+          } else {
+            state.options.add(value);
+          }
+          syncOptionAvailability();
+          updateSummary();
+        });
+      });
+
+      syncSingleState("plan");
+      syncSingleState("type");
+      syncSingleState("payment");
+      syncOptionAvailability();
+      updateSummary();
+    })();
+  </script>
 </body>
 </html>
