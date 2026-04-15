@@ -1162,14 +1162,37 @@
     }
 
     @media (max-width: 768px) {
+      .step-card .select-grid,
+      .step-card .select-grid.three-col {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
       .type-select-grid {
         grid-template-columns: 1fr;
         gap: 10px;
       }
 
-      .type-select-grid .select-card {
-        min-height: 82px;
-        padding: 11px 12px 10px;
+      .select-card {
+        min-height: 118px;
+        padding: 12px;
+        gap: 5px;
+      }
+
+      .select-card .select-note {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-top: 2px;
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: initial;
+        overflow: visible;
+      }
+
+      .type-select-grid .select-card,
+      .step-card--type .select-grid .select-card {
+        min-height: 124px;
+        padding: 12px;
       }
 
       .type-select-grid .select-name {
@@ -1179,8 +1202,16 @@
       }
 
       .type-select-grid .select-note {
-        font-size: 11px;
-        line-height: 1.5;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+
+      .step-card--option .select-grid .select-card {
+        min-height: 150px;
+      }
+
+      .step-card--payment .select-grid .select-card {
+        min-height: 124px;
       }
 
       .header-inner { flex-direction: column; align-items: stretch; }
