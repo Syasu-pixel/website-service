@@ -609,11 +609,13 @@
       margin-top: 0;
     }
 
-    .contact-actions .btn[aria-disabled="true"] {
+    .contact-actions .btn[aria-disabled="true"],
+    .form-submit[aria-disabled="true"] {
       cursor: default;
     }
 
-    .contact-actions .btn[aria-disabled="true"]:hover {
+    .contact-actions .btn[aria-disabled="true"]:hover,
+    .form-submit[aria-disabled="true"]:hover {
       transform: none;
     }
 
@@ -1199,9 +1201,9 @@
               <a class="btn btn-secondary" href="javascript:void(0)" aria-disabled="true">電話で相談する（見本）</a>
             </div>
 
-            <p class="note">※このページは見本のため、メール・電話ボタンは動作しません。実際の制作時は、実在のメールアドレスや電話番号に差し替えて設定します。</p>
+            <p class="note">※このページは見本のため、メール・電話ボタン、フォーム送信は動作しません。実際の制作時は、実在の連絡先・送信先に差し替えて設定します。</p>
 
-            <form class="contact-form" action="https://formspree.io/f/mdayorwa" method="POST">
+            <form class="contact-form">
               <input type="hidden" name="form_type" value="STANDARD型ページ問い合わせ">
 
               <div class="form-row">
@@ -1229,7 +1231,7 @@
                 <textarea class="form-textarea" id="contact-message" name="message" required></textarea>
               </div>
 
-              <button class="btn btn-primary form-submit" type="submit">この内容で問い合わせる</button>
+              <button class="btn btn-primary form-submit" type="button" aria-disabled="true">この内容で問い合わせる（見本）</button>
             </form>
           </div>
 
