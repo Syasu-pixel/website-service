@@ -542,6 +542,51 @@
       color: var(--muted);
     }
 
+    .price-guide {
+      margin-top: 34px;
+      padding: 26px;
+      border-radius: 12px;
+      border: 1px solid #c9d7e6;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    .price-guide-title {
+      margin: 0 0 10px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #375779;
+    }
+
+    .price-guide-main {
+      margin: 0 0 12px;
+      font-size: clamp(21px, 2.9vw, 31px);
+      line-height: 1.5;
+      color: #1f2f44;
+      font-weight: 700;
+    }
+
+    .price-guide-main strong {
+      display: inline-block;
+      margin: 0 4px;
+      font-size: clamp(25px, 3.4vw, 36px);
+      line-height: 1.25;
+      color: #193c63;
+      letter-spacing: 0.02em;
+    }
+
+    .price-guide-text {
+      margin: 0;
+      font-size: 15px;
+      color: #4d5e72;
+    }
+
+    .price-guide-note {
+      margin: 10px 0 0;
+      font-size: 12px;
+      color: #6c7a8b;
+    }
+
     .back-links {
       display: flex;
       flex-wrap: wrap;
@@ -684,6 +729,11 @@
       .intro-block,
       .section {
         padding: 34px 20px;
+      }
+
+      .price-guide {
+        margin-top: 28px;
+        padding: 20px 16px;
       }
 
       .business-image img {
@@ -934,6 +984,16 @@
             </div>
 
             <p class="contact-note">※このページは見本のため、ボタンは動作しません。</p>
+
+            <aside class="price-guide" aria-label="この見本ページの価格案内">
+              <p class="price-guide-title">PRICE GUIDE</p>
+              <p class="price-guide-main">このコーポレート型のホームページは、<strong>88,000円（税込）〜</strong>で作成できます。</p>
+              <p class="price-guide-text">
+                会社案内としての見やすさや信頼感を整えながら、営業先や取引先にも見せやすい形にしたい方向けです。<br>
+                必要に応じて、追加ページやお問い合わせフォームの設置にも対応できます。
+              </p>
+              <p class="price-guide-note">※内容や調整範囲によって変わる場合があります。</p>
+            </aside>
 
           </section>
 
