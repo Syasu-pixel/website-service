@@ -790,6 +790,17 @@
       line-height: 1.6;
     }
 
+    .select-card .select-note {
+      font-size: 11px;
+      color: #4a6282;
+      line-height: 1.55;
+      margin-top: 1px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
     .select-card.plan-card {
       gap: 6px;
       padding: 14px 14px 12px;
@@ -1335,17 +1346,17 @@
           <article class="card step-card">
             <div class="card-body">
               <h3 class="step-title">ステップ3：必要に応じて追加できるオプション</h3>
-              <p class="step-description">オプションは複数選択できます。標準プラン選択時は「お問い合わせフォーム追加」は含まれるため選択不可になります。</p>
+              <p class="step-description">必要なものだけ後から追加できるよう、オプションは複数選択できます。各項目の補足文で追加内容をすぐ確認でき、標準プラン選択時は「お問い合わせフォーム追加」が含まれるため選択不可になります。</p>
               <div class="select-grid three-col" aria-label="ご希望オプション">
-                <button type="button" class="select-card js-option-select" data-value="1ページ追加" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">1ページ追加</span><span class="select-meta">11,000円（税込）〜16,500円（税込）</span></button>
-                <button type="button" class="select-card js-option-select" data-value="お問い合わせフォーム追加" data-disabled-for-plan="標準プラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">お問い合わせフォーム追加</span><span class="select-meta">5,500円（税込）〜11,000円（税込）</span><span class="disable-note">標準プランに含まれています</span></button>
-                <button type="button" class="select-card js-option-select" data-value="Google設定補助" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">Google設定補助</span><span class="select-meta">5,500円（税込）〜11,000円（税込）</span></button>
-                <button type="button" class="select-card js-option-select" data-value="独自ドメイン接続・設定代行" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">独自ドメイン接続・設定代行</span><span class="select-meta">5,500円（税込）〜8,800円（税込）</span></button>
-                <button type="button" class="select-card js-option-select" data-value="独自ドメイン移管サポート" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">独自ドメイン移管サポート</span><span class="select-meta">5,500円（税込）〜8,800円（税込）</span></button>
-                <button type="button" class="select-card js-option-select" data-value="軽微修正・文章差し替え" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">軽微修正・文章差し替え</span><span class="select-meta">3,300円（税込）〜5,500円（税込）</span></button>
-                <button type="button" class="select-card js-option-select" data-value="画像追加・差し替え" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">画像追加・差し替え</span><span class="select-meta">3,300円（税込）〜</span></button>
-                <button type="button" class="select-card js-option-select" data-value="ファビコン設置" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">ファビコン設置</span><span class="select-meta">3,300円（税込）〜5,500円（税込）</span></button>
-                <button type="button" class="select-card js-option-select" data-value="ロゴ作成" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">ロゴ作成</span><span class="select-meta">16,500円（税込）〜33,000円（税込）</span></button>
+                <button type="button" class="select-card js-option-select" data-value="1ページ追加" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">1ページ追加</span><span class="select-meta">11,000円（税込）〜16,500円（税込）</span><span class="select-note">会社概要や事業内容などを別ページで見やすく整理したい場合向け</span></button>
+                <button type="button" class="select-card js-option-select" data-value="お問い合わせフォーム追加" data-disabled-for-plan="標準プラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">お問い合わせフォーム追加</span><span class="select-meta">5,500円（税込）〜11,000円（税込）</span><span class="select-note">問い合わせ内容を受け取りやすい入力フォームを設置したい場合向け</span><span class="disable-note">標準プランに含まれています</span></button>
+                <button type="button" class="select-card js-option-select" data-value="Google設定補助" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">Google設定補助</span><span class="select-meta">5,500円（税込）〜11,000円（税込）</span><span class="select-note">Google検索やGoogleマップまわりの初期設定を整えたい場合向け</span></button>
+                <button type="button" class="select-card js-option-select" data-value="独自ドメイン接続・設定代行" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">独自ドメイン接続・設定代行</span><span class="select-meta">5,500円（税込）〜8,800円（税込）</span><span class="select-note">独自ドメインで公開できるよう接続設定を進めたい場合向け</span></button>
+                <button type="button" class="select-card js-option-select" data-value="独自ドメイン移管サポート" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">独自ドメイン移管サポート</span><span class="select-meta">5,500円（税込）〜8,800円（税込）</span><span class="select-note">今の管理先から別の管理先へ移したい場合の確認・進行補助</span></button>
+                <button type="button" class="select-card js-option-select" data-value="軽微修正・文章差し替え" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">軽微修正・文章差し替え</span><span class="select-meta">3,300円（税込）〜5,500円（税込）</span><span class="select-note">公開後の文章変更や小さな修正を追加したい場合向け</span></button>
+                <button type="button" class="select-card js-option-select" data-value="画像追加・差し替え" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">画像追加・差し替え</span><span class="select-meta">3,300円（税込）〜</span><span class="select-note">写真や掲載画像をあとから追加・変更したい場合向け</span></button>
+                <button type="button" class="select-card js-option-select" data-value="ファビコン設置" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">ファビコン設置</span><span class="select-meta">3,300円（税込）〜5,500円（税込）</span><span class="select-note">ブラウザタブに表示される小さなアイコンを整えたい場合向け</span></button>
+                <button type="button" class="select-card js-option-select" data-value="ロゴ作成" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">ロゴ作成</span><span class="select-meta">16,500円（税込）〜33,000円（税込）</span><span class="select-note">会社や事業のロゴをシンプルに整えたい場合向け</span></button>
               </div>
               <p class="option-note">※ドメイン取得費・更新費、外部サービス利用料などの実費は別途必要です。</p>
             </div>
