@@ -1085,6 +1085,22 @@
     }
 
     @media (max-width: 768px) {
+      .type-select-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .type-select-grid .select-card {
+        min-height: 72px;
+        padding: 12px 12px 11px;
+      }
+
+      .type-select-grid .select-name {
+        font-size: 14px;
+        line-height: 1.45;
+        letter-spacing: 0.01em;
+      }
+
       .header-inner { flex-direction: column; align-items: stretch; }
       .header-nav { justify-content: flex-start; }
       .brand { gap: 8px; }
@@ -1145,7 +1161,7 @@
             </p>
             <ul class="hero-points">
               <li>トップの第一印象から、相談しやすさと信頼感が伝わる構成に整理します。</li>
-              <li>STANDARD型に近い上品さを意識しつつ、営業サイトとしての親しみやすさは残します。</li>
+              <li>スタンダード型に近い上品さを意識しつつ、営業サイトとしての親しみやすさは残します。</li>
               <li>公開後の更新も重くしすぎず、必要な範囲から始められる設計です。</li>
             </ul>
             <div class="cta-group">
@@ -1230,7 +1246,7 @@
         <div class="section-head">
           <span class="section-kicker">BASE SHOWCASE</span>
           <h2 class="section-title">自分に合う形を、見本で比べながら選べます</h2>
-          <p class="section-lead">シンプル型・STANDARD型・コーポレート型の見本を見比べながら、自分の仕事に合う形を選べます。見本ページそのものを真似るのではなく、トップの営業導線として必要な完成度を上げるための判断材料として使いやすくしています。</p>
+          <p class="section-lead">シンプル型・スタンダード型・コーポレート型の見本を見比べながら、自分の仕事に合う形を選べます。見本ページそのものを真似るのではなく、トップの営業導線として必要な完成度を上げるための判断材料として使いやすくしています。</p>
         </div>
 
         <div class="grid-3">
@@ -1253,7 +1269,7 @@
 
           <article class="card showcase-card">
             <div class="card-body">
-              <span class="tag warm">STANDARD型</span>
+              <span class="tag warm">スタンダード型</span>
               <h3>相談・信頼感のバランス重視</h3>
               <p>会社情報とサービス案内を整理しながら、問い合わせのしやすさも確保したい場合に向いています。1ページを厚めに整える形から、複数ページ構成への展開まで見据えやすい型です。</p>
               <ul class="plain-list">
@@ -1263,7 +1279,7 @@
               </ul>
               <div class="showcase-strength">向いているケース：見た目の整然さと相談のしやすさを両立し、営業サイトの完成度を一段上げたい。</div>
               <div class="showcase-actions">
-                <a class="btn showcase-cta" href="base-standard.html">STANDARD型の見本を見る</a>
+                <a class="btn showcase-cta" href="base-standard.html">スタンダード型の見本を見る</a>
               </div>
             </div>
           </article>
@@ -1287,7 +1303,7 @@
         </div>
 
         <div class="choice-box">
-          <strong>選び方の目安：</strong>「まず公開を急ぐならシンプル型」→「営業導線も整えるならSTANDARD型」→「会社案内として厚みを出すならコーポレート型」の順で検討すると決めやすいです。迷う場合はSTANDARD型を基準にし、必要な要素を前後に調整する形がおすすめです。
+          <strong>選び方の目安：</strong>「まず公開を急ぐならシンプル型」→「営業導線も整えるならスタンダード型」→「会社案内として厚みを出すならコーポレート型」の順で検討すると決めやすいです。迷う場合はスタンダード型を基準にし、必要な要素を前後に調整する形がおすすめです。
         </div>
       </div>
     </section>
@@ -1329,15 +1345,15 @@
           <article class="card step-card">
             <div class="card-body">
               <h3 class="step-title">ステップ2：型を選ぶ</h3>
-              <p class="step-description">ご希望の型を1つだけ選択できます。迷った場合はSTANDARD型を基準に選ぶと決めやすいです。</p>
-              <div class="select-grid three-col" role="radiogroup" aria-label="ご希望の型">
+              <p class="step-description">ご希望の型を1つだけ選択できます。迷った場合はスタンダード型を基準に選ぶと決めやすいです。</p>
+              <div class="select-grid three-col type-select-grid" role="radiogroup" aria-label="ご希望の型">
                 <button type="button" class="select-card js-single-select" data-group="type" data-value="シンプル型" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">シンプル型</span></button>
-                <button type="button" class="select-card js-single-select" data-group="type" data-value="STANDARD型" data-disabled-for-plan="ライトプラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">STANDARD型</span><span class="disable-note">標準プラン以上で選択できます</span></button>
+                <button type="button" class="select-card js-single-select" data-group="type" data-value="スタンダード型" data-disabled-for-plan="ライトプラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">スタンダード型</span><span class="disable-note">標準プラン以上で選択できます</span></button>
                 <button type="button" class="select-card js-single-select" data-group="type" data-value="コーポレート型" data-disabled-for-plan="ライトプラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">コーポレート型</span><span class="disable-note">標準プラン以上で選択できます</span></button>
               </div>
               <div class="mini-links" aria-label="型の見本ページ">
                 <a href="base-simple.html">シンプル型の見本を見る</a>
-                <a href="base-standard.html">STANDARD型の見本を見る</a>
+                <a href="base-standard.html">スタンダード型の見本を見る</a>
                 <a href="base-corporate.html">コーポレート型の見本を見る</a>
               </div>
             </div>
@@ -1445,7 +1461,7 @@
                 <select class="form-select" id="base-type" name="ご希望のベース">
                   <option value="">選択してください</option>
                   <option value="シンプル型">シンプル型</option>
-                  <option value="STANDARD型">STANDARD型</option>
+                  <option value="スタンダード型">スタンダード型</option>
                   <option value="コーポレート型">コーポレート型</option>
                   <option value="まだ未定">まだ未定</option>
                 </select>
