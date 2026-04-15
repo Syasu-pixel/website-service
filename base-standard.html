@@ -585,6 +585,38 @@
       flex: 1 1 220px;
     }
 
+    .contact-card--info {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-info-block {
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff, #f7fbff);
+    }
+
+    .contact-info-block strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #1d3f6f;
+    }
+
+    .contact-info-block .list-check {
+      margin-top: 0;
+    }
+
+    .contact-actions .btn[aria-disabled="true"] {
+      cursor: default;
+    }
+
+    .contact-actions .btn[aria-disabled="true"]:hover {
+      transform: none;
+    }
+
     .note {
       margin-top: 12px;
       font-size: 13px;
@@ -1163,9 +1195,11 @@
             <p>新規取引のご相談、見積依頼前の確認、継続案件の引き継ぎ整理など、法人担当者様向けの窓口を想定した見本です。メール・電話でのご相談に加えて、フォームからもお問い合わせいただけます。</p>
 
             <div class="contact-actions">
-              <a class="btn btn-primary" href="mailto:info@kyokutoseiki.example.jp">メールで問い合わせる</a>
-              <a class="btn btn-secondary" href="tel:0612345678">電話で相談する</a>
+              <a class="btn btn-primary" href="javascript:void(0)" aria-disabled="true">メールで問い合わせる（見本）</a>
+              <a class="btn btn-secondary" href="javascript:void(0)" aria-disabled="true">電話で相談する（見本）</a>
             </div>
+
+            <p class="note">※このページは見本のため、メール・電話ボタンは動作しません。実際の制作時は、実在のメールアドレスや電話番号に差し替えて設定します。</p>
 
             <form class="contact-form" action="https://formspree.io/f/mdayorwa" method="POST">
               <input type="hidden" name="form_type" value="STANDARD型ページ問い合わせ">
@@ -1199,10 +1233,29 @@
             </form>
           </div>
 
-          <div class="contact-card">
+          <div class="contact-card contact-card--info">
             <h3>連絡先情報</h3>
             <p>旭東精機株式会社<br>〒577-0012 大阪府東大阪市長田東2-3-14<br>TEL：06-1234-5678<br>MAIL：info@kyokutoseiki.example.jp</p>
-            <p style="margin-top: 12px; color: var(--muted);">図面支給時は、材質・数量・希望納期・検査要件をあわせて共有いただくと、初回回答がスムーズです。</p>
+
+            <div class="contact-info-block">
+              <strong>初回相談時にあるとスムーズな情報</strong>
+              <ul class="list-check">
+                <li>図面データの有無（PDF / DXF / STEPなど）</li>
+                <li>材質・数量・希望納期</li>
+                <li>検査成績書の要否</li>
+              </ul>
+            </div>
+
+            <div class="contact-info-block">
+              <strong>この見本ページで想定している相談内容</strong>
+              <ul class="list-check">
+                <li>試作前の加工可否確認</li>
+                <li>設備保全部品の再製作相談</li>
+                <li>量産移行前の仕様整理</li>
+              </ul>
+            </div>
+
+            <p style="margin-top: 14px; color: var(--muted);">右側は、実際の制作時には「連絡先＋相談のヒント」まで見せることで、問い合わせ前の不安を減らす想定です。</p>
           </div>
         </div>
 
