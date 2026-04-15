@@ -951,6 +951,18 @@
       display: inline-block;
     }
 
+    .type-select-grid .select-card {
+      min-height: 96px;
+      gap: 3px;
+      padding: 13px 14px 12px;
+    }
+
+    .type-select-grid .select-note {
+      font-size: 12px;
+      line-height: 1.6;
+      -webkit-line-clamp: 1;
+    }
+
     .mini-links {
       margin-top: 10px;
       display: flex;
@@ -1151,14 +1163,19 @@
       }
 
       .type-select-grid .select-card {
-        min-height: 72px;
-        padding: 12px 12px 11px;
+        min-height: 82px;
+        padding: 11px 12px 10px;
       }
 
       .type-select-grid .select-name {
         font-size: 14px;
         line-height: 1.45;
         letter-spacing: 0.01em;
+      }
+
+      .type-select-grid .select-note {
+        font-size: 11px;
+        line-height: 1.5;
       }
 
       .header-inner { flex-direction: column; align-items: stretch; }
@@ -1434,9 +1451,9 @@
               <h3 class="step-title">型を選ぶ</h3>
               <p class="step-description">ご希望の型を1つだけ選択できます。迷った場合はスタンダード型を基準に選ぶと決めやすいです。</p>
               <div class="select-grid three-col type-select-grid" role="radiogroup" aria-label="ご希望の型">
-                <button type="button" class="select-card js-single-select" data-group="type" data-value="シンプル型" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">シンプル型</span></button>
-                <button type="button" class="select-card js-single-select" data-group="type" data-value="スタンダード型" data-disabled-for-plan="ライトプラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">スタンダード型</span><span class="disable-note">標準プラン以上で選択できます</span></button>
-                <button type="button" class="select-card js-single-select" data-group="type" data-value="コーポレート型" data-disabled-for-plan="ライトプラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">コーポレート型</span><span class="disable-note">標準プラン以上で選択できます</span></button>
+                <button type="button" class="select-card js-single-select" data-group="type" data-value="シンプル型" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">シンプル型</span><span class="select-note">まず公開を優先したい方向け</span></button>
+                <button type="button" class="select-card js-single-select" data-group="type" data-value="スタンダード型" data-disabled-for-plan="ライトプラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">スタンダード型</span><span class="select-note">問い合わせ導線と見せ方を整えたい方向け</span><span class="disable-note">標準プラン以上で選択できます</span></button>
+                <button type="button" class="select-card js-single-select" data-group="type" data-value="コーポレート型" data-disabled-for-plan="ライトプラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">コーポレート型</span><span class="select-note">会社案内としての厚みを出したい方向け</span><span class="disable-note">標準プラン以上で選択できます</span></button>
               </div>
               <div class="mini-links" aria-label="型の見本ページ">
                 <a href="base-simple.html">シンプル型の見本を見る</a>
