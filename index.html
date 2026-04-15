@@ -468,7 +468,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 14px;
+      margin-top: auto;
+      padding-top: 14px;
     }
 
     .plan-showcase-actions .showcase-cta {
@@ -510,7 +511,13 @@
       background: linear-gradient(160deg, rgba(255,255,255,0.00), rgba(231,242,255,0.20));
     }
 
-    .plan-card .card-body { position: relative; z-index: 1; }
+    .plan-card .card-body {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
 
     .plan-card.featured { border-color: #bad1f4; box-shadow: 0 18px 36px rgba(30, 58, 107, 0.15); }
     .plan-card.featured::after {
@@ -544,8 +551,43 @@
       line-height: 1.75;
     }
 
-    .plan-structure {
+    .plan-subblock {
       margin-top: 12px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #d8e5f8;
+      background: #f5f9ff;
+    }
+
+    .plan-subblock strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #1d3f72;
+    }
+
+    .plan-subblock ul {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .plan-subblock p {
+      margin: 6px 0 0;
+      font-size: 12px;
+      color: #4a6282;
+      line-height: 1.7;
+    }
+
+    .plan-structure-grid {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .plan-structure {
       padding: 12px;
       border-radius: 12px;
       border: 1px solid #d6e3f8;
@@ -763,6 +805,7 @@
       .check-grid { grid-template-columns: 1fr; }
 
       .hero-side { border-left: 0; border-top: 1px solid rgba(191, 213, 242, 0.9); }
+      .plan-structure-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
@@ -995,6 +1038,15 @@
                 <li>スマホ対応</li>
               </ul>
               <div class="plan-summary">名刺交換後に「まず見てもらえる状態」を短期間で整えたい場合に向いています。</div>
+              <div class="plan-subblock">
+                <strong>向いている進め方</strong>
+                <ul>
+                  <li>最初は1ページで公開を優先する</li>
+                  <li>打ち合わせ負担をできるだけ軽く始める</li>
+                  <li>必要に応じて後からページ追加する</li>
+                </ul>
+                <p>※ライトで公開後、標準に近い構成へ段階的に育てる流れにも対応できます</p>
+              </div>
               <div class="plan-showcase-actions">
                 <a class="btn showcase-cta" href="base-simple.html">シンプル型の見本を見る</a>
               </div>
@@ -1016,26 +1068,36 @@
                 <li>軽微な修正対応</li>
               </ul>
               <div class="plan-summary">STANDARD型〜コーポレート型の方向性に合わせて、情報整理の厚みを調整しやすいプランです。</div>
-              <div class="plan-structure">
-                <strong>STANDARD型｜想定ページ構成</strong>
+              <div class="plan-subblock">
+                <strong>想定しやすい使い方</strong>
                 <ul>
-                  <li>トップページ</li>
-                  <li>事業内容 / サービス紹介</li>
-                  <li>会社概要</li>
-                  <li>お問い合わせ</li>
+                  <li>営業導線と信頼感を同時に整えたい</li>
+                  <li>事業説明をページ分けして見せたい</li>
+                  <li>中期運用を見据えて情報を整理したい</li>
                 </ul>
-                <p>※1ページにまとめる構成にも対応可能です</p>
               </div>
-              <div class="plan-structure">
-                <strong>コーポレート型｜想定ページ構成</strong>
-                <ul>
-                  <li>トップページ</li>
-                  <li>事業内容</li>
-                  <li>会社概要</li>
-                  <li>お問い合わせ</li>
-                  <li>プライバシーポリシー</li>
-                </ul>
-                <p>※必要に応じてページ追加も可能です</p>
+              <div class="plan-structure-grid">
+                <div class="plan-structure">
+                  <strong>STANDARD型｜想定ページ構成</strong>
+                  <ul>
+                    <li>トップページ</li>
+                    <li>事業内容 / サービス紹介</li>
+                    <li>会社概要</li>
+                    <li>お問い合わせ</li>
+                  </ul>
+                  <p>※1ページにまとめる構成にも対応可能です</p>
+                </div>
+                <div class="plan-structure">
+                  <strong>コーポレート型｜想定ページ構成</strong>
+                  <ul>
+                    <li>トップページ</li>
+                    <li>事業内容</li>
+                    <li>会社概要</li>
+                    <li>お問い合わせ</li>
+                    <li>プライバシーポリシー</li>
+                  </ul>
+                  <p>※必要に応じてページ追加も可能です</p>
+                </div>
               </div>
               <div class="plan-showcase-actions">
                 <a class="btn showcase-cta" href="base-standard.html">STANDARD型の見本を見る</a>
