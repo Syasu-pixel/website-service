@@ -575,6 +575,38 @@
     .option-grid,
     .payment-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
 
+    .option-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+
+    .option-card {
+      height: 100%;
+      border-color: #cfe0f5;
+      box-shadow: 0 10px 26px rgba(31, 79, 146, 0.08);
+    }
+
+    .option-card .card-body {
+      display: grid;
+      gap: 8px;
+    }
+
+    .option-price {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #edf4ff;
+      border: 1px solid #c7d9f6;
+      color: #153f72;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .option-note {
+      font-size: 12px;
+      color: #4d6381;
+    }
+
     .faq-item {
       background: #fff;
       border: 1px solid var(--line);
@@ -1020,36 +1052,21 @@
         <div class="section-head">
           <span class="section-kicker">OPTION</span>
           <h2 class="section-title">必要に応じて追加できるオプション</h2>
-          <p class="section-lead">最初は本体を作り、必要な分だけ追加する進め方にも対応できます。</p>
+          <p class="section-lead">まずは本体を作り、必要なものだけ追加できます。<br>下記は目安価格です。内容によって変わる場合があります。</p>
         </div>
 
         <div class="option-grid">
-          <article class="card">
-            <div class="card-body">
-              <span class="tag warm">検索・マップ向け</span>
-              <h3>Google設定補助</h3>
-              <p>公開後に、検索やマップで見つけてもらいやすくするための初期整備を補助します。制作直後の動き出しでつまずきにくいよう、必要な手順を絞ってご案内します。</p>
-              <ul class="plain-list">
-                <li>Google検索向け初期設定補助</li>
-                <li>Googleビジネスプロフィール初期設定補助</li>
-                <li>公開後の動き出しサポート</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-body">
-              <span class="tag">公開まわり</span>
-              <h3>そのほか追加しやすい対応</h3>
-              <p>運用しながら必要になった項目を、後から追加で整えていくことができます。最初に盛り込みすぎないことで、費用と運用負担を調整しやすくします。</p>
-              <ul class="plain-list">
-                <li>独自ドメイン接続設定</li>
-                <li>公開後の軽微修正</li>
-                <li>文章差し替え・写真追加</li>
-              </ul>
-            </div>
-          </article>
+          <article class="card option-card"><div class="card-body"><h3>1ページ追加</h3><p class="option-price">11,000円（税込）〜16,500円（税込）</p><p>ページを分けて見やすくしたい場合に追加できます。会社概要、事業内容、お問い合わせページなどの追加に対応します。</p></div></article>
+          <article class="card option-card"><div class="card-body"><h3>お問い合わせフォーム追加</h3><p class="option-price">5,500円（税込）〜11,000円（税込）</p><p>お問い合わせ導線をしっかり作りたい場合に追加できます。用途に合わせて、必要な入力項目を整理して設置します。</p></div></article>
+          <article class="card option-card"><div class="card-body"><h3>Google設定補助</h3><p class="option-price">5,500円（税込）〜11,000円（税込）</p><p>検索やGoogleマップまわりの初期設定を補助します。公開後の動き出しで困りにくいように整えます。</p></div></article>
+          <article class="card option-card"><div class="card-body"><h3>独自ドメイン接続・移管</h3><p class="option-price">5,500円（税込）〜8,800円（税込）</p><p>会社用の独自ドメインを使いたい場合に対応します。すでに取得済みのドメイン移管や接続もご相談いただけます。</p></div></article>
+          <article class="card option-card"><div class="card-body"><h3>軽微修正・文章差し替え</h3><p class="option-price">3,300円（税込）〜5,500円（税込）</p><p>公開後の文章修正や、ちょっとした内容変更に対応します。必要な時だけ追加しやすい形です。</p></div></article>
+          <article class="card option-card"><div class="card-body"><h3>画像追加・差し替え</h3><p class="option-price">3,300円（税込）〜</p><p>写真や画像の追加、差し替えに対応します。掲載内容に合わせて見やすく整えます。</p></div></article>
+          <article class="card option-card"><div class="card-body"><h3>ファビコン設置</h3><p class="option-price">3,300円（税込）〜5,500円（税込）</p><p>ブラウザのタブに表示される小さなアイコンを設置します。細かい部分まで整えたい場合におすすめです。</p></div></article>
+          <article class="card option-card"><div class="card-body"><h3>ロゴ作成</h3><p class="option-price">16,500円（税込）〜33,000円（税込）</p><p>会社ロゴがまだない方向けに、シンプルなロゴ案作成に対応します。ホームページに載せやすい見た目で整えます。</p></div></article>
+          <article class="card option-card"><div class="card-body"><h3>予約サービス導入補助</h3><p class="option-price">11,000円（税込）〜22,000円（税込）</p><p>外部予約サービスの導入や案内ページの整備を補助します。静的サイトに合う形で、無理のない導線づくりを行います。</p></div></article>
         </div>
+        <p class="option-note">※上記はすべて税込の目安価格です。実際の費用は、作業内容・分量・連携方法により変わる場合があります。</p>
       </div>
     </section>
 
