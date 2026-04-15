@@ -1283,8 +1283,8 @@
               <p class="step-description">ご希望の型を1つだけ選択できます。迷った場合はSTANDARD型を基準に選ぶと決めやすいです。</p>
               <div class="select-grid three-col" role="radiogroup" aria-label="ご希望の型">
                 <button type="button" class="select-card js-single-select" data-group="type" data-value="シンプル型" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">シンプル型</span></button>
-                <button type="button" class="select-card js-single-select" data-group="type" data-value="STANDARD型" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">STANDARD型</span></button>
-                <button type="button" class="select-card js-single-select" data-group="type" data-value="コーポレート型" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">コーポレート型</span></button>
+                <button type="button" class="select-card js-single-select" data-group="type" data-value="STANDARD型" data-disabled-for-plan="ライトプラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">STANDARD型</span><span class="disable-note">標準プラン以上で選択できます</span></button>
+                <button type="button" class="select-card js-single-select" data-group="type" data-value="コーポレート型" data-disabled-for-plan="ライトプラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">コーポレート型</span><span class="disable-note">標準プラン以上で選択できます</span></button>
               </div>
               <div class="mini-links" aria-label="型の見本ページ">
                 <a href="base-simple.html">シンプル型の見本を見る</a>
@@ -1452,6 +1452,7 @@
 
       const singleButtons = [...document.querySelectorAll(".js-single-select")];
       const optionButtons = [...document.querySelectorAll(".js-option-select")];
+      const typeButtons = singleButtons.filter((button) => button.dataset.group === "type");
       const summaryPlan = document.getElementById("summary-plan");
       const summaryType = document.getElementById("summary-type");
       const summaryOptions = document.getElementById("summary-options");
@@ -1505,6 +1506,20 @@
         });
       };
 
+      const syncTypeAvailability = () => {
+        typeButtons.forEach((button) => {
+          const disabledPlan = button.dataset.disabledForPlan;
+          const shouldDisable = disabledPlan && state.plan === disabledPlan;
+
+          button.disabled = !!shouldDisable;
+          button.classList.toggle("is-disabled", !!shouldDisable);
+
+          if (shouldDisable && state.type === button.dataset.value) {
+            state.type = "";
+          }
+        });
+      };
+
       const syncOptionAvailability = () => {
         optionButtons.forEach((button) => {
           const disabledPlan = button.dataset.disabledForPlan;
@@ -1517,7 +1532,7 @@
           }
           const isSelected = state.options.has(button.dataset.value);
           button.classList.toggle("is-selected", isSelected);
-          button.classList.toggle("is-unselected", state.options.size > 0 && !isSelected);
+          button.classList.remove("is-unselected");
           button.setAttribute("aria-pressed", String(isSelected));
         });
       };
@@ -1529,6 +1544,8 @@
           state[group] = state[group] === value ? "" : value;
           syncSingleState(group);
           if (group === "plan") {
+            syncTypeAvailability();
+            syncSingleState("type");
             syncOptionAvailability();
           }
           updateSummary();
@@ -1550,6 +1567,7 @@
       });
 
       syncSingleState("plan");
+      syncTypeAvailability();
       syncSingleState("type");
       syncSingleState("payment");
       syncOptionAvailability();
