@@ -517,6 +517,71 @@
       margin-right: 6px;
     }
 
+    .contact-layout {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .contact-panel {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2a3f58;
+      letter-spacing: 0.02em;
+    }
+
+    .required {
+      margin-left: 6px;
+      color: #184c7f;
+      font-size: 12px;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid #c2cfdd;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #24374f;
+      background: #fff;
+      font-family: inherit;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      outline: 2px solid rgba(24, 76, 127, 0.16);
+      border-color: #184c7f;
+    }
+
+    .form-textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      margin-top: 4px;
+    }
+
     .contact-actions {
       margin-top: 28px;
       display: flex;
@@ -657,6 +722,10 @@
       .company-table th {
         border-bottom: none;
         padding-bottom: 4px;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
       }
 
       .company-table td {
@@ -971,19 +1040,56 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <div class="contact-info">
-              <p><strong>会社名</strong>東和設備ソリューションズ株式会社</p>
-              <p><strong>住所</strong>〒455-0028 愛知県名古屋市港区潮見町12-4</p>
-              <p><strong>電話</strong><a href="#" aria-disabled="true" onclick="return false;">052-389-1147</a></p>
-              <p><strong>メール</strong><a href="#" aria-disabled="true" onclick="return false;">info@towa-fs.co.jp</a></p>
+            <div class="contact-layout">
+              <div class="contact-panel">
+                <div class="contact-info">
+                  <p><strong>会社名</strong>東和設備ソリューションズ株式会社</p>
+                  <p><strong>住所</strong>〒455-0028 愛知県名古屋市港区潮見町12-4</p>
+                  <p><strong>電話</strong><a href="tel:0523891147">052-389-1147</a></p>
+                  <p><strong>メール</strong><a href="mailto:info@towa-fs.co.jp">info@towa-fs.co.jp</a></p>
+                </div>
+
+                <div class="contact-actions">
+                  <a class="btn btn-primary" href="mailto:info@towa-fs.co.jp">メールで問い合わせる</a>
+                  <a class="btn btn-secondary" href="tel:0523891147">電話で相談する</a>
+                </div>
+              </div>
+
+              <div class="contact-panel">
+                <form class="contact-form" action="https://formspree.io/f/mdayorwa" method="POST">
+                  <input type="hidden" name="form_type" value="コーポレート型ページ問い合わせ">
+
+                  <div class="form-row">
+                    <label class="form-label" for="corp-name">お名前または会社名<span class="required">必須</span></label>
+                    <input class="form-input" id="corp-name" name="お名前または会社名" type="text" required>
+                  </div>
+
+                  <div class="form-row">
+                    <label class="form-label" for="corp-email">メールアドレス<span class="required">必須</span></label>
+                    <input class="form-input" id="corp-email" name="メールアドレス" type="email" required>
+                  </div>
+
+                  <div class="form-row">
+                    <label class="form-label" for="corp-phone">電話番号（任意）</label>
+                    <input class="form-input" id="corp-phone" name="電話番号" type="tel">
+                  </div>
+
+                  <div class="form-row">
+                    <label class="form-label" for="corp-company">会社名 / 部署名（任意）</label>
+                    <input class="form-input" id="corp-company" name="会社名 / 部署名" type="text">
+                  </div>
+
+                  <div class="form-row">
+                    <label class="form-label" for="corp-message">ご相談内容<span class="required">必須</span></label>
+                    <textarea class="form-textarea" id="corp-message" name="ご相談内容" required></textarea>
+                  </div>
+
+                  <button class="btn btn-primary form-submit" type="submit">フォームから送信する</button>
+                </form>
+              </div>
             </div>
 
-            <div class="contact-actions">
-              <a class="btn btn-primary" href="#" aria-disabled="true" onclick="return false;">メールで問い合わせる</a>
-              <a class="btn btn-secondary" href="#" aria-disabled="true" onclick="return false;">電話で相談する</a>
-            </div>
-
-            <p class="contact-note">※このページは見本のため、ボタンは動作しません。</p>
+            <p class="contact-note">※見本ページのため受信先はデモ用（Formspree）です。</p>
 
             <aside class="price-guide" aria-label="この見本ページの価格案内">
               <p class="price-guide-title">PRICE GUIDE</p>
