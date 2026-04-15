@@ -601,6 +601,16 @@
       box-shadow: none;
     }
 
+    .contact-actions .btn[aria-disabled="true"],
+    .form-submit[aria-disabled="true"] {
+      cursor: default;
+    }
+
+    .contact-actions .btn[aria-disabled="true"]:hover,
+    .form-submit[aria-disabled="true"]:hover {
+      transform: none;
+    }
+
     .contact-note {
       margin-top: 10px;
       font-size: 12px;
@@ -1029,7 +1039,7 @@
             <div class="section-head">
               <span class="section-kicker">CONTACT</span>
               <h2 class="section-title">お問い合わせ</h2>
-              <p class="section-lead">新規工事、設備更新、保守契約のご相談は下記窓口よりお問い合わせください。</p>
+              <p class="section-lead">メール・電話・フォーム導線を含めた見本として掲載しています。</p>
             </div>
 
             <div class="contact-map" aria-label="所在地マップ">
@@ -1050,13 +1060,13 @@
                 </div>
 
                 <div class="contact-actions">
-                  <a class="btn btn-primary" href="mailto:info@towa-fs.co.jp">メールで問い合わせる</a>
-                  <a class="btn btn-secondary" href="tel:0523891147">電話で相談する</a>
+                  <a class="btn btn-primary" href="javascript:void(0)" aria-disabled="true">メールで問い合わせる（見本）</a>
+                  <a class="btn btn-secondary" href="javascript:void(0)" aria-disabled="true">電話で相談する（見本）</a>
                 </div>
               </div>
 
               <div class="contact-panel">
-                <form class="contact-form" action="https://formspree.io/f/mdayorwa" method="POST">
+                <form class="contact-form" onsubmit="return false;">
                   <input type="hidden" name="form_type" value="コーポレート型ページ問い合わせ">
 
                   <div class="form-row">
@@ -1084,12 +1094,12 @@
                     <textarea class="form-textarea" id="corp-message" name="ご相談内容" required></textarea>
                   </div>
 
-                  <button class="btn btn-primary form-submit" type="submit">フォームから送信する</button>
+                  <button class="btn btn-primary form-submit" type="button" aria-disabled="true">フォームから送信する（見本）</button>
                 </form>
               </div>
             </div>
 
-            <p class="contact-note">※見本ページのため受信先はデモ用（Formspree）です。</p>
+            <p class="contact-note">※このページは見本のため、メール・電話ボタン、フォーム送信は動作しません。実際の制作時は、実在の連絡先・送信先に差し替えて設定します。</p>
 
             <aside class="price-guide" aria-label="この見本ページの価格案内">
               <p class="price-guide-title">PRICE GUIDE</p>
