@@ -730,8 +730,65 @@
     }
 
     .step-card {
+      position: relative;
+      overflow: hidden;
       border: 1px solid #cfe0f7;
-      background: linear-gradient(170deg, rgba(255,255,255,0.96), rgba(243,249,255,0.94));
+      background: linear-gradient(170deg, rgba(255,255,255,0.98), rgba(244,249,255,0.94));
+      box-shadow: 0 13px 28px rgba(31, 79, 146, 0.10);
+    }
+
+    .step-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 5px;
+      border-radius: 18px 0 0 18px;
+      background: linear-gradient(180deg, rgba(47,109,196,0.56), rgba(245,158,11,0.40));
+    }
+
+    .step-card .card-body {
+      position: relative;
+      padding-top: 40px;
+    }
+
+    .step-card .card-body::before {
+      content: attr(data-step-label);
+      position: absolute;
+      top: 14px;
+      left: 22px;
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 2px 10px;
+      border-radius: 999px;
+      border: 1px solid #d1def2;
+      background: linear-gradient(145deg, rgba(255,255,255,0.92), rgba(245,250,255,0.90));
+      color: #294f7c;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .step-card.step-card--plan {
+      border-color: #bfd5f4;
+      background: linear-gradient(165deg, #ffffff 0%, #f3f8ff 85%);
+    }
+
+    .step-card.step-card--type {
+      border-color: #cddcf2;
+      background: linear-gradient(165deg, #ffffff 0%, #f5f8fd 100%);
+    }
+
+    .step-card.step-card--option {
+      border-color: #d6dff0;
+      background: linear-gradient(165deg, #ffffff 0%, #f8f6ff 100%);
+    }
+
+    .step-card.step-card--payment {
+      border-color: #d7e1f2;
+      background: linear-gradient(165deg, #ffffff 0%, #f6f9ff 100%);
     }
 
     .step-title {
@@ -763,7 +820,7 @@
       text-align: left;
       border: 1px solid #cddff7;
       border-radius: 14px;
-      background: #fff;
+      background: linear-gradient(162deg, #ffffff, #f6f9ff);
       color: #16385f;
       padding: 14px;
       display: grid;
@@ -835,14 +892,14 @@
 
     .select-card.is-selected {
       border-color: #2f6dc4;
-      background: #eaf3ff;
+      background: linear-gradient(160deg, #f2f8ff, #e7f1ff);
       box-shadow: 0 12px 24px rgba(47, 109, 196, 0.2);
     }
 
     .select-card.is-unselected {
-      opacity: 0.5;
-      background: #f4f7fb;
-      border-color: #d9e4f4;
+      opacity: 0.68;
+      background: linear-gradient(160deg, #fcfdff, #f3f7fd);
+      border-color: #d3dfef;
     }
 
     .select-card.is-disabled,
@@ -910,16 +967,29 @@
 
     .selection-summary {
       margin-top: 4px;
-      border: 1px solid #cfe1f7;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #c5d9f4;
       border-radius: 14px;
-      background: #f4f9ff;
-      padding: 14px;
+      background: linear-gradient(150deg, #ffffff 0%, #f2f8ff 64%, #fff9ef 100%);
+      box-shadow: 0 15px 30px rgba(29, 70, 131, 0.14);
+      padding: 16px 16px 14px;
+    }
+
+    .selection-summary::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: linear-gradient(90deg, rgba(47,109,196,0.86), rgba(21,53,98,0.84) 64%, rgba(245,158,11,0.72));
     }
 
     .selection-summary h3 {
-      margin: 0 0 8px;
+      margin: 0 0 10px;
       font-size: 17px;
-      color: #163961;
+      color: #14345d;
+      padding-left: 10px;
+      border-left: 3px solid rgba(47, 109, 196, 0.50);
     }
 
     .summary-list {
@@ -930,6 +1000,10 @@
       gap: 6px;
       font-size: 14px;
       color: #355274;
+    }
+
+    .summary-list strong {
+      color: #12345f;
     }
 
     .faq-item {
@@ -1106,6 +1180,16 @@
       .hero-wrap::before,
       .hero-wrap::after { opacity: 0.55; }
       .option-card { --option-image-opacity: 0.34; }
+      .step-card .card-body {
+        padding-top: 38px;
+      }
+      .step-card .card-body::before {
+        top: 12px;
+        left: 16px;
+      }
+      .selection-summary {
+        padding: 15px 14px 13px;
+      }
       .btn { width: 100%; }
       .cta-group { display: grid; }
       .section { padding: 24px 0; }
@@ -1303,8 +1387,8 @@
         </div>
 
         <div class="step-flow">
-          <article class="card step-card">
-            <div class="card-body">
+          <article class="card step-card step-card--plan">
+            <div class="card-body" data-step-label="Plan">
               <h3 class="step-title">プランを選ぶ</h3>
               <p class="step-description">どちらか1つだけ選択できます。選択中のカードは強調表示され、もう一方は薄く表示されます。</p>
               <div class="select-grid" role="radiogroup" aria-label="ご希望プラン">
@@ -1328,8 +1412,8 @@
             </div>
           </article>
 
-          <article class="card step-card">
-            <div class="card-body">
+          <article class="card step-card step-card--type">
+            <div class="card-body" data-step-label="Type">
               <h3 class="step-title">型を選ぶ</h3>
               <p class="step-description">ご希望の型を1つだけ選択できます。迷った場合はスタンダード型を基準に選ぶと決めやすいです。</p>
               <div class="select-grid three-col type-select-grid" role="radiogroup" aria-label="ご希望の型">
@@ -1345,8 +1429,8 @@
             </div>
           </article>
 
-          <article class="card step-card">
-            <div class="card-body">
+          <article class="card step-card step-card--option">
+            <div class="card-body" data-step-label="Option">
               <h3 class="step-title">必要に応じて追加する内容</h3>
               <p class="step-description">必要なものだけ後から追加できるよう、オプションは複数選択できます。各項目の補足文で追加内容をすぐ確認でき、標準プラン選択時は「お問い合わせフォーム追加」が含まれるため選択不可になります。</p>
               <div class="select-grid three-col" aria-label="ご希望オプション">
@@ -1364,8 +1448,8 @@
             </div>
           </article>
 
-          <article class="card step-card">
-            <div class="card-body">
+          <article class="card step-card step-card--payment">
+            <div class="card-body" data-step-label="Payment">
               <h3 class="step-title">決済方法</h3>
               <div class="select-grid" role="radiogroup" aria-label="ご希望の決済方法">
                 <button type="button" class="select-card js-single-select" data-group="payment" data-value="銀行振込" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">銀行振込</span></button>
