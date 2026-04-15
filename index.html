@@ -790,6 +790,38 @@
       line-height: 1.6;
     }
 
+    .select-card.plan-card {
+      gap: 6px;
+      padding: 14px 14px 12px;
+    }
+
+    .select-card .plan-focus {
+      font-size: 12px;
+      font-weight: 700;
+      color: #2f5f9f;
+      line-height: 1.5;
+    }
+
+    .select-card .plan-copy {
+      margin: 0;
+      font-size: 12px;
+      color: #476283;
+      line-height: 1.6;
+    }
+
+    .select-card .plan-points {
+      margin: 0;
+      font-size: 11px;
+      color: #4f6786;
+      line-height: 1.55;
+      display: grid;
+      gap: 1px;
+    }
+
+    .select-card .plan-points span {
+      display: block;
+    }
+
     .select-card.is-selected {
       border-color: #2f6dc4;
       background: #eaf3ff;
@@ -1263,15 +1295,21 @@
               <h3 class="step-title">ステップ1：プランを選ぶ</h3>
               <p class="step-description">どちらか1つだけ選択できます。選択中のカードは強調表示され、もう一方は薄く表示されます。</p>
               <div class="select-grid" role="radiogroup" aria-label="ご希望プラン">
-                <button type="button" class="select-card js-single-select" data-group="plan" data-value="ライトプラン" aria-pressed="false">
+                <button type="button" class="select-card plan-card js-single-select" data-group="plan" data-value="ライトプラン" aria-pressed="false">
                   <span class="selected-badge" aria-hidden="true">選択中</span>
                   <span class="select-name">ライトプラン</span>
-                  <span class="select-meta">55,000円（税込）〜 / まずは公開優先で始めたい方向け</span>
+                  <span class="select-meta">55,000円（税込）〜</span>
+                  <span class="plan-focus">公開を優先したい方向け</span>
+                  <p class="plan-copy">必要な内容を1ページにまとめて、まずは早めに公開したい方向けのプランです。名刺代わりの会社HPを持ちたい場合や、できるだけ負担を抑えて始めたい場合に向いています。</p>
+                  <span class="plan-points"><span>・まず見てもらえる状態を作りやすい</span><span>・打ち合わせ負担をできるだけ軽く始めやすい</span><span>・必要に応じて後から追加しやすい</span></span>
                 </button>
-                <button type="button" class="select-card js-single-select" data-group="plan" data-value="標準プラン" aria-pressed="false">
+                <button type="button" class="select-card plan-card js-single-select" data-group="plan" data-value="標準プラン" aria-pressed="false">
                   <span class="selected-badge" aria-hidden="true">選択中</span>
                   <span class="select-name">標準プラン</span>
-                  <span class="select-meta">88,000円（税込）〜 / 問い合わせ導線まで整えたい方向け</span>
+                  <span class="select-meta">88,000円（税込）〜</span>
+                  <span class="plan-focus">差額で増えること</span>
+                  <p class="plan-copy">ライトプランより、問い合わせ導線と見せ方まで整えやすいのが標準プランです。お問い合わせフォーム設置込みで、公開後の微調整にも対応しやすく、営業サイトとしての完成度を上げたい場合に向いています。</p>
+                  <span class="plan-points"><span>・お問い合わせフォーム設置込み</span><span>・公開後の微調整まで進めやすい</span><span>・情報整理の厚みを出しやすい</span><span>・営業サイトとして仕上げやすい</span></span>
                 </button>
               </div>
             </div>
