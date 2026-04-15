@@ -766,23 +766,13 @@
       gap: 10px;
     }
 
-    .contact-box details {
+    .contact-form {
       background: rgba(255,255,255,0.10);
       border: 1px solid rgba(255,255,255,0.20);
       border-radius: 14px;
-      padding: 10px 12px 14px;
-      margin-top: 8px;
+      padding: 16px;
+      margin-top: 12px;
     }
-
-    .contact-box summary {
-      cursor: pointer;
-      font-weight: 800;
-      font-size: 15px;
-      color: #fff;
-      list-style: none;
-    }
-
-    .contact-box summary::-webkit-details-marker { display: none; }
 
     .contact-note {
       margin-top: 8px;
@@ -1235,10 +1225,7 @@
             <p class="contact-note">「内容がまだ未整理」「何から決めればいいかわからない」状態でも、そのままご相談いただけます。まずは短い内容でも送っていただければ、必要事項をこちらからご案内します。</p>
           </div>
 
-          <details>
-            <summary id="contact-form">入力フォームを開いて相談内容を送る</summary>
-
-          <form class="contact-form" action="https://formspree.io/f/mdayorwa" method="POST">
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/mdayorwa" method="POST">
             <input type="hidden" name="form_type" value="ホームページ制作相談">
 
             <div class="form-grid">
@@ -1291,7 +1278,6 @@
               </div>
             </div>
           </form>
-          </details>
         </div>
       </div>
     </section>
