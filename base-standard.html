@@ -784,9 +784,28 @@
       .grid-3,
       .gallery,
       .gallery-sub,
-      .contact-wrap,
-      .stats {
+      .contact-wrap {
         grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 10px;
+      }
+
+      .stat {
+        min-height: 92px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .stat strong {
+        font-size: 21px;
+      }
+
+      .stat span {
+        font-size: 11px;
       }
 
       .header-inner {
