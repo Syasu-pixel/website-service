@@ -1029,19 +1029,6 @@
 
     .form-textarea { min-height: 120px; resize: vertical; }
 
-    .check-grid {
-      display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 10px 14px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.13);
-      border-radius: 14px;
-      padding: 12px;
-    }
-
-    .check-item { display: flex; gap: 8px; font-size: 14px; }
-    .check-item input { margin-top: 3px; accent-color: #f59e0b; }
-
     .site-footer { padding: 24px 0 34px; }
     .footer-inner {
       border-top: 1px solid var(--line);
@@ -1077,8 +1064,7 @@
       .plans,
       .option-grid,
       .payment-grid,
-      .form-grid,
-      .check-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
 
       .hero-side { border-left: 0; border-top: 1px solid rgba(191, 213, 242, 0.9); }
       .plan-structure-grid { grid-template-columns: 1fr; }
@@ -1477,17 +1463,7 @@
 
               <div class="form-group full">
                 <label class="form-label" for="message">その他ご相談内容 <span class="form-note">任意</span></label>
-                <textarea class="form-textarea" id="message" name="その他ご相談内容" placeholder="まだ内容がまとまっていないので、相談しながら決めたいです。"></textarea>
-              </div>
-
-              <div class="form-group full">
-                <label class="form-label">追加で希望する内容（手動追加） <span class="form-note">任意</span></label>
-                <div class="check-grid">
-                  <label class="check-item"><input type="checkbox" name="追加希望[]" value="お問い合わせフォームを付けたい"><span>お問い合わせフォームを付けたい</span></label>
-                  <label class="check-item"><input type="checkbox" name="追加希望[]" value="独自ドメインも相談したい"><span>独自ドメインも相談したい</span></label>
-                  <label class="check-item"><input type="checkbox" name="追加希望[]" value="Google設定補助も相談したい"><span>Google設定補助も相談したい</span></label>
-                  <label class="check-item"><input type="checkbox" name="追加希望[]" value="クレジットカード決済も相談したい"><span>クレジットカード決済も相談したい</span></label>
-                </div>
+                <textarea class="form-textarea" id="message" name="その他ご相談内容" placeholder="上で選んだ内容以外で、気になっていることや補足したいことがあればご記入ください。"></textarea>
               </div>
 
               <div class="form-group full">
