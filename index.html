@@ -620,15 +620,55 @@
     .option-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
 
     .option-card {
+      position: relative;
+      overflow: hidden;
       height: 100%;
       border-color: #cfe0f5;
       box-shadow: 0 10px 26px rgba(31, 79, 146, 0.08);
+      isolation: isolate;
+      --option-image-url: none;
+    }
+
+    .option-card::before,
+    .option-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .option-card::before {
+      background:
+        radial-gradient(circle at 82% 20%, rgba(255,255,255,0.42), transparent 56%),
+        var(--option-image-url) center / cover no-repeat;
+      opacity: 0.13;
+      transform: scale(1.02);
+    }
+
+    .option-card::after {
+      background:
+        linear-gradient(170deg, rgba(255,255,255,0.94), rgba(255,255,255,0.82)),
+        linear-gradient(120deg, rgba(248,252,255,0.82), rgba(255,255,255,0.62));
+      z-index: 1;
     }
 
     .option-card .card-body {
+      position: relative;
+      z-index: 2;
       display: grid;
       gap: 8px;
     }
+
+    .option-card--page { --option-image-url: url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80"); }
+    .option-card--form { --option-image-url: url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80"); }
+    .option-card--google { --option-image-url: url("https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80"); }
+    .option-card--domain { --option-image-url: url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80"); }
+    .option-card--edit { --option-image-url: url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80"); }
+    .option-card--image { --option-image-url: url("https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1200&q=80"); }
+    .option-card--favicon { --option-image-url: url("https://images.unsplash.com/photo-1618788372246-79faff0c3742?auto=format&fit=crop&w=1200&q=80"); }
+    .option-card--logo { --option-image-url: url("https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=80"); }
+    .option-card--booking { --option-image-url: url("https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80"); }
 
     .option-price {
       display: inline-flex;
@@ -1105,15 +1145,15 @@
         </div>
 
         <div class="option-grid">
-          <article class="card option-card"><div class="card-body"><h3>1ページ追加</h3><p class="option-price">11,000円（税込）〜16,500円（税込）</p><p>ページを分けて見やすくしたい場合に追加できます。会社概要、事業内容、お問い合わせページなどの追加に対応します。1ページで公開したあと、必要に応じて段階的に広げていく形にも向いています。</p></div></article>
-          <article class="card option-card"><div class="card-body"><h3>お問い合わせフォーム追加</h3><p class="option-price">5,500円（税込）〜11,000円（税込）</p><p>お問い合わせ導線をしっかり作りたい場合に追加できます。用途に合わせて、必要な入力項目を整理して設置します。</p></div></article>
-          <article class="card option-card"><div class="card-body"><h3>Google設定補助</h3><p class="option-price">5,500円（税込）〜11,000円（税込）</p><p>検索やGoogleマップまわりの初期設定を補助します。公開後の動き出しで困りにくいように整えます。</p></div></article>
-          <article class="card option-card"><div class="card-body"><h3>独自ドメイン接続・移管</h3><p class="option-price">5,500円（税込）〜8,800円（税込）</p><p>会社用の独自ドメインを使いたい場合に対応します。すでに取得済みのドメイン移管や接続もご相談いただけます。</p></div></article>
-          <article class="card option-card"><div class="card-body"><h3>軽微修正・文章差し替え</h3><p class="option-price">3,300円（税込）〜5,500円（税込）</p><p>公開後の文章修正や、ちょっとした内容変更に対応します。必要な時だけ追加しやすい形です。</p></div></article>
-          <article class="card option-card"><div class="card-body"><h3>画像追加・差し替え</h3><p class="option-price">3,300円（税込）〜</p><p>写真や画像の追加、差し替えに対応します。掲載内容に合わせて見やすく整えます。</p></div></article>
-          <article class="card option-card"><div class="card-body"><h3>ファビコン設置</h3><p class="option-price">3,300円（税込）〜5,500円（税込）</p><p>ブラウザのタブに表示される小さなアイコンを設置します。細かい部分まで整えたい場合におすすめです。</p></div></article>
-          <article class="card option-card"><div class="card-body"><h3>ロゴ作成</h3><p class="option-price">16,500円（税込）〜33,000円（税込）</p><p>会社ロゴがまだない方向けに、シンプルなロゴ案作成に対応します。ホームページに載せやすい見た目で整えます。</p></div></article>
-          <article class="card option-card"><div class="card-body"><h3>予約サービス導入補助</h3><p class="option-price">11,000円（税込）〜22,000円（税込）</p><p>外部予約サービスの導入や案内ページの整備を補助します。静的サイトに合う形で、無理のない導線づくりを行います。</p></div></article>
+          <article class="card option-card option-card--page"><div class="card-body"><h3>1ページ追加</h3><p class="option-price">11,000円（税込）〜16,500円（税込）</p><p>ページを分けて見やすくしたい場合に追加できます。会社概要、事業内容、お問い合わせページなどの追加に対応します。1ページで公開したあと、必要に応じて段階的に広げていく形にも向いています。</p></div></article>
+          <article class="card option-card option-card--form"><div class="card-body"><h3>お問い合わせフォーム追加</h3><p class="option-price">5,500円（税込）〜11,000円（税込）</p><p>お問い合わせ導線をしっかり作りたい場合に追加できます。用途に合わせて、必要な入力項目を整理して設置します。</p></div></article>
+          <article class="card option-card option-card--google"><div class="card-body"><h3>Google設定補助</h3><p class="option-price">5,500円（税込）〜11,000円（税込）</p><p>検索やGoogleマップまわりの初期設定を補助します。公開後の動き出しで困りにくいように整えます。</p></div></article>
+          <article class="card option-card option-card--domain"><div class="card-body"><h3>独自ドメイン接続・移管</h3><p class="option-price">5,500円（税込）〜8,800円（税込）</p><p>会社用の独自ドメインを使いたい場合に対応します。すでに取得済みのドメイン移管や接続もご相談いただけます。</p></div></article>
+          <article class="card option-card option-card--edit"><div class="card-body"><h3>軽微修正・文章差し替え</h3><p class="option-price">3,300円（税込）〜5,500円（税込）</p><p>公開後の文章修正や、ちょっとした内容変更に対応します。必要な時だけ追加しやすい形です。</p></div></article>
+          <article class="card option-card option-card--image"><div class="card-body"><h3>画像追加・差し替え</h3><p class="option-price">3,300円（税込）〜</p><p>写真や画像の追加、差し替えに対応します。掲載内容に合わせて見やすく整えます。</p></div></article>
+          <article class="card option-card option-card--favicon"><div class="card-body"><h3>ファビコン設置</h3><p class="option-price">3,300円（税込）〜5,500円（税込）</p><p>ブラウザのタブに表示される小さなアイコンを設置します。細かい部分まで整えたい場合におすすめです。</p></div></article>
+          <article class="card option-card option-card--logo"><div class="card-body"><h3>ロゴ作成</h3><p class="option-price">16,500円（税込）〜33,000円（税込）</p><p>会社ロゴがまだない方向けに、シンプルなロゴ案作成に対応します。ホームページに載せやすい見た目で整えます。</p></div></article>
+          <article class="card option-card option-card--booking"><div class="card-body"><h3>予約サービス導入補助</h3><p class="option-price">11,000円（税込）〜22,000円（税込）</p><p>外部予約サービスの導入や案内ページの整備を補助します。静的サイトに合う形で、無理のない導線づくりを行います。</p></div></article>
         </div>
         <p class="option-note">※上記はすべて税込の目安価格です。実際の費用は、作業内容・分量・連携方法により変わる場合があります。</p>
       </div>
