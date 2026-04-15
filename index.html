@@ -766,8 +766,8 @@
       color: #294f7c;
       font-size: 11px;
       font-weight: 800;
-      letter-spacing: .06em;
-      text-transform: uppercase;
+      letter-spacing: .03em;
+      text-transform: none;
       line-height: 1;
     }
 
@@ -1186,6 +1186,23 @@
       .step-card .card-body::before {
         top: 12px;
         left: 16px;
+        font-size: 10px;
+        padding: 2px 8px;
+      }
+      .step-card--plan .select-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .step-card--plan .select-card.plan-card {
+        gap: 5px;
+        padding: 12px 12px 11px;
+      }
+      .step-card--plan .select-card .plan-copy {
+        line-height: 1.5;
+      }
+      .step-card--plan .select-card .plan-points {
+        gap: 0;
+        line-height: 1.5;
       }
       .selection-summary {
         padding: 15px 14px 13px;
@@ -1383,12 +1400,12 @@
         <div class="section-head">
           <span class="section-kicker">PRICE</span>
           <h2 class="section-title">料金の違いを見ながら、希望に近い内容を選べます</h2>
-          <p class="section-lead">まずは近いプランや型を選びながら、相談したい内容を整理できるようにしています。選んだ内容は、下のご相談フォームにも反映されます。</p>
+          <p class="section-lead">「これなら進めやすそう」という内容を、順番に気軽に選べるようにしています。選んだ内容は下のご相談フォームにも反映されるので、そのまま相談に進めます。</p>
         </div>
 
         <div class="step-flow">
           <article class="card step-card step-card--plan">
-            <div class="card-body" data-step-label="Plan">
+            <div class="card-body" data-step-label="STEP 1｜プラン">
               <h3 class="step-title">プランを選ぶ</h3>
               <p class="step-description">どちらか1つだけ選択できます。選択中のカードは強調表示され、もう一方は薄く表示されます。</p>
               <div class="select-grid" role="radiogroup" aria-label="ご希望プラン">
@@ -1396,24 +1413,24 @@
                   <span class="selected-badge" aria-hidden="true">選択中</span>
                   <span class="select-name">ライトプラン</span>
                   <span class="select-meta">55,000円（税込）〜</span>
-                  <span class="plan-focus">公開を優先したい方向け</span>
-                  <p class="plan-copy">必要な内容を1ページにまとめて、まずは早めに公開したい方向けのプランです。会社情報は掲載できますが、地図埋め込みなどの追加要素は必要に応じて調整しながら進めます。</p>
-                  <span class="plan-points"><span>・まず見てもらえる状態を作りやすい</span><span>・必要な内容をシンプルに整理しやすい</span><span>・地図埋め込みなどは必要に応じて追加相談しやすい</span></span>
+                  <span class="plan-focus">まず公開して動かしたい方向け</span>
+                  <p class="plan-copy">必要な内容を1ページにまとめ、早めに公開したい場合に向いています。必要な機能は相談しながら追加できます。</p>
+                  <span class="plan-points"><span>・まず見てもらえる状態を作りやすい</span><span>・必要に応じて機能を追加しやすい</span></span>
                 </button>
                 <button type="button" class="select-card plan-card js-single-select" data-group="plan" data-value="標準プラン" aria-pressed="false">
                   <span class="selected-badge" aria-hidden="true">選択中</span>
                   <span class="select-name">標準プラン</span>
                   <span class="select-meta">88,000円（税込）〜</span>
-                  <span class="plan-focus">問い合わせ導線と見せ方まで整えたい方向け</span>
-                  <p class="plan-copy">お問い合わせフォーム設置に加えて、会社情報の見せ方まで整えやすいのが標準プランです。Googleマップ埋め込みなども含めて、営業サイトとして完成度を上げたい場合に向いています。</p>
-                  <span class="plan-points"><span>・お問い合わせフォーム設置込み</span><span>・Googleマップ埋め込み込み</span><span>・公開後の微調整まで進めやすい</span><span>・営業サイトとして仕上げやすい</span></span>
+                  <span class="plan-focus">見せ方と導線まで整えたい方向け</span>
+                  <p class="plan-copy">お問い合わせ導線や会社情報の見せ方まで、バランスよく整えたい場合に向いているプランです。</p>
+                  <span class="plan-points"><span>・お問い合わせフォーム設置込み</span><span>・営業サイトとして仕上げやすい</span><span>・公開後の微調整まで進めやすい</span></span>
                 </button>
               </div>
             </div>
           </article>
 
           <article class="card step-card step-card--type">
-            <div class="card-body" data-step-label="Type">
+            <div class="card-body" data-step-label="STEP 2｜型">
               <h3 class="step-title">型を選ぶ</h3>
               <p class="step-description">ご希望の型を1つだけ選択できます。迷った場合はスタンダード型を基準に選ぶと決めやすいです。</p>
               <div class="select-grid three-col type-select-grid" role="radiogroup" aria-label="ご希望の型">
@@ -1430,7 +1447,7 @@
           </article>
 
           <article class="card step-card step-card--option">
-            <div class="card-body" data-step-label="Option">
+            <div class="card-body" data-step-label="STEP 3｜追加内容">
               <h3 class="step-title">必要に応じて追加する内容</h3>
               <p class="step-description">必要なものだけ後から追加できるよう、オプションは複数選択できます。各項目の補足文で追加内容をすぐ確認でき、標準プラン選択時は「お問い合わせフォーム追加」が含まれるため選択不可になります。</p>
               <div class="select-grid three-col" aria-label="ご希望オプション">
@@ -1449,7 +1466,7 @@
           </article>
 
           <article class="card step-card step-card--payment">
-            <div class="card-body" data-step-label="Payment">
+            <div class="card-body" data-step-label="STEP 4｜お支払い">
               <h3 class="step-title">決済方法</h3>
               <div class="select-grid" role="radiogroup" aria-label="ご希望の決済方法">
                 <button type="button" class="select-card js-single-select" data-group="payment" data-value="銀行振込" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">銀行振込</span></button>
