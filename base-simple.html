@@ -489,6 +489,46 @@
       margin-top: 18px;
     }
 
+    .price-guide {
+      margin-top: 20px;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid #cddcf8;
+      background: linear-gradient(160deg, #ffffff, #f5f9ff);
+      box-shadow: 0 10px 26px rgba(29, 78, 216, 0.10);
+    }
+
+    .price-guide-title {
+      margin: 0 0 10px;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: 0.02em;
+    }
+
+    .price-guide-amount {
+      margin: 0 0 14px;
+      font-size: clamp(30px, 5vw, 40px);
+      line-height: 1.2;
+      font-weight: 900;
+      color: var(--primary-dark);
+    }
+
+    .price-guide-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .price-guide-note small {
+      display: block;
+      margin-top: 6px;
+      font-size: 12px;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
     .site-footer {
       padding: 22px 0 36px;
     }
@@ -594,6 +634,18 @@
 
       .label-mobile {
         display: inline;
+      }
+
+      .price-guide {
+        padding: 20px;
+      }
+
+      .price-guide-amount {
+        font-size: clamp(26px, 8vw, 36px);
+      }
+
+      .price-guide-note {
+        font-size: 13px;
       }
     }
   </style>
@@ -839,6 +891,17 @@
         <div class="back-links">
           <a class="btn btn-secondary" href="index.html#price">料金一覧に戻る</a>
         </div>
+
+        <section class="price-guide" aria-label="シンプル型ページの価格案内">
+          <h3 class="price-guide-title">この見本ページの制作費目安</h3>
+          <p class="price-guide-amount">55,000円（税込）〜</p>
+          <p class="price-guide-note">
+            このシンプル型のホームページは、55,000円（税込）〜で作成できます。<br>
+            まずは1ページで、会社情報や仕事内容が伝わる形を整えたい方向けです。<br>
+            必要に応じて、追加ページやお問い合わせフォームの設置にも対応できます。
+            <small>※内容や調整範囲によって変わる場合があります。</small>
+          </p>
+        </section>
       </div>
     </section>
   </main>
