@@ -1016,6 +1016,13 @@
       border-left: 3px solid rgba(47, 109, 196, 0.50);
     }
 
+    .selection-summary-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+      gap: 12px;
+      align-items: stretch;
+    }
+
     .summary-list {
       margin: 0;
       padding: 0;
@@ -1028,6 +1035,43 @@
 
     .summary-list strong {
       color: #12345f;
+    }
+
+    .estimate-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      padding: 14px 14px 13px;
+      border: 1px solid rgba(47, 109, 196, 0.20);
+      border-radius: 12px;
+      background: linear-gradient(165deg, rgba(255,255,255,0.92) 0%, rgba(232,241,255,0.86) 100%);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    }
+
+    .estimate-label {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #36557a;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .estimate-price {
+      margin: 0;
+      color: #14345d;
+      font-size: clamp(24px, 3.4vw, 30px);
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      font-weight: 800;
+    }
+
+    .estimate-note {
+      margin: 0;
+      font-size: 11px;
+      line-height: 1.55;
+      color: #4b6687;
     }
 
     .faq-item {
@@ -1275,6 +1319,12 @@
       }
       .selection-summary {
         padding: 15px 14px 13px;
+      }
+      .selection-summary-inner {
+        grid-template-columns: 1fr;
+      }
+      .estimate-panel {
+        padding: 12px;
       }
       .btn { width: 100%; }
       .cta-group { display: grid; }
@@ -1547,12 +1597,19 @@
 
           <article class="selection-summary" aria-live="polite">
             <h3>現在の選択内容</h3>
-            <ul class="summary-list">
-              <li>ご希望プラン：<strong id="summary-plan">未選択</strong></li>
-              <li>ご希望の型：<strong id="summary-type">未選択</strong></li>
-              <li>ご希望オプション：<strong id="summary-options">未選択</strong></li>
-              <li>ご希望の決済方法：<strong id="summary-payment">未選択</strong></li>
-            </ul>
+            <div class="selection-summary-inner">
+              <ul class="summary-list">
+                <li>ご希望プラン：<strong id="summary-plan">未選択</strong></li>
+                <li>ご希望の型：<strong id="summary-type">未選択</strong></li>
+                <li>ご希望オプション：<strong id="summary-options">未選択</strong></li>
+                <li>ご希望の決済方法：<strong id="summary-payment">未選択</strong></li>
+              </ul>
+              <aside class="estimate-panel" id="estimate-panel" hidden>
+                <p class="estimate-label">概算の目安</p>
+                <p class="estimate-price" id="summary-estimate-price"></p>
+                <p class="estimate-note">※選択内容をもとにした目安です。内容により変動します。</p>
+              </aside>
+            </div>
           </article>
         </div>
       </div>
@@ -1687,12 +1744,45 @@
       const summaryType = document.getElementById("summary-type");
       const summaryOptions = document.getElementById("summary-options");
       const summaryPayment = document.getElementById("summary-payment");
+      const estimatePanel = document.getElementById("estimate-panel");
+      const summaryEstimatePrice = document.getElementById("summary-estimate-price");
+
+      const PLAN_BASE_PRICES = {
+        "ライトプラン": 55000,
+        "標準プラン": 88000
+      };
+
+      const OPTION_BASE_PRICES = {
+        "1ページ追加": 11000,
+        "お問い合わせフォーム追加": 5500,
+        "Google設定補助": 5500,
+        "独自ドメイン接続・設定代行": 5500,
+        "独自ドメイン移管サポート": 5500,
+        "軽微修正・文章差し替え": 3300,
+        "画像追加・差し替え": 3300,
+        "ファビコン設置": 3300,
+        "ロゴ作成": 16500
+      };
 
       const planSelect = document.getElementById("plan");
       const typeSelect = document.getElementById("base-type");
       const paymentSelect = document.getElementById("payment-method");
       const message = document.getElementById("message");
       const hiddenSummary = document.getElementById("selection-hidden");
+
+      const formatYen = (value) => `${new Intl.NumberFormat("ja-JP").format(value)}円（税込）〜`;
+
+      const computeEstimate = () => {
+        const planPrice = PLAN_BASE_PRICES[state.plan];
+        if (!planPrice) { return null; }
+
+        let total = planPrice;
+        state.options.forEach((optionName) => {
+          if (state.plan === "標準プラン" && optionName === "お問い合わせフォーム追加") { return; }
+          total += OPTION_BASE_PRICES[optionName] || 0;
+        });
+        return total;
+      };
 
       const buildSummaryText = () => {
         const optionsText = state.options.size ? [...state.options].join("、") : "未選択";
@@ -1717,6 +1807,15 @@
         summaryType.textContent = state.type || "未選択";
         summaryOptions.textContent = state.options.size ? [...state.options].join("、") : "未選択";
         summaryPayment.textContent = state.payment || "未選択";
+
+        const estimate = computeEstimate();
+        if (estimate) {
+          estimatePanel.hidden = false;
+          summaryEstimatePrice.textContent = formatYen(estimate);
+        } else {
+          estimatePanel.hidden = true;
+          summaryEstimatePrice.textContent = "";
+        }
 
         if (planSelect) { planSelect.value = state.plan || ""; }
         if (typeSelect) { typeSelect.value = state.type || ""; }
