@@ -780,8 +780,8 @@
     .step-head {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px 16px;
+      justify-content: flex-start;
+      gap: 10px;
       margin-bottom: 10px;
     }
 
@@ -827,7 +827,7 @@
       font-size: 20px;
       color: #143860;
       line-height: 1.4;
-      text-align: right;
+      text-align: left;
     }
 
     .step-description {
@@ -1432,16 +1432,13 @@
       .hero-wrap::after { opacity: 0.55; }
       .option-card { --option-image-opacity: 0.34; }
       .step-head {
-        flex-wrap: wrap;
-        align-items: flex-start;
-        gap: 8px 10px;
+        gap: 8px;
       }
       .step-label {
         font-size: 10px;
         padding: 2px 8px;
       }
       .step-title {
-        flex: 1 1 180px;
         font-size: 19px;
         text-align: left;
       }
@@ -1777,7 +1774,7 @@
           <article class="card step-card step-card--plan">
             <div class="card-body">
               <div class="step-head">
-                <span class="step-label">STEP 1｜プラン</span>
+                <span class="step-label">STEP 1</span>
                 <h3 class="step-title">プランを選ぶ</h3>
               </div>
               <p class="step-description">プランは1つ選べます。選択中の内容は画面でわかりやすく表示されます。</p>
@@ -1805,7 +1802,7 @@
           <article class="card step-card step-card--type">
             <div class="card-body">
               <div class="step-head">
-                <span class="step-label">STEP 2｜型</span>
+                <span class="step-label">STEP 2</span>
                 <h3 class="step-title">型を選ぶ</h3>
               </div>
               <p class="step-description">型は1つ選べます。迷ったらスタンダード型を基準にすると決めやすいです。</p>
@@ -1825,7 +1822,7 @@
           <article class="card step-card step-card--option">
             <div class="card-body">
               <div class="step-head">
-                <span class="step-label">STEP 3｜追加内容</span>
+                <span class="step-label">STEP 3</span>
                 <h3 class="step-title">必要に応じて追加する内容</h3>
               </div>
               <p class="step-description">オプションは複数選べます。必要なものだけ追加でき、標準プランでは「お問い合わせフォーム追加」が標準で含まれます。</p>
@@ -1847,7 +1844,7 @@
           <article class="card step-card step-card--payment">
             <div class="card-body">
               <div class="step-head">
-                <span class="step-label">STEP 4｜お支払い</span>
+                <span class="step-label">STEP 4</span>
                 <h3 class="step-title">決済方法</h3>
               </div>
               <p class="step-description">お支払いは銀行振込が基本です。ほかの方法をご希望の場合は事前にご相談ください。</p>
