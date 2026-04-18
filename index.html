@@ -1092,20 +1092,6 @@
     .faq-q::-webkit-details-marker { display: none; }
     .faq-a { color: var(--muted); font-size: 14px; }
 
-    .mobile-more {
-      display: none;
-      margin-top: 8px;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 800;
-      line-height: 1.5;
-      cursor: pointer;
-    }
-
-    .mobile-more:hover { color: var(--primary-strong); }
 
     .process-grid {
       display: grid;
@@ -1311,23 +1297,6 @@
         gap: 6px;
       }
 
-      .mobile-teaser {
-        --mobile-lines: 3;
-      }
-
-      .mobile-teaser.is-collapsed {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: var(--mobile-lines);
-        overflow: hidden;
-      }
-
-      .mobile-more {
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        margin-top: 6px;
-      }
 
       .step-card .select-grid,
       .step-card .select-grid.three-col {
@@ -1353,12 +1322,6 @@
         display: block;
       }
 
-      .select-card .select-note.is-collapsed {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-      }
 
       .type-select-grid .select-card,
       .step-card--type .select-grid .select-card {
@@ -1524,10 +1487,8 @@
           <div class="hero-main">
             <span class="eyebrow"><span class="eyebrow-line">小規模事業者向け</span><span class="eyebrow-sep" aria-hidden="true">・</span><span class="eyebrow-line">営業サイトの顔としてのトップページ</span></span>
             <h1>小さな会社にも、ちゃんと伝わるホームページを。<br>見やすく、相談しやすく、仕事につながる形へ。</h1>
-            <p class="hero-sub mobile-teaser">
-              会社案内として最低限をそろえるだけでなく、「問い合わせしやすい」「依頼できる内容がわかる」「安心して連絡できる」までを、
-              ちょうどいい情報量で整理します。難しい準備がなくても、相談から進められる制作スタイルです。愛知県豊田市を拠点に、
-              近隣エリアを含めたご相談にも対応しています。
+            <p class="hero-sub">
+              小規模事業者向けに、会社の魅力と相談窓口が伝わるホームページを作ります。準備が十分でなくても、愛知県豊田市を拠点に相談しながら進められます。
             </p>
             <ul class="hero-points">
               <li>トップの第一印象から、相談しやすさと信頼感が伝わる構成に整理します。</li>
@@ -1553,7 +1514,7 @@
               <strong>公開後も扱いやすい</strong>
               <span>月々の運用費を必須にせず、必要な分だけ追加しやすい設計です。</span>
             </div>
-            <div class="hero-side-trust mobile-teaser">短い準備でも「きちんとした会社サイト感」を出せるよう、文面整理・見せ方・余白設計まで一体で調整します。</div>
+            <div class="hero-side-trust">短い準備でも、会社サイトとして整って見えるように文面と見せ方を調整します。</div>
           </aside>
         </div>
       </div>
@@ -1564,7 +1525,7 @@
         <div class="section-head">
           <span class="section-kicker">INTRODUCTION</span>
           <h2 class="section-title">「まず一歩」を踏み出しやすいよう、最初に押さえたいポイントからご案内します</h2>
-          <p class="section-lead mobile-teaser">見本ページを見る前に、サービス全体の特徴と進め方が自然に伝わるよう流れを整えています。検討の初期でも読みやすい分量で、完成後のイメージを持ちながら確認しやすくしています。</p>
+          <p class="section-lead">最初に全体の流れを確認できるので、見本を見る前に進め方をつかめます。</p>
         </div>
 
         <div class="grid-3">
@@ -1572,7 +1533,7 @@
             <div class="card-body">
               <span class="tag">こんな方に向いています</span>
               <h3>会社の情報をきちんと伝えたい</h3>
-              <p class="mobile-teaser">名刺に載せるURLがほしい、問い合わせ窓口を整えたい、仕事内容をわかりやすく示したい方向けです。営業先で見せたときに、最低限の安心感が伝わる状態を目指します。</p>
+              <p>会社案内のURLや相談窓口を整えたい方に向いています。営業先に見せたときに、必要な情報と安心感が伝わります。</p>
               <ul class="check-list">
                 <li>会社HPがまだない</li>
                 <li>営業先に見せられるページがほしい</li>
@@ -1585,7 +1546,7 @@
             <div class="card-body">
               <span class="tag warm">この作り方が進めやすい理由</span>
               <h3>難しくしすぎない制作方針</h3>
-              <p class="mobile-teaser">最初から機能を盛り込みすぎず、いま必要な情報を優先。文章や構成も相談しながら調整できます。必要になった段階でページを育てる前提なので、初期負担を抑えやすい進め方です。</p>
+              <p>最初は必要な情報だけに絞って進めたい方に向いています。文章と構成を相談しながら決められるので、初期負担を抑えられます。</p>
               <ul class="check-list">
                 <li>打ち合わせ内容を反映しやすい</li>
                 <li>公開までの流れがわかりやすい</li>
@@ -1598,7 +1559,7 @@
             <div class="card-body">
               <span class="tag">費用感の安心ポイント</span>
               <h3>月額必須ではなく、必要分だけ追加</h3>
-              <p class="mobile-teaser">制作費を軸に始めて、運用サポートや追加ページは必要に応じて段階的に選べる形です。導入時はシンプルに始め、売上や運用状況に合わせて無理なく整えていけます。</p>
+              <p>固定費を重くせずに始めたい方に向いています。必要なタイミングで追加できるため、運用に合わせて無理なく整えられます。</p>
               <ul class="check-list">
                 <li>毎月の固定費を重くしにくい</li>
                 <li>公開後の修正も都度相談しやすい</li>
@@ -1615,7 +1576,7 @@
         <div class="section-head">
           <span class="section-kicker">WORKS FOR</span>
           <h2 class="section-title">こんな業種・事業の方に向いています</h2>
-          <p class="section-lead mobile-teaser">小規模事業者向けを前提に、仕事内容や相談窓口をわかりやすく見せたい方に向いています。会社案内を整えたい方や、営業先に見せるURLを用意したい方にもなじみやすい形です。</p>
+          <p class="section-lead">小規模事業者向けに、仕事内容と相談窓口をわかりやすく見せたい方へ向けた構成です。</p>
         </div>
 
         <div class="grid-3">
@@ -1623,7 +1584,7 @@
             <div class="card-body">
               <span class="tag">工事・設備系</span>
               <h3>電気工事業・設備工事業</h3>
-              <p>対応できる工事内容や相談窓口を整理し、営業先や取引先にも見せやすい形に整えたい場合に向いています。</p>
+              <p>電気工事や設備工事の内容を、ひと目で伝えたい方に向いています。営業先や取引先にも、そのまま見せやすい形に整えます。</p>
               <ul class="check-list">
                 <li>対応業務をわかりやすく載せたい</li>
                 <li>問い合わせしやすい窓口を整えたい</li>
@@ -1636,7 +1597,7 @@
             <div class="card-body">
               <span class="tag warm">製造・加工系</span>
               <h3>製造業・加工業</h3>
-              <p>仕事の内容、対応できる範囲、依頼相談の流れを整理して、初めて見た相手にも伝わりやすくしたい場合に向いています。</p>
+              <p>製造・加工の対応範囲を、すっきり整理して伝えたい方に向いています。初めて見る相手にも、依頼までの流れが自然に伝わります。</p>
               <ul class="check-list">
                 <li>会社概要と事業内容を整理したい</li>
                 <li>問い合わせ前の不安を減らしたい</li>
@@ -1649,7 +1610,7 @@
             <div class="card-body">
               <span class="tag">小規模法人・個人事業</span>
               <h3>小規模事業者・個人事業の方</h3>
-              <p>業種を問わず、会社情報・仕事の内容・連絡先をきちんとまとめたホームページを用意したい方に向いています。</p>
+              <p>業種を問わず、会社情報と連絡先をきちんと整えたい方に向いています。必要な情報を一か所にまとめ、相談への導線をはっきり作れます。</p>
               <ul class="check-list">
                 <li>営業先に見せられるページがほしい</li>
                 <li>スマホでも見やすく整えたい</li>
@@ -1666,7 +1627,7 @@
         <div class="section-head">
           <span class="section-kicker">BASE SHOWCASE</span>
           <h2 class="section-title">自分に合う形を、見本で比べながら選べます</h2>
-          <p class="section-lead mobile-teaser">シンプル型・スタンダード型・コーポレート型の見本を見比べながら、自分の会社や仕事に合う形を選べます。見本ページそのものを真似るのではなく、どの見せ方がしっくりくるかを比較しながら検討しやすい構成です。</p>
+          <p class="section-lead">3つの見本を比べながら、自社に合う見せ方を選べます。</p>
         </div>
 
         <div class="grid-3">
@@ -1674,7 +1635,7 @@
             <div class="card-body">
               <span class="tag">シンプル型</span>
               <h3>最短で公開したい方向け</h3>
-              <p>情報を1ページに集約し、会社案内と問い合わせ窓口をコンパクトにまとめたい方向きです。</p>
+              <p>まずは1ページで公開したい方に向いています。会社案内と問い合わせ窓口を、短くわかりやすくまとめられます。</p>
               <ul class="plain-list">
                 <li>名刺代わりに使いやすい</li>
                 <li>準備項目を絞って進められる</li>
@@ -1691,7 +1652,7 @@
             <div class="card-body">
               <span class="tag warm">スタンダード型</span>
               <h3>相談・信頼感のバランス重視</h3>
-              <p class="mobile-teaser">会社情報とサービス案内を整理しながら、問い合わせのしやすさも確保したい場合に向いています。1ページを厚めに整える形から、複数ページ構成への展開まで見据えやすい型です。</p>
+              <p>会社情報とサービス案内を整え、問い合わせしやすさも重視したい方に向いています。1ページ構成から複数ページ展開まで進めやすい型です。</p>
               <ul class="plain-list">
                 <li>仕事につながる流れを作りやすい</li>
                 <li>迷ったときの基準にしやすい</li>
@@ -1708,7 +1669,7 @@
             <div class="card-body">
               <span class="tag">コーポレート型</span>
               <h3>会社案内の整った印象を重視</h3>
-              <p class="mobile-teaser">事業案内・概要・問い合わせまで、企業サイトらしい見せ方を整えたい場合に選びやすい構成です。最初は1ページ豪華版から始めて、必要に応じて複数ページ化する流れにも対応しやすくしています。</p>
+              <p>企業サイトらしい整った印象を重視する方に向いています。事業案内から問い合わせまで、段階的に厚みを持たせて見せられます。</p>
               <ul class="plain-list">
                 <li>会社としての安心感を出しやすい</li>
                 <li>複数情報を段階的に掲載しやすい</li>
@@ -1723,7 +1684,7 @@
         </div>
 
         <div class="choice-box">
-          <strong>選び方の目安：</strong>「まず公開を急ぐならシンプル型」→「問い合わせまで整えるならスタンダード型」→「会社案内として厚みを出すならコーポレート型」の順で見比べると、違いがつかみやすくなります。迷う場合はスタンダード型を基準にすると、希望に合う形を選びやすいです。
+          <strong>選び方の目安：</strong>まず公開を優先するならシンプル型、相談導線まで整えるならスタンダード型、会社案内の厚みを出すならコーポレート型がおすすめです。迷ったらスタンダード型を基準にしてください。
         </div>
       </div>
     </section>
@@ -1733,21 +1694,21 @@
         <div class="section-head">
           <span class="section-kicker">PRICE</span>
           <h2 class="section-title">料金を見比べながら、希望に合う内容を選べます</h2>
-          <p class="section-lead mobile-teaser">「これならお願いしやすそう」と思える内容を、順番に気軽に選べます。選んだ内容は下のご相談フォームにも反映されるので、スムーズに相談へ進めます。</p>
+          <p class="section-lead">順番に選ぶだけで内容を整理でき、選択結果は下のフォームに反映されます。</p>
         </div>
 
         <div class="step-flow">
           <article class="card step-card step-card--plan">
             <div class="card-body" data-step-label="STEP 1｜プラン">
               <h3 class="step-title">プランを選ぶ</h3>
-              <p class="step-description">どちらか1つだけ選択できます。選んだプランは表示でわかりやすく区別されます。</p>
+              <p class="step-description">プランは1つ選べます。選択中の内容は画面でわかりやすく表示されます。</p>
               <div class="select-grid" role="radiogroup" aria-label="ご希望プラン">
                 <button type="button" class="select-card plan-card js-single-select" data-group="plan" data-value="ライトプラン" aria-pressed="false">
                   <span class="selected-badge" aria-hidden="true">選択中</span>
                   <span class="select-name">ライトプラン</span>
                   <span class="select-meta">55,000円（税込）〜</span>
                   <span class="plan-focus">まず公開して動かしたい方向け</span>
-                  <p class="plan-copy mobile-teaser" data-mobile-lines="2">必要な内容を1ページにまとめ、早めに公開したい場合に向いています。必要な機能は相談しながら追加できます。</p>
+                  <p class="plan-copy">まず公開して反応を見たい方向けです。必要な機能は後から相談して追加できます。</p>
                   <span class="plan-points"><span>・まず見てもらえる状態を作りやすい</span><span>・必要に応じて機能を追加しやすい</span></span>
                 </button>
                 <button type="button" class="select-card plan-card js-single-select" data-group="plan" data-value="標準プラン" aria-pressed="false">
@@ -1755,7 +1716,7 @@
                   <span class="select-name">標準プラン</span>
                   <span class="select-meta">88,000円（税込）〜</span>
                   <span class="plan-focus">見せ方と問い合わせ導線まで整えたい方向け</span>
-                  <p class="plan-copy mobile-teaser" data-mobile-lines="2">お問い合わせのしやすさや会社情報の見せ方まで、バランスよく整えたい場合に向いているプランです。</p>
+                  <p class="plan-copy">会社情報と問い合わせ導線をまとめて整えたい方向けです。信頼感と相談しやすさを両立しやすいプランです。</p>
                   <span class="plan-points"><span>・お問い合わせフォーム設置込み</span><span>・仕事につながる見せ方を整えやすい</span><span>・公開後の微調整まで進めやすい</span></span>
                 </button>
               </div>
@@ -1765,7 +1726,7 @@
           <article class="card step-card step-card--type">
             <div class="card-body" data-step-label="STEP 2｜型">
               <h3 class="step-title">型を選ぶ</h3>
-              <p class="step-description">ご希望の型を1つだけ選択できます。迷った場合はスタンダード型を基準に選ぶと決めやすいです。</p>
+              <p class="step-description">型は1つ選べます。迷ったらスタンダード型を基準にすると決めやすいです。</p>
               <div class="select-grid three-col type-select-grid" role="radiogroup" aria-label="ご希望の型">
                 <button type="button" class="select-card js-single-select" data-group="type" data-value="シンプル型" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">シンプル型</span><span class="select-note">まず公開を優先したい方向け</span></button>
                 <button type="button" class="select-card js-single-select" data-group="type" data-value="スタンダード型" data-disabled-for-plan="ライトプラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">スタンダード型</span><span class="select-note">問い合わせしやすさと見せ方を整えたい方向け</span><span class="disable-note">標準プラン以上で選択できます</span></button>
@@ -1782,7 +1743,7 @@
           <article class="card step-card step-card--option">
             <div class="card-body" data-step-label="STEP 3｜追加内容">
               <h3 class="step-title">必要に応じて追加する内容</h3>
-              <p class="step-description mobile-teaser">必要なものだけ後から追加できるよう、オプションは複数選択できます。各項目の補足文で内容を確認でき、標準プラン選択時は「お問い合わせフォーム追加」が含まれるため選択できません。</p>
+              <p class="step-description">オプションは複数選べます。必要なものだけ追加でき、標準プランでは「お問い合わせフォーム追加」が標準で含まれます。</p>
               <div class="select-grid three-col" aria-label="ご希望オプション">
                 <button type="button" class="select-card js-option-select" data-value="1ページ追加" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">1ページ追加</span><span class="select-meta">11,000円（税込）〜</span><span class="select-note">会社概要や事業内容などを別ページで見やすく整理したい場合向け</span></button>
                 <button type="button" class="select-card js-option-select" data-value="お問い合わせフォーム追加" data-disabled-for-plan="標準プラン" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">お問い合わせフォーム追加</span><span class="select-meta">5,500円（税込）〜</span><span class="select-note">問い合わせ内容を受け取りやすい入力フォームを設置したい場合向け</span><span class="disable-note">標準プランに含まれています</span></button>
@@ -1794,7 +1755,7 @@
                 <button type="button" class="select-card js-option-select" data-value="ファビコン設置" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">ファビコン設置</span><span class="select-meta">3,300円（税込）〜</span><span class="select-note">ブラウザタブに表示される小さなアイコンを整えたい場合向け</span></button>
                 <button type="button" class="select-card js-option-select" data-value="ロゴ作成" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">ロゴ作成</span><span class="select-meta">16,500円（税込）〜</span><span class="select-note">会社や事業のロゴをシンプルに整えたい場合向け</span></button>
               </div>
-              <p class="option-note mobile-teaser" data-mobile-lines="3">※ドメイン取得費・更新費、外部サービス利用料などの実費は別途必要です。<br>※Googleマップ埋め込みと、Google検索・Googleビジネスプロフィール等の初期設定補助は別内容です。<br>※Google設定補助は、公開後のGoogleまわりの初期整備をサポートするオプションです。<br>※表示価格は目安です。内容により金額は変わります。</p>
+              <p class="option-note">※ドメイン取得・更新費や外部サービス利用料は別途必要です。<br>※Googleマップ埋め込みと、Google検索・Googleビジネスプロフィールの初期設定補助は別内容です。<br>※Google設定補助は、公開後のGoogle関連の初期整備を支援するオプションです。<br>※表示価格は目安で、内容により変動します。</p>
             </div>
           </article>
 
@@ -1805,8 +1766,8 @@
                 <button type="button" class="select-card js-single-select" data-group="payment" data-value="銀行振込" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">銀行振込</span><span class="select-note">請求書ベースで進めたい場合や、一般的な方法で進めたい場合向け</span></button>
                 <button type="button" class="select-card js-single-select" data-group="payment" data-value="その他相談" aria-pressed="false"><span class="selected-badge" aria-hidden="true">選択中</span><span class="select-name">その他相談</span><span class="select-note">支払い方法に希望がある場合や、事前に相談しながら決めたい場合向け</span></button>
               </div>
-              <p class="price-note">※お支払いは銀行振込を基本としております。その他の方法をご希望の場合は、事前にご相談ください。</p>
-              <p class="price-note">※制作案件は、制作開始前に半額、公開確定時または納品時に残額のお支払いをお願いしています。</p>
+              <p class="price-note">※お支払いは銀行振込が基本です。ほかの方法をご希望の場合は事前にご相談ください。</p>
+              <p class="price-note">※制作開始前に半額、公開時または納品時に残額をお支払いいただきます。</p>
             </div>
           </article>
 
@@ -1971,7 +1932,7 @@
         <div class="section-head">
           <span class="section-kicker">FAQ</span>
           <h2 class="section-title">よくある質問</h2>
-          <p class="section-lead">初めてホームページを作る方でも相談しやすいよう、要点をまとめました。</p>
+          <p class="section-lead">初めての方が迷いやすい点を、短くまとめています。</p>
         </div>
 
         <details class="faq-item" open><summary class="faq-q">Q. 月々の運用費は必ずかかりますか？</summary><div class="faq-a">必須ではありません。必要な時だけ都度修正や追加対応を行う形でも、無理なく続けやすいです。</div></details>
@@ -1993,98 +1954,6 @@
   </footer>
   <script>
     (() => {
-      const mobileQuery = window.matchMedia("(max-width: 768px)");
-
-      const removeMobileEnhancements = () => {
-        document.querySelectorAll(".mobile-more[data-mobile-helper='true']").forEach((button) => {
-          button.remove();
-        });
-
-        document.querySelectorAll(".mobile-teaser").forEach((element) => {
-          element.classList.remove("is-collapsed", "is-expanded");
-          element.style.removeProperty("--mobile-lines");
-        });
-
-        document.querySelectorAll(".select-card .select-note").forEach((note) => {
-          note.classList.remove("is-collapsed");
-        });
-
-        document.querySelectorAll(".faq-item").forEach((item) => {
-          item.open = true;
-        });
-      };
-
-      const createToggleButton = ({ label, onClick }) => {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "mobile-more";
-        button.dataset.mobileHelper = "true";
-        button.textContent = label;
-        button.setAttribute("aria-expanded", "false");
-        button.addEventListener("click", onClick);
-        return button;
-      };
-
-      const applyMobileEnhancements = () => {
-        document.querySelectorAll(".mobile-teaser").forEach((element) => {
-          const lineCount = Number(element.dataset.mobileLines || "3");
-          element.style.setProperty("--mobile-lines", String(lineCount));
-          element.classList.add("is-collapsed");
-
-          if (element.scrollHeight <= element.clientHeight + 2) {
-            element.classList.remove("is-collapsed");
-            return;
-          }
-
-          const toggleButton = createToggleButton({
-            label: "続きを読む",
-            onClick: () => {
-              const willExpand = element.classList.contains("is-collapsed");
-              element.classList.toggle("is-collapsed", !willExpand);
-              element.classList.toggle("is-expanded", willExpand);
-              toggleButton.textContent = willExpand ? "閉じる" : "続きを読む";
-              toggleButton.setAttribute("aria-expanded", String(willExpand));
-            }
-          });
-
-          element.insertAdjacentElement("afterend", toggleButton);
-        });
-
-        document.querySelectorAll(".faq-item").forEach((item) => {
-          item.open = false;
-        });
-
-        document.querySelectorAll(".select-card .select-note").forEach((note) => {
-          note.classList.add("is-collapsed");
-          if (note.scrollHeight <= note.clientHeight + 2) {
-            note.classList.remove("is-collapsed");
-            return;
-          }
-          const toggleButton = createToggleButton({
-            label: "詳細を見る",
-            onClick: (event) => {
-              event.stopPropagation();
-              const willExpand = note.classList.contains("is-collapsed");
-              note.classList.toggle("is-collapsed", !willExpand);
-              toggleButton.textContent = willExpand ? "閉じる" : "詳細を見る";
-              toggleButton.setAttribute("aria-expanded", String(willExpand));
-            }
-          });
-
-          note.insertAdjacentElement("afterend", toggleButton);
-        });
-      };
-
-      const syncMobileEnhancements = () => {
-        removeMobileEnhancements();
-        if (mobileQuery.matches) {
-          applyMobileEnhancements();
-        }
-      };
-
-      syncMobileEnhancements();
-      mobileQuery.addEventListener("change", syncMobileEnhancements);
-
       const state = {
         plan: "",
         type: "",
