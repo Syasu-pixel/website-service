@@ -88,27 +88,6 @@
     }
 
     .site-header {
-      --header-bg-alpha: 0.002;
-      --header-border-alpha: 0.001;
-      --header-shadow-alpha: 0;
-      --header-blur: 2px;
-      --header-brand-label-rgb: 255, 255, 255;
-      --header-brand-label-alpha: 0.82;
-      --header-brand-name-rgb: 255, 255, 255;
-      --header-brand-name-alpha: 1;
-      --header-nav-border-rgb: 255, 255, 255;
-      --header-nav-border-alpha: 0.08;
-      --header-nav-bg-rgb: 255, 255, 255;
-      --header-nav-bg-alpha: 0.012;
-      --header-nav-hover-alpha: 0.045;
-      --header-nav-text-rgb: 255, 255, 255;
-      --header-nav-text-alpha: 1;
-      --header-return-bg-rgb: 255, 255, 255;
-      --header-return-bg-alpha: 0.93;
-      --header-return-border-rgb: 255, 255, 255;
-      --header-return-border-alpha: 0.93;
-      --header-return-text-rgb: 39, 79, 121;
-      --header-return-text-alpha: 1;
       position: fixed;
       top: 0;
       left: 0;
@@ -125,12 +104,29 @@
       gap: 24px;
       padding: 16px 22px;
       border-radius: 16px;
-      background-color: rgba(255, 255, 255, var(--header-bg-alpha));
-      border: 1px solid rgba(255, 255, 255, var(--header-border-alpha));
-      box-shadow: 0 8px 24px rgba(15, 23, 42, var(--header-shadow-alpha));
-      backdrop-filter: blur(var(--header-blur));
-      -webkit-backdrop-filter: blur(var(--header-blur));
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.02);
+      box-shadow: none;
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
       transition: background-color 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease, backdrop-filter 0.45s ease, -webkit-backdrop-filter 0.45s ease;
+    }
+
+    .site-header.is-scrolled .header-inner {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-color: rgba(210, 220, 232, 0.85);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+
+    .site-header.is-scrolled .brand-label {
+      color: #5b6778;
+    }
+
+    .site-header.is-scrolled .brand-name {
+      color: #1f2f44;
     }
 
     .brand {
@@ -142,7 +138,7 @@
 
     .brand-label {
       font-size: 11px;
-      color: rgba(var(--header-brand-label-rgb), var(--header-brand-label-alpha));
+      color: rgba(255, 255, 255, 0.8);
       font-weight: 700;
       letter-spacing: 0.12em;
     }
@@ -151,7 +147,7 @@
       font-size: 19px;
       font-weight: 700;
       line-height: 1.35;
-      color: rgba(var(--header-brand-name-rgb), var(--header-brand-name-alpha));
+      color: #fff;
     }
 
     .header-nav {
@@ -168,22 +164,43 @@
       justify-content: center;
       padding: 8px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(var(--header-nav-border-rgb), var(--header-nav-border-alpha));
+      border: 1px solid rgba(255, 255, 255, 0.34);
       font-size: 12px;
       font-weight: 700;
-      color: rgba(var(--header-nav-text-rgb), var(--header-nav-text-alpha));
-      background: rgba(var(--header-nav-bg-rgb), var(--header-nav-bg-alpha));
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
       transition: 0.2s ease;
     }
 
     .nav-link:hover {
-      background: rgba(var(--header-nav-bg-rgb), var(--header-nav-hover-alpha));
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .site-header.is-scrolled .nav-link {
+      color: #2a3f58;
+      border-color: rgba(186, 200, 215, 0.9);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .site-header.is-scrolled .nav-link:hover {
+      background: rgba(242, 247, 252, 0.95);
+    }
+
+    .site-header.is-scrolled .nav-return {
+      background: #1f4f7f;
+      border-color: #1f4f7f;
+      color: #fff;
+    }
+
+    .site-header.is-scrolled .nav-return:hover {
+      background: #1a436d;
+      border-color: #1a436d;
     }
 
     .nav-return {
-      background: rgba(var(--header-return-bg-rgb), var(--header-return-bg-alpha));
-      border-color: rgba(var(--header-return-border-rgb), var(--header-return-border-alpha));
-      color: rgba(var(--header-return-text-rgb), var(--header-return-text-alpha));
+      background: rgba(255, 255, 255, 0.94);
+      border-color: rgba(255, 255, 255, 0.94);
+      color: var(--primary);
       white-space: nowrap;
     }
 
@@ -781,6 +798,13 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 14px;
+        background-color: rgba(255, 255, 255, 0.02);
+        border-color: rgba(255, 255, 255, 0.01);
+      }
+
+      .site-header.is-scrolled .header-inner {
+        background-color: rgba(255, 255, 255, 0.92);
+        border-color: rgba(205, 216, 229, 0.88);
       }
 
       .header-nav {
@@ -1159,40 +1183,18 @@
     (() => {
       const header = document.querySelector('.site-header');
       if (!header) return;
-      const maxScroll = 220;
-      const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-      const lerp = (start, end, progress) => start + ((end - start) * progress);
-      const round = (value) => Number(value.toFixed(3));
+
+      const threshold = 56;
 
       const updateHeaderState = () => {
-        const progress = clamp(window.scrollY / maxScroll, 0, 1);
-
-        header.style.setProperty('--header-bg-alpha', round(lerp(0.001, 0.2, progress)));
-        header.style.setProperty('--header-border-alpha', round(lerp(0, 0.14, progress)));
-        header.style.setProperty('--header-shadow-alpha', round(lerp(0, 0.07, progress)));
-        header.style.setProperty('--header-blur', `${round(lerp(2, 6, progress))}px`);
-
-        header.style.setProperty('--header-brand-label-alpha', round(lerp(0.82, 0.95, progress)));
-        header.style.setProperty('--header-brand-label-rgb', `${round(lerp(255, 91, progress))}, ${round(lerp(255, 103, progress))}, ${round(lerp(255, 120, progress))}`);
-        header.style.setProperty('--header-brand-name-rgb', `${round(lerp(255, 31, progress))}, ${round(lerp(255, 47, progress))}, ${round(lerp(255, 68, progress))}`);
-
-        header.style.setProperty('--header-nav-text-rgb', `${round(lerp(255, 42, progress))}, ${round(lerp(255, 63, progress))}, ${round(lerp(255, 88, progress))}`);
-        header.style.setProperty('--header-nav-border-rgb', `${round(lerp(255, 186, progress))}, ${round(lerp(255, 200, progress))}, ${round(lerp(255, 215, progress))}`);
-        header.style.setProperty('--header-nav-border-alpha', round(lerp(0.08, 0.8, progress)));
-        header.style.setProperty('--header-nav-bg-rgb', `${round(lerp(255, 255, progress))}, ${round(lerp(255, 255, progress))}, ${round(lerp(255, 255, progress))}`);
-        header.style.setProperty('--header-nav-bg-alpha', round(lerp(0.012, 0.66, progress)));
-        header.style.setProperty('--header-nav-hover-alpha', round(lerp(0.045, 0.84, progress)));
-
-        header.style.setProperty('--header-return-bg-rgb', `${round(lerp(255, 31, progress))}, ${round(lerp(255, 79, progress))}, ${round(lerp(255, 127, progress))}`);
-        header.style.setProperty('--header-return-bg-alpha', round(lerp(0.93, 1, progress)));
-        header.style.setProperty('--header-return-border-rgb', `${round(lerp(255, 31, progress))}, ${round(lerp(255, 79, progress))}, ${round(lerp(255, 127, progress))}`);
-        header.style.setProperty('--header-return-border-alpha', round(lerp(0.93, 1, progress)));
-        header.style.setProperty('--header-return-text-rgb', `${round(lerp(39, 255, progress))}, ${round(lerp(79, 255, progress))}, ${round(lerp(121, 255, progress))}`);
+        header.classList.toggle('is-scrolled', window.scrollY > threshold);
       };
 
       updateHeaderState();
       window.addEventListener('scroll', updateHeaderState, { passive: true });
-      window.addEventListener('hashchange', () => requestAnimationFrame(updateHeaderState));
+      window.addEventListener('hashchange', () => {
+        requestAnimationFrame(updateHeaderState);
+      });
       window.addEventListener('load', updateHeaderState);
     })();
   </script>
