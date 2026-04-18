@@ -94,6 +94,7 @@
       right: 0;
       z-index: 10;
       padding: 24px 0;
+      transition: padding 0.3s ease;
     }
 
     .header-inner {
@@ -103,9 +104,29 @@
       gap: 24px;
       padding: 16px 22px;
       border-radius: 16px;
-      background: rgba(10, 18, 31, 0.38);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(6px);
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.02);
+      box-shadow: none;
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      transition: background-color 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease, backdrop-filter 0.45s ease, -webkit-backdrop-filter 0.45s ease;
+    }
+
+    .site-header.is-scrolled .header-inner {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-color: rgba(210, 220, 232, 0.85);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+
+    .site-header.is-scrolled .brand-label {
+      color: #5b6778;
+    }
+
+    .site-header.is-scrolled .brand-name {
+      color: #1f2f44;
     }
 
     .brand {
@@ -153,6 +174,27 @@
 
     .nav-link:hover {
       background: rgba(255, 255, 255, 0.14);
+    }
+
+    .site-header.is-scrolled .nav-link {
+      color: #2a3f58;
+      border-color: rgba(186, 200, 215, 0.9);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .site-header.is-scrolled .nav-link:hover {
+      background: rgba(242, 247, 252, 0.95);
+    }
+
+    .site-header.is-scrolled .nav-return {
+      background: #1f4f7f;
+      border-color: #1f4f7f;
+      color: #fff;
+    }
+
+    .site-header.is-scrolled .nav-return:hover {
+      background: #1a436d;
+      border-color: #1a436d;
     }
 
     .nav-return {
@@ -756,6 +798,13 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 14px;
+        background-color: rgba(255, 255, 255, 0.02);
+        border-color: rgba(255, 255, 255, 0.01);
+      }
+
+      .site-header.is-scrolled .header-inner {
+        background-color: rgba(255, 255, 255, 0.92);
+        border-color: rgba(205, 216, 229, 0.88);
       }
 
       .header-nav {
@@ -1130,5 +1179,25 @@
       <div>© 2026 Towa Facility Solutions Co., Ltd.</div>
     </div>
   </footer>
+  <script>
+    (() => {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+
+      const threshold = 56;
+
+      const updateHeaderState = () => {
+        header.classList.toggle('is-scrolled', window.scrollY > threshold);
+      };
+
+      updateHeaderState();
+      window.addEventListener('scroll', updateHeaderState, { passive: true });
+      window.addEventListener('hashchange', () => {
+        requestAnimationFrame(updateHeaderState);
+      });
+      window.addEventListener('load', updateHeaderState);
+    })();
+  </script>
+
 </body>
 </html>
