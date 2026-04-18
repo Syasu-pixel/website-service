@@ -1343,7 +1343,46 @@
       }
 
       .step-card--option .select-grid .select-card {
-        min-height: 136px;
+        min-height: 0;
+        padding: 16px 11px 10px;
+        gap: 3px;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+          "name meta"
+          "note note"
+          "disable disable";
+        align-items: start;
+        column-gap: 10px;
+        row-gap: 2px;
+      }
+
+      .step-card--option .select-grid .select-card .select-name {
+        grid-area: name;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.45;
+        min-width: 0;
+      }
+
+      .step-card--option .select-grid .select-card .select-meta {
+        grid-area: meta;
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.4;
+        white-space: nowrap;
+        text-align: right;
+      }
+
+      .step-card--option .select-grid .select-card .select-note {
+        grid-area: note;
+        margin-top: 1px;
+        font-size: 11px;
+        line-height: 1.5;
+      }
+
+      .step-card--option .select-grid .select-card .disable-note {
+        grid-area: disable;
+        margin-top: 1px;
       }
 
       .step-card--payment .select-grid .select-card {
