@@ -88,7 +88,9 @@
     }
 
     .site-header {
+      --header-bg-rgb: 255, 255, 255;
       --header-bg-alpha: 0.002;
+      --header-border-rgb: 255, 255, 255;
       --header-border-alpha: 0.001;
       --header-shadow-alpha: 0;
       --header-blur: 2px;
@@ -125,8 +127,8 @@
       gap: 24px;
       padding: 16px 22px;
       border-radius: 16px;
-      background-color: rgba(255, 255, 255, var(--header-bg-alpha));
-      border: 1px solid rgba(255, 255, 255, var(--header-border-alpha));
+      background-color: rgba(var(--header-bg-rgb), var(--header-bg-alpha));
+      border: 1px solid rgba(var(--header-border-rgb), var(--header-border-alpha));
       box-shadow: 0 8px 24px rgba(15, 23, 42, var(--header-shadow-alpha));
       backdrop-filter: blur(var(--header-blur));
       -webkit-backdrop-filter: blur(var(--header-blur));
@@ -1159,7 +1161,7 @@
     (() => {
       const header = document.querySelector('.site-header');
       if (!header) return;
-      const maxScroll = 220;
+      const maxScroll = 360;
       const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
       const lerp = (start, end, progress) => start + ((end - start) * progress);
       const round = (value) => Number(value.toFixed(3));
@@ -1167,21 +1169,23 @@
       const updateHeaderState = () => {
         const progress = clamp(window.scrollY / maxScroll, 0, 1);
 
-        header.style.setProperty('--header-bg-alpha', round(lerp(0.001, 0.2, progress)));
-        header.style.setProperty('--header-border-alpha', round(lerp(0, 0.14, progress)));
+        header.style.setProperty('--header-bg-rgb', `${round(lerp(255, 214, progress))}, ${round(lerp(255, 220, progress))}, ${round(lerp(255, 228, progress))}`);
+        header.style.setProperty('--header-bg-alpha', round(lerp(0.001, 0.72, progress)));
+        header.style.setProperty('--header-border-rgb', `${round(lerp(255, 186, progress))}, ${round(lerp(255, 194, progress))}, ${round(lerp(255, 204, progress))}`);
+        header.style.setProperty('--header-border-alpha', round(lerp(0, 0.34, progress)));
         header.style.setProperty('--header-shadow-alpha', round(lerp(0, 0.07, progress)));
         header.style.setProperty('--header-blur', `${round(lerp(2, 6, progress))}px`);
 
         header.style.setProperty('--header-brand-label-alpha', round(lerp(0.82, 0.95, progress)));
-        header.style.setProperty('--header-brand-label-rgb', `${round(lerp(255, 91, progress))}, ${round(lerp(255, 103, progress))}, ${round(lerp(255, 120, progress))}`);
-        header.style.setProperty('--header-brand-name-rgb', `${round(lerp(255, 31, progress))}, ${round(lerp(255, 47, progress))}, ${round(lerp(255, 68, progress))}`);
+        header.style.setProperty('--header-brand-label-rgb', `${round(lerp(255, 83, progress))}, ${round(lerp(255, 96, progress))}, ${round(lerp(255, 114, progress))}`);
+        header.style.setProperty('--header-brand-name-rgb', `${round(lerp(255, 34, progress))}, ${round(lerp(255, 48, progress))}, ${round(lerp(255, 67, progress))}`);
 
-        header.style.setProperty('--header-nav-text-rgb', `${round(lerp(255, 42, progress))}, ${round(lerp(255, 63, progress))}, ${round(lerp(255, 88, progress))}`);
-        header.style.setProperty('--header-nav-border-rgb', `${round(lerp(255, 186, progress))}, ${round(lerp(255, 200, progress))}, ${round(lerp(255, 215, progress))}`);
-        header.style.setProperty('--header-nav-border-alpha', round(lerp(0.08, 0.8, progress)));
-        header.style.setProperty('--header-nav-bg-rgb', `${round(lerp(255, 255, progress))}, ${round(lerp(255, 255, progress))}, ${round(lerp(255, 255, progress))}`);
-        header.style.setProperty('--header-nav-bg-alpha', round(lerp(0.012, 0.66, progress)));
-        header.style.setProperty('--header-nav-hover-alpha', round(lerp(0.045, 0.84, progress)));
+        header.style.setProperty('--header-nav-text-rgb', `${round(lerp(255, 41, progress))}, ${round(lerp(255, 59, progress))}, ${round(lerp(255, 80, progress))}`);
+        header.style.setProperty('--header-nav-border-rgb', `${round(lerp(255, 177, progress))}, ${round(lerp(255, 188, progress))}, ${round(lerp(255, 201, progress))}`);
+        header.style.setProperty('--header-nav-border-alpha', round(lerp(0.08, 0.62, progress)));
+        header.style.setProperty('--header-nav-bg-rgb', `${round(lerp(255, 220, progress))}, ${round(lerp(255, 226, progress))}, ${round(lerp(255, 234, progress))}`);
+        header.style.setProperty('--header-nav-bg-alpha', round(lerp(0.012, 0.46, progress)));
+        header.style.setProperty('--header-nav-hover-alpha', round(lerp(0.045, 0.58, progress)));
 
         header.style.setProperty('--header-return-bg-rgb', `${round(lerp(255, 31, progress))}, ${round(lerp(255, 79, progress))}, ${round(lerp(255, 127, progress))}`);
         header.style.setProperty('--header-return-bg-alpha', round(lerp(0.93, 1, progress)));
