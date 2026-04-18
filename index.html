@@ -36,6 +36,8 @@
       --radius-md: 14px;
       --max: 1120px;
       --hero-max: 1320px;
+      --anchor-offset: 92px;
+      --anchor-offset-contact: 98px;
     }
 
     * { box-sizing: border-box; }
@@ -321,6 +323,15 @@
     }
 
     .section { padding: 32px 0; }
+    #intro,
+    #showcase,
+    #price,
+    #faq {
+      scroll-margin-top: var(--anchor-offset);
+    }
+    #contact {
+      scroll-margin-top: var(--anchor-offset-contact);
+    }
     .section-head { margin-bottom: 18px; }
     .section-kicker { color: var(--primary); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
     .section-title { margin: 4px 0 10px; font-size: clamp(24px, 3.1vw, 34px); line-height: 1.35; color: #132f52; text-wrap: balance; }
@@ -1267,6 +1278,11 @@
     }
 
     @media (max-width: 768px) {
+      :root {
+        --anchor-offset: 142px;
+        --anchor-offset-contact: 148px;
+      }
+
       .section-head {
         margin-bottom: 14px;
       }
