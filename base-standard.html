@@ -45,6 +45,9 @@
       --radius-lg: 18px;
       --radius-md: 14px;
       --max: 1120px;
+      --anchor-offset-pc: 96px;
+      --anchor-offset-sp: 148px;
+      --anchor-offset: var(--anchor-offset-pc);
     }
 
     * {
@@ -53,6 +56,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: var(--anchor-offset);
     }
 
     body {
@@ -745,6 +749,10 @@
       color: var(--muted);
     }
 
+    .anchor-target {
+      scroll-margin-top: var(--anchor-offset);
+    }
+
     footer {
       margin-top: 40px;
       background: var(--deep);
@@ -780,6 +788,10 @@
     }
 
     @media (max-width: 720px) {
+      :root {
+        --anchor-offset: var(--anchor-offset-sp);
+      }
+
       .hero-grid,
       .grid-3,
       .gallery,
@@ -967,7 +979,7 @@
       </div>
     </section>
 
-    <section id="company" aria-labelledby="company-title">
+    <section class="anchor-target" id="company" aria-labelledby="company-title">
       <div class="container">
         <h2 class="section-title" id="company-title">会社紹介 / メッセージ</h2>
         <p class="section-lead">旭東精機株式会社は、加工現場で求められる「品質」「納期」「相談のしやすさ」のバランスを重視し、法人取引でも安心して進められる体制で部品調達を支援します。初めてのお取引でも、技術仕様・検査基準・納入条件を段階的にすり合わせるため、無理なく継続しやすい体制づくりを進めます。</p>
@@ -985,7 +997,7 @@
       </div>
     </section>
 
-    <section id="services" aria-labelledby="services-title">
+    <section class="anchor-target" id="services" aria-labelledby="services-title">
       <div class="container">
         <h2 class="section-title" id="services-title">対応内容</h2>
         <p class="section-lead">用途・数量・納期に応じて、下記のような加工と進め方に対応します。図面支給案件を中心に、仕様確認〜納入までを一貫してサポートします。</p>
@@ -1062,7 +1074,7 @@
       </div>
     </section>
 
-    <section id="strengths" aria-labelledby="strengths-title">
+    <section class="anchor-target" id="strengths" aria-labelledby="strengths-title">
       <div class="container">
         <h2 class="section-title" id="strengths-title">旭東精機の強み</h2>
         <p class="section-lead">「品質管理」「納期対応」「加工相談」「継続取引のしやすさ」を軸に、企業間取引で必要な安心感を整えています。</p>
@@ -1101,7 +1113,7 @@
       </div>
     </section>
 
-    <section id="cases" aria-labelledby="cases-title">
+    <section class="anchor-target" id="cases" aria-labelledby="cases-title">
       <div class="container">
         <h2 class="section-title" id="cases-title">実績・対応分野（イメージ）</h2>
         <p class="section-lead">案件検討時の参考として、加工事例・対応材質・製作部品例・対応業界をまとめています。実務で比較しやすいよう、用途別に整理しています。</p>
@@ -1164,7 +1176,7 @@
       </div>
     </section>
 
-    <section id="company-profile" aria-labelledby="company-profile-title">
+    <section class="anchor-target" id="company-profile" aria-labelledby="company-profile-title">
       <div class="container">
         <h2 class="section-title" id="company-profile-title">会社概要</h2>
         <p class="section-lead">企業間取引を前提に、継続発注しやすい情報整理で掲載しています。実在感のある架空会社として標準プランの完成見本を想定しています。</p>
@@ -1205,7 +1217,7 @@
       </div>
     </section>
 
-    <section id="contact" aria-labelledby="contact-title">
+    <section class="anchor-target" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <h2 class="section-title" id="contact-title">お問い合わせ</h2>
         <p class="section-lead">量産前の試作、設備保全部品、図面支給案件など、まずは仕様や納期条件から整理してご相談いただけます。</p>

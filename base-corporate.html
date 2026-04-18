@@ -37,6 +37,9 @@
       --hero-radius: 18px;
       --block-radius: 12px;
       --max: 1140px;
+      --anchor-offset-pc: 134px;
+      --anchor-offset-sp: 166px;
+      --anchor-offset: var(--anchor-offset-pc);
     }
 
     * {
@@ -45,6 +48,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: var(--anchor-offset);
     }
 
     body {
@@ -702,6 +706,10 @@
       border-color: #c6d4e1;
     }
 
+    .anchor-target {
+      scroll-margin-top: var(--anchor-offset);
+    }
+
     .site-footer {
       padding: 24px 0 34px;
       border-top: 1px solid #dce4ec;
@@ -771,6 +779,10 @@
     }
 
     @media (max-width: 768px) {
+      :root {
+        --anchor-offset: var(--anchor-offset-sp);
+      }
+
       .container {
         width: min(calc(100% - 28px), var(--max));
       }
@@ -918,7 +930,7 @@
             </p>
           </section>
 
-          <section class="section section-alt" id="strength">
+          <section class="section anchor-target section-alt" id="strength">
             <div class="section-head">
               <span class="section-kicker">STRENGTH</span>
               <h2 class="section-title">当社の強み</h2>
@@ -941,7 +953,7 @@
             </div>
           </section>
 
-          <section class="section" id="business">
+          <section class="section anchor-target" id="business">
             <div class="section-head">
               <span class="section-kicker">BUSINESS</span>
               <h2 class="section-title">事業内容</h2>
@@ -1014,7 +1026,7 @@
             </div>
           </section>
 
-          <section class="section" id="company">
+          <section class="section anchor-target" id="company">
             <div class="section-head">
               <span class="section-kicker">COMPANY</span>
               <h2 class="section-title">会社概要</h2>
@@ -1062,7 +1074,7 @@
             </div>
           </section>
 
-          <section class="section section-alt" id="contact">
+          <section class="section section-alt anchor-target" id="contact">
             <div class="section-head">
               <span class="section-kicker">CONTACT</span>
               <h2 class="section-title">お問い合わせ</h2>

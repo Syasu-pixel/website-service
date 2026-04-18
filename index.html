@@ -36,12 +36,13 @@
       --radius-md: 14px;
       --max: 1120px;
       --hero-max: 1320px;
-      --anchor-offset: 92px;
-      --anchor-offset-contact: 98px;
+      --anchor-offset-pc: 96px;
+      --anchor-offset-sp: 152px;
+      --anchor-offset: var(--anchor-offset-pc);
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--anchor-offset); }
 
     body {
       margin: 0;
@@ -325,14 +326,8 @@
     }
 
     .section { padding: 32px 0; }
-    #intro,
-    #showcase,
-    #price,
-    #faq {
+    .anchor-target {
       scroll-margin-top: var(--anchor-offset);
-    }
-    #contact {
-      scroll-margin-top: var(--anchor-offset-contact);
     }
     .section-head { margin-bottom: 18px; }
     .section-kicker { color: var(--primary); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
@@ -1353,8 +1348,7 @@
 
     @media (max-width: 768px) {
       :root {
-        --anchor-offset: 142px;
-        --anchor-offset-contact: 148px;
+        --anchor-offset: var(--anchor-offset-sp);
       }
 
       .section-head {
@@ -1679,7 +1673,7 @@
       </div>
     </section>
 
-    <section class="section scene scene-intro" id="intro">
+    <section class="section scene scene-intro anchor-target" id="intro">
       <div class="container">
         <div class="section-head">
           <span class="section-kicker">INTRODUCTION</span>
@@ -1730,7 +1724,7 @@
       </div>
     </section>
 
-    <section class="section" id="works-for">
+    <section class="section anchor-target" id="works-for">
       <div class="container">
         <div class="section-head">
           <span class="section-kicker">WORKS FOR</span>
@@ -1781,7 +1775,7 @@
       </div>
     </section>
 
-    <section class="section scene scene-showcase" id="showcase">
+    <section class="section scene scene-showcase anchor-target" id="showcase">
       <div class="container">
         <div class="section-head">
           <span class="section-kicker">BASE SHOWCASE</span>
@@ -1848,7 +1842,7 @@
       </div>
     </section>
 
-    <section class="section" id="price">
+    <section class="section anchor-target" id="price">
       <div class="container">
         <div class="section-head">
           <span class="section-kicker">PRICE</span>
@@ -1963,7 +1957,7 @@
       </div>
     </section>
 
-    <section class="section" id="process">
+    <section class="section anchor-target" id="process">
       <div class="container">
         <div class="section-head">
           <span class="section-kicker">PROCESS</span>
@@ -2005,7 +1999,7 @@
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="section anchor-target" id="contact">
       <div class="container">
         <div class="contact-box">
           <div class="section-head">
@@ -2093,7 +2087,7 @@
         </div>
       </div>
     </section>
-    <section class="section" id="faq">
+    <section class="section anchor-target" id="faq">
       <div class="container">
         <div class="section-head">
           <span class="section-kicker">FAQ</span>
