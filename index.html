@@ -491,6 +491,23 @@
       background: var(--accent);
     }
 
+    .showcase-compare-note {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px dashed #c8dbf7;
+      background: rgba(246, 250, 255, 0.9);
+      font-size: 13px;
+      color: #355273;
+      line-height: 1.75;
+    }
+
+    .showcase-variants {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .showcase-card {
       position: relative;
       overflow: hidden;
@@ -519,6 +536,67 @@
       display: flex;
       flex-direction: column;
       height: 100%;
+      gap: 10px;
+    }
+
+    .showcase-media {
+      margin: -6px -6px 2px;
+      border-radius: 12px;
+      border: 1px solid #d7e6f8;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .showcase-card--construction .showcase-media {
+      aspect-ratio: 5 / 3;
+      background-image: url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80");
+      background-position: center 45%;
+    }
+
+    .showcase-card--manufacturing .showcase-media {
+      background-image: url("https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1400&q=80");
+      background-position: center 46%;
+      filter: saturate(0.92);
+    }
+
+    .showcase-card--quick .showcase-media {
+      background-image: url("https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1400&q=80");
+      background-position: center 35%;
+    }
+
+    .showcase-card--manufacturing {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border-color: #d4dee9;
+    }
+
+    .showcase-card--quick {
+      background: linear-gradient(180deg, #ffffff 0%, #f4f9ff 100%);
+    }
+
+    .showcase-points {
+      margin: 0;
+      padding: 10px 12px;
+      list-style: none;
+      border-radius: 12px;
+      border: 1px solid #d8e5f8;
+      background: #f8fbff;
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      line-height: 1.65;
+      color: #284567;
+    }
+
+    .showcase-card--manufacturing .showcase-points {
+      border-radius: 8px;
+      background: #f9fbfd;
+      border-color: #d6dee8;
+    }
+
+    .showcase-card--quick .showcase-points {
+      background: #f3f8ff;
     }
 
     .showcase-strength {
@@ -1337,6 +1415,7 @@
       .hero-grid,
       .grid-3,
       .grid-2,
+      .showcase-variants,
       .plans,
       .option-grid,
       .payment-grid,
@@ -1780,64 +1859,68 @@
         <div class="section-head">
           <span class="section-kicker">BASE SHOWCASE</span>
           <h2 class="section-title">自分に合う形を、見本で比べながら選べます</h2>
-          <p class="section-lead">3つの見本を比べながら、自社に合う見せ方を選べます。</p>
+          <p class="section-lead">業種や公開目的にあわせて、雰囲気の違う3系統を比較できる見せ方にしました。</p>
+          <p class="showcase-compare-note">業種や見せたい雰囲気に合わせて、近い形をベースに調整できます。まずは近い見本からご相談ください。</p>
         </div>
 
-        <div class="grid-3">
-          <article class="card showcase-card">
+        <div class="showcase-variants">
+          <article class="card showcase-card showcase-card--construction">
             <div class="card-body">
-              <span class="tag">シンプル型</span>
-              <h3>最短で公開したい方向け</h3>
-              <p>まずは1ページで公開したい方に向いています。会社案内と問い合わせ窓口を、短くわかりやすくまとめられます。</p>
-              <ul class="plain-list">
-                <li>名刺代わりに使いやすい</li>
-                <li>準備項目を絞って進められる</li>
-                <li>ライトプランと相性がよい</li>
+              <span class="tag">工事・設備系</span>
+              <div class="showcase-media" role="img" aria-label="工事・設備系の見本イメージ"></div>
+              <h3>施工内容が伝わる現場重視レイアウト</h3>
+              <p>電気工事・設備工事・空調・配管・修理業向けに、写真をやや大きめに使って対応業務と施工イメージが伝わる構成です。初見でも信頼感が伝わるよう、実績と対応範囲を整理して見せます。</p>
+              <ul class="showcase-points">
+                <li>対応工事の種類を一覧で見せたい</li>
+                <li>施工写真を使って現場感を出したい</li>
+                <li>緊急対応や相談窓口を目立たせたい</li>
               </ul>
-              <div class="showcase-strength">向いているケース：まず営業先に見せるURLを作りたい / できるだけ早く公開したい。</div>
+              <div class="showcase-strength">向いているケース：取引先や元請けに「何ができる会社か」を短時間で伝えたい／現場の安心感を重視したい。</div>
               <div class="showcase-actions">
-                <a class="btn showcase-cta" href="base-simple.html">シンプル型の見本を見る</a>
+                <a class="btn showcase-cta" href="base-corporate.html">工事・設備系の見本を見る</a>
               </div>
             </div>
           </article>
 
-          <article class="card showcase-card">
+          <article class="card showcase-card showcase-card--manufacturing">
             <div class="card-body">
-              <span class="tag warm">スタンダード型</span>
-              <h3>相談・信頼感のバランス重視</h3>
-              <p>会社情報とサービス案内を整え、問い合わせしやすさも重視したい方に向いています。1ページ構成から複数ページ展開まで進めやすい型です。</p>
-              <ul class="plain-list">
-                <li>仕事につながる流れを作りやすい</li>
-                <li>迷ったときの基準にしやすい</li>
-                <li>標準プランの中心イメージ</li>
+              <span class="tag warm">製造・加工系</span>
+              <div class="showcase-media" role="img" aria-label="製造・加工系の見本イメージ"></div>
+              <h3>余白を活かした整然レイアウト</h3>
+              <p>町工場・金属加工・溶接・板金・部品製作向けに、直線的で落ち着いた見た目で情報を整理する構成です。設備、加工内容、対応範囲、ロット感を比較しやすく配置できます。</p>
+              <ul class="showcase-points">
+                <li>設備一覧と加工内容を分けて整理したい</li>
+                <li>対応材質・サイズ・ロットを明記したい</li>
+                <li>引き合い前の確認項目を減らしたい</li>
               </ul>
-              <div class="showcase-strength">向いているケース：見た目の整然さと相談のしやすさを両立し、営業サイトの完成度を一段上げたい。</div>
+              <div class="showcase-strength">向いているケース：技術力や対応範囲を落ち着いたトーンで見せたい／取引判断に必要な情報を整理して提示したい。</div>
               <div class="showcase-actions">
-                <a class="btn showcase-cta" href="base-standard.html">スタンダード型の見本を見る</a>
+                <a class="btn showcase-cta" href="base-standard.html">製造・加工系の見本を見る</a>
               </div>
             </div>
           </article>
 
-          <article class="card showcase-card">
+          <article class="card showcase-card showcase-card--quick">
             <div class="card-body">
-              <span class="tag">コーポレート型</span>
-              <h3>会社案内の整った印象を重視</h3>
-              <p>企業サイトらしい整った印象を重視する方に向いています。事業案内から問い合わせまで、段階的に厚みを持たせて見せられます。</p>
-              <ul class="plain-list">
-                <li>会社としての安心感を出しやすい</li>
-                <li>複数情報を段階的に掲載しやすい</li>
-                <li>中長期の運用にもなじみやすい</li>
+              <span class="tag">シンプル名刺サイト系</span>
+              <div class="showcase-media" role="img" aria-label="シンプル名刺サイト系の見本イメージ"></div>
+              <h3>1ページ完結の最短公開レイアウト</h3>
+              <p>個人事業や小規模法人向けに、必要情報を簡潔にまとめる軽い見本です。サービス内容・連絡先・対応エリアを中心に、公開までの準備負担を抑えます。</p>
+              <ul class="showcase-points">
+                <li>まずは名刺代わりのURLを作りたい</li>
+                <li>更新負担を小さく始めたい</li>
+                <li>短期間で公開を優先したい</li>
               </ul>
-              <div class="showcase-strength">向いているケース：採用・取引先向けにも通用する、企業サイトらしい情報整理を早めに作りたい。</div>
+              <div class="showcase-strength">向いているケース：なるべく早く公開したい／情報を増やしすぎずに最低限の信頼導線を整えたい。</div>
               <div class="showcase-actions">
-                <a class="btn showcase-cta" href="base-corporate.html">コーポレート型の見本を見る</a>
+                <a class="btn showcase-cta" href="base-simple.html">シンプル名刺サイトの見本を見る</a>
               </div>
             </div>
           </article>
         </div>
 
         <div class="choice-box">
-          <strong>選び方の目安：</strong>まず公開を優先するならシンプル型、相談導線まで整えるならスタンダード型、会社案内の厚みを出すならコーポレート型がおすすめです。迷ったらスタンダード型を基準にしてください。
+          <strong>選び方の目安：</strong>施工や対応業務を見せるなら工事・設備系、設備や加工範囲を整理するなら製造・加工系、まず早く公開するならシンプル名刺サイト系がおすすめです。迷ったら、近い業種の見本を選んでから調整内容をご相談ください。
         </div>
       </div>
     </section>
